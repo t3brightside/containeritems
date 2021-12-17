@@ -1,56 +1,56 @@
 /* gridelements page sections and column layouts */
-.ge-section {
+.containerSection {
     padding-top: 7em;
     padding-bottom: 7em;
     float: left;
     width: 100%;
     position: relative;
 }
-.ge-section.bg0 {
+.containerSection.bg0 {
     background-position: center center !important;
 }
-.ge-section.bg1 {
+.containerSection.bg1 {
     background-position: left top !important;
 }
 
-.ge-section.bg2 {
+.containerSection.bg2 {
     background-position: left center !important;
 }
 
-.ge-section.bg3 {
+.containerSection.bg3 {
     background-position: left bottom !important;
 }
 
-.ge-section.bg4 {
+.containerSection.bg4 {
     background-position: center top !important;
 }
 
-.ge-section.bg5 {
+.containerSection.bg5 {
     background-position: center bottom !important;
 }
 
-.ge-section.bg6 {
+.containerSection.bg6 {
     background-position: right top !important;
 }
 
-.ge-section.bg7 {
+.containerSection.bg7 {
     background-position: right center !important;
 }
 
-.ge-section.bg8 {
+.containerSection.bg8 {
     background-position: right bottom !important;
 }
 
-.ge-section.fixed {
+.containerSection.fixed {
     background-attachment: fixed !important;
 }
 
-.ge-section.has-bg-video {
+.containerSection.has-bg-video {
     background-color: transparent !important;
     overflow: hidden;
 }
 
-.ge-section .videobuttons {
+.containerSection .videobuttons {
     background: rgba(255, 255, 255, 0.2);
     color: #fff;
     text-transform: uppercase;
@@ -64,36 +64,36 @@
     z-index: 3;
 }
 
-.ge-section .videobuttons:hover {
+.containerSection .videobuttons:hover {
     cursor: pointer;
 }
 
-.ge-section .sound.hasclearframebutton {
+.containerSection .sound.hasclearframebutton {
     right: 7.5em;
 }
 
-.ge-section .videobuttons svg {
+.containerSection .videobuttons svg {
     height: 1.5em;
     width: auto;
 }
 
-.ge-section .sound .on, .ge-section .clearframe .on {
+.containerSection .sound .on, .containerSection .clearframe .on {
     display: none;
 }
 
-.ge-section .sound .off, .ge-section .clearframe .off {
+.containerSection .sound .off, .containerSection .clearframe .off {
     display: block;
 }
 
-.ge-section .sound.active .on, .ge-section .clearframe.active .on {
+.containerSection .sound.active .on, .containerSection .clearframe.active .on {
     display: block
 }
 
-.ge-section .sound.active .off, .ge-section .clearframe.active .off {
+.containerSection .sound.active .off, .containerSection .clearframe.active .off {
     display: none
 }
 
-.ge-section .overlay {
+.containerSection .overlay {
     position: absolute;
     left: 0;
     top: 0;
@@ -102,7 +102,7 @@
     z-index: 1;
 }
 
-.ge-section .bg-video {
+.containerSection .bg-video {
     min-width: 100%;
     min-height: 100%;
     width: auto;
@@ -114,51 +114,51 @@
     z-index: 1;
 }
 
-.ge-section.bg1 .bg-video {
+.containerSection.bg1 .bg-video {
     left: 0;
     top: 50%;
     transform: translateY(-50%);
 }
 
-.ge-section.bg2 .bg-video {
+.containerSection.bg2 .bg-video {
     left: auto;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
 }
 
-.ge-section.bg3 .bg-video {
+.containerSection.bg3 .bg-video {
     left: 0;
     top: 0;
     transform: none;
 }
 
-.ge-section.bg4 .bg-video {
+.containerSection.bg4 .bg-video {
     top: 0;
     transform: translateX(-50%);
 }
 
-.ge-section.bg5 .bg-video {
+.containerSection.bg5 .bg-video {
     top: 0;
     left: auto;
     right: 0;
     transform: none;
 }
 
-.ge-section.bg6 .bg-video {
+.containerSection.bg6 .bg-video {
     left: 0;
     bottom: 0;
     top: auto;
     transform: none;
 }
 
-.ge-section.bg7 .bg-video {
+.containerSection.bg7 .bg-video {
     bottom: 0;
     top: auto;
     transform: translateX(-50%);
 }
 
-.ge-section.bg8 .bg-video {
+.containerSection.bg8 .bg-video {
     left: auto;
     right: 0;
     bottom: 0;
@@ -166,7 +166,7 @@
     transform: none;
 }
 
-.ge-section.vcenter.fullheight .contentWidth {
+.containerSection.vcenter.fullheight .contentWidth {
     position: absolute;
     width: 100%;
     top: 50%;
@@ -175,94 +175,94 @@
     -ms-transform: translate(-50%, -50%);
 }
 
-.ge-section.nopadding {
+.containerSection.nopadding {
     padding: 0;
 }
 
-.ge-section.fullwidth .contentWidth {
+.containerSection.fullwidth .contentWidth {
     max-width: 100%;
     padding: 0;
     margin: 0;
     width: 100% !important;
 }
 
-.ge-section.fullheight {
+.containerSection.fullheight {
     min-height: 100vh;
 }
 
-.ge-section.align-center {
+.containerSection.align-center {
     text-align: center;
 }
 
-.ge-section.align-center p, .ge-section.align-center ol, .ge-section.align-center ul, .ge-section.align-center {
+.containerSection.align-center p, .containerSection.align-center ol, .containerSection.align-center ul, .containerSection.align-center {
     margin: auto;
 }
 
 /* dark and light BG colors are set in template constants */
-.ge-section.bg-dark {
+.containerSection.bg-dark {
     -webkit-font-smoothing: antialiased;
 }
 
-.ge-section.bg-black {
+.containerSection.bg-black {
     background-color: #000;
     color: #fff;
     -webkit-font-smoothing: antialiased;
 }
 
-.ge-section p, .ge-section ol, .ge-section ul {
+.containerSection p, .containerSection ol, .containerSection ul {
     max-width: 41em;
 }
 
 /* custom section classes */
-.ge-section.home h1 {
+.containerSection.home h1 {
     font-size: 5vw;
 }
 
 @media screen and (min-width: 1600px) {
-    .ge-section.home h1 {
+    .containerSection.home h1 {
         font-size: 4em;
     }
 }
 
 @media screen and (max-width: 1180px) {
-    .ge-section.home h1 {
+    .containerSection.home h1 {
         font-size: 3em;
     }
 }
 
 @media screen and (max-width: 1024px) {
-    .ge-section.fixed {
+    .containerSection.fixed {
         background-attachment: scroll !important;
     }
 }
 
 @media screen and (max-width: 960px) {
-    .ge-section {
+    .containerSection {
         padding-top: 4em;
         padding-bottom: 4em;
     }
 }
 
 @media screen and (max-width: 680px) {
-    .ge-section.home h1, h1 {
+    .containerSection.home h1, h1 {
         font-size: 2.3em;
         line-height: 1.2em;
     }
 }
 
 @media screen and (max-width: 520px) {
-    .ge-section .videobuttons {
+    .containerSection .videobuttons {
         right: 2.5em;
         bottom: 2.5em;
     }
 
-    .ge-section .sound.hasclearframebutton {
+    .containerSection .sound.hasclearframebutton {
         right: 6em;
     }
 }
 
 @media screen and (max-height: 590px) {
-    .ge-section.fullheight {
+    .containerSection.fullheight {
         min-height: 25em;
         height: 100vh;
     }
