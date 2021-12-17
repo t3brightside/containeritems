@@ -8,7 +8,7 @@
             'Content section',
             [
                 [
-                    ['name' => 'Content', 'colPos' => 101],
+                    ['name' => 'Section Content', 'colPos' => 101],
                 ]
             ]
         )

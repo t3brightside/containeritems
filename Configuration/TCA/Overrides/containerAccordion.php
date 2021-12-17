@@ -8,7 +8,7 @@
             'Each element inside will be shown as an accordion item',
             [
                 [
-                    ['name' => 'Content', 'colPos' => 101],
+                    ['name' => 'Accordion Elements', 'colPos' => 101],
                 ]
             ]
         )
