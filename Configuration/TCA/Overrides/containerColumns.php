@@ -88,3 +88,14 @@
     )
     ->setIcon('EXT:container/Resources/Public/Icons/container-3col.svg')
 );
+
+$GLOBALS['TCA']['tt_content']['types']['containerColumns-1-1']['showitem'] = str_replace(
+    'header;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header.ALT.div_formlabel,',
+    'header;Title (shown in special cases only),header_layout,',
+    $GLOBALS['TCA']['tt_content']['types']['containerColumns-1-1']['showitem']
+);
+
+$GLOBALS['TCA']['tt_content']['types']['containerColumns-2-1']['showitem'] = $GLOBALS['TCA']['tt_content']['types']['containerColumns-1-1']['showitem'];
+$GLOBALS['TCA']['tt_content']['types']['containerColumns-1-2']['showitem'] = $GLOBALS['TCA']['tt_content']['types']['containerColumns-1-1']['showitem'];
+$GLOBALS['TCA']['tt_content']['types']['containerColumns-1-1-1']['showitem'] = $GLOBALS['TCA']['tt_content']['types']['containerColumns-1-1']['showitem'];
+$GLOBALS['TCA']['tt_content']['types']['containerColumns-1-1-1-1']['showitem'] = $GLOBALS['TCA']['tt_content']['types']['containerColumns-1-1']['showitem'];

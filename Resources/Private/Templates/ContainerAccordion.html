@@ -2,7 +2,12 @@
 <div id="c{data.uid}" class="frame frame-default frame-container-accordion containerAccordion frame-space-before-{data.space_before_class} frame-space-after-{data.space_after_class}">
     <f:for each="{children_101}" as="element">
         <div class="containerAccordion-item">
-            <span class="containerAccordion-title">{element.header}</span>
+            <span class="containerAccordion-title">
+                <f:if condition="{element.header_layout} != 100">
+                    <f:then>{element.header}</f:then>
+                    <f:else>&nbsp;</f:else>
+                </f:if>
+            </span>
             <div class="containerAccordion-content">
 			      {element.renderedContent -> f:format.raw()}
                   <div class="clear"></div>

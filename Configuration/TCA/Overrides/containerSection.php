@@ -286,7 +286,7 @@ $tempColumns = array(
 
 $GLOBALS['TCA']['tt_content']['types']['containerSection']['showitem'] = str_replace(
     'header;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header.ALT.div_formlabel,',
-    'header;Menu Title,
+    'header;Title (shown in special cases only),header_layout,
     --palette--;Settings;sectionSettings,
     --palette--;Colors;sectionColors,
     --palette--;Background Image;sectionBgImage,
