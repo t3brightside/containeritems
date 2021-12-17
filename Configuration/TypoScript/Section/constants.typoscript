@@ -1,5 +1,7 @@
 # cat=Containeritems Section/containeritems; type=string; label= Styles File
 containerSection.styles = EXT:containeritems/Resources/Public/Styles/containerSection.css
+# cat=Containeritems Section/containeritems; type=string; label= JavaScript File
+containerSection.javaScript = EXT:containeritems/Resources/Public/JavaScript/containerSection.js
 # cat=Containeritems Section/containeritems; type=string; label= Template Root Paths
 containerSection.templateRootPaths = EXT:containeritems/Resources/Private/Templates/
 # cat=Containeritems Section/containeritems; type=string; label= Partial Root Paths
