@@ -1,8 +1,12 @@
-page.includeCSS.containerSection = EXT:containeritems/Resources/Public/Styles/containerSection.css
+page.includeCSS.containerSection = {$containerSection.styles}
+
 tt_content.containerSection =< lib.contentElement
 tt_content.containerSection {
   templateRootPaths.10 = EXT:containeritems/Resources/Private/Templates/
+  templateRootPaths.20 = {$containerSection.templateRootPaths}
   partialRootPaths.10 = EXT:containeritems/Resources/Private/Partials/
+  partialRootPaths.20 = {$containerSection.partialRootPaths}
+  dataProcessing.13 = B13\Container\DataProcessing\ContainerProcessor
   templateName = containerSection
   dataProcessing {
     13 = B13\Container\DataProcessing\ContainerProcessor

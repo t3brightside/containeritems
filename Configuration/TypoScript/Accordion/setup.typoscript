@@ -1,11 +1,13 @@
 
-page.includeJSFooterlibs.containerAccordion = EXT:containeritems/Resources/Public/JavaScript/containerAccordion.js
-page.includeCSS.containerAccordion = EXT:containeritems/Resources/Public/Styles/containerAccordion.css
+page.includeCSS.containerAccordion = {$containerAccordion.styles}
 
 tt_content.containerAccordion =< lib.contentElement
 tt_content.containerAccordion {
   templateRootPaths.10 = EXT:containeritems/Resources/Private/Templates/
+  templateRootPaths.20 = {$containerAccordion.templateRootPaths}
   partialRootPaths.10 = EXT:containeritems/Resources/Private/Partials/
+  partialRootPaths.20 = {$containerAccordion.partialRootPaths}
+  dataProcessing.13 = B13\Container\DataProcessing\ContainerProcessor
 
   templateName = ContainerAccordion
   dataProcessing.13 = B13\Container\DataProcessing\ContainerProcessor

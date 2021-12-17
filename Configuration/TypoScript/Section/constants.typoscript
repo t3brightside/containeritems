@@ -1,0 +1,6 @@
+# cat=Containeritems Section/containeritems; type=string; label= Styles File
+containerSection.styles = EXT:containeritems/Resources/Public/Styles/containerSection.css
+# cat=Containeritems Section/containeritems; type=string; label= Template Root Paths
+containerSection.templateRootPaths = EXT:containeritems/Resources/Private/Templates/
+# cat=Containeritems Section/containeritems; type=string; label= Partial Root Paths
+containerSection.partialRootPaths = EXT:containeritems/Resources/Private/Partials/

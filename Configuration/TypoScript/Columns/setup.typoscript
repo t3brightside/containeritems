@@ -1,9 +1,11 @@
-page.includeCSS.containerGrids = EXT:containeritems/Resources/Public/Styles/containerColumns.css
+page.includeCSS.containerGrids = {$containerColumns.styles}
 
 lib.containerColumnsDefault =< lib.contentElement
 lib.containerColumnsDefault {
   templateRootPaths.10 = EXT:containeritems/Resources/Private/Templates/
+  templateRootPaths.20 = {$containerColumns.templateRootPaths}
   partialRootPaths.10 = EXT:containeritems/Resources/Private/Partials/
+  partialRootPaths.20 = {$containerColumns.partialRootPaths}
   dataProcessing.13 = B13\Container\DataProcessing\ContainerProcessor
   variables {
     spaceWidth = TEXT

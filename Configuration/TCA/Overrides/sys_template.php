@@ -25,7 +25,7 @@ call_user_func(function () {
 
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
         $extensionKey,
-        'Configuration/TypoScript/Sections',
-        'Containeritems - Sections'
+        'Configuration/TypoScript/Section',
+        'Containeritems - Section'
     );
 });
