@@ -19,6 +19,10 @@
   width: 30%;
 }
 
+.containerColumns-1-1-1-1>.col {
+  width: 21.25%;
+}
+
 .containerColumns-2-1>.col:first-child {
   width: 65%;
 }

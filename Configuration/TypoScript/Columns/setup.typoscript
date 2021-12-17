@@ -17,3 +17,6 @@ tt_content.containerColumns-1-2.templateName = ContainerColumns-1-2
 
 tt_content.containerColumns-1-1-1 =< lib.containerColumnsDefault
 tt_content.containerColumns-1-1-1.templateName = ContainerColumns-1-1-1
+
+tt_content.containerColumns-1-1-1-1 =< lib.containerColumnsDefault
+tt_content.containerColumns-1-1-1-1.templateName = ContainerColumns-1-1-1-1
