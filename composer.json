@@ -1,0 +1,24 @@
+{
+	"name": "t3brightside/containeritems",
+	"description": "Container elements like column grids, accordion, page sections etc.",
+	"type": "typo3-cms-extension",
+	"keywords": ["TYPO3", "template", "grids", "columns", "structure"],
+	"homepage": "https://microtemplate.t3brightside.com/",
+	"license": "GPL-2.0-or-later",
+	"authors": [{
+		"name": "Tanel Põld",
+		"role": "Developer",
+		"homepage": "https://t3brightside.com"
+	}],
+	"require": {
+		"typo3/cms-core": "^11.5",
+		"typo3/cms-fluid-styled-content": "^11.5",
+		"b13/container": "^1.4",
+		"ichhabrecht/content-defender": "^3.2"
+	},
+	"extra": {
+		"typo3/cms": {
+			"extension-key": "containeritems"
+		}
+	}
+}
