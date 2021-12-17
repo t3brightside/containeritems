@@ -26,7 +26,7 @@
             'Dividing the content area into two columns with left column being wider',
             [
                 [
-                    ['name' => 'Left', 'colPos' => 101],
+                    ['name' => 'Wider Left', 'colPos' => 101],
                     ['name' => 'Right', 'colPos' => 102]
                 ]
             ]
@@ -44,7 +44,7 @@
             [
                 [
                     ['name' => 'Left', 'colPos' => 101],
-                    ['name' => 'Right', 'colPos' => 102]
+                    ['name' => 'Wider Right', 'colPos' => 102]
                 ]
             ]
         )
@@ -81,7 +81,7 @@
                     ['name' => 'Left', 'colPos' => 101],
                     ['name' => 'Middle Left', 'colPos' => 102],
                     ['name' => 'Middle Right', 'colPos' => 103],
-                    ['name' => 'Right', 'colPos' => 103]
+                    ['name' => 'Right', 'colPos' => 104]
                 ]
             ]
         )
