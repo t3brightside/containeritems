@@ -13,13 +13,18 @@
 
 - TYPO3
 - fluid_styled_content
+- container
 
 ## Features
-- Yet to be listed
+- Easy to customise using TypoScript constants
+- Columns: 4-col, 3-col, 2-col, 2-col with sidebar
+- Accordions
+- Sections with background image and video
+- Minimal CSS and JavaScript no frameworks needed
 
 ## Install
 - `composer req t3brightside/containeritems` or from TYPO3 extension repository **[containeritems](https://extensions.typo3.org/extension/containeritems/)**
-- Include static templates
+- Include desired static templates
 
 ## Sources
 - [GitHub](https://github.com/t3brightside/containeritems)
