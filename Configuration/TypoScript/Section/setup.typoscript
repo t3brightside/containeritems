@@ -30,7 +30,7 @@ tt_content.containerSection {
         5.theImage.cObject.file {
           import.data = file:current:publicUrl
           crop.data = file:current:crop
-          width = {$microtemplate.ge-section.bg-width}
+          width = {$containerSection.bgImageWidth}
           width.override.field = tx_containeritems_s_bgimagewidth
         }
         # hack to remove / from path seems like a core bug
@@ -49,7 +49,7 @@ tt_content.containerSection {
           file = GIFBUILDER
           file {
             format = jpg
-            quality = {$microtemplate.ge-section.bg-quality}
+            quality = {$containerSection.bgImageQuality}
             XY = [5.w],[5.h]
             5 = IMAGE
             5.file.import.data = REGISTER:theImage

@@ -4,3 +4,7 @@ containerSection.styles = EXT:containeritems/Resources/Public/Styles/containerSe
 containerSection.templateRootPaths = EXT:containeritems/Resources/Private/Templates/
 # cat=Containeritems Section/containeritems; type=string; label= Partial Root Paths
 containerSection.partialRootPaths = EXT:containeritems/Resources/Private/Partials/
+# cat=Containeritems Section/containeritems; type=int; label= Section background image width (px)
+containerSection.bgImageWidth = 1400
+# cat=Containeritems Section/containeritems; type=int[10-100]; label= Section background jpg quality
+containerSection.bgImageQuality = 80
