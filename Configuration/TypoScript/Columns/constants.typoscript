@@ -1,5 +1,5 @@
 # cat=Containeritems Columns/containeritems; type=string; label= Styles File
-containerColumns.styles = EXT:containeritems/Resources/Public/Styles/containerSection.css
+containerColumns.styles = EXT:containeritems/Resources/Public/Styles/containerColumns.css
 # cat=Containeritems Columns/containeritems; type=string; label= Template Root Paths
 containerColumns.templateRootPaths = EXT:containeritems/Resources/Private/Templates/
 # cat=Containeritems Columns/containeritems; type=string; label= Partial Root Paths
