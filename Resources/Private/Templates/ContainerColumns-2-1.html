@@ -1,0 +1,13 @@
+<div id="c{data.uid}" class="frame frame-type-container containerColumns containerColumns-2-1 {f:if(condition: '{data.space_before_class}', then: 'frame-space-before-{data.space_before_class}')} {f:if(condition: '{data.space_after_class}', then: 'frame-space-after-{data.space_after_class}')}">
+	<div class="col">
+        <f:for each="{children_101}" as="element">
+			{element.renderedContent -> f:format.raw()}
+		</f:for>
+	</div>
+	<div class="space"></div>
+	<div class="col">
+        <f:for each="{children_102}" as="element">
+			{element.renderedContent -> f:format.raw()}
+		</f:for>
+	</div>
+</div>

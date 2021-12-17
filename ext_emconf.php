@@ -3,7 +3,7 @@
     'title' => 'Containeritems',
     'description' => 'Container elements like column grids, accordion, page sections etc.',
     'category' => 'fe',
-    'version' => '0.0.1',
+    'version' => '0.1.0',
     'state' => 'stable',
     'clearCacheOnLoad' => 1,
     'author' => 'Tanel Põld',

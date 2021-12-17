@@ -1,0 +1,19 @@
+page.includeCSS.containerGrids = EXT:containeritems/Resources/Public/Styles/containerColumns.css
+
+lib.containerColumnsDefault =< lib.contentElement
+lib.containerColumnsDefault {
+  templateRootPaths.10 = EXT:containeritems/Resources/Private/Templates/
+  partialRootPaths.10 = EXT:containeritems/Resources/Private/Partials/
+  dataProcessing.13 = B13\Container\DataProcessing\ContainerProcessor
+}
+tt_content.containerColumns-1-1 =< lib.containerColumnsDefault
+tt_content.containerColumns-1-1.templateName = ContainerColumns-1-1
+
+tt_content.containerColumns-2-1 =< lib.containerColumnsDefault
+tt_content.containerColumns-2-1.templateName = ContainerColumns-2-1
+
+tt_content.containerColumns-1-2 =< lib.containerColumnsDefault
+tt_content.containerColumns-1-2.templateName = ContainerColumns-1-2
+
+tt_content.containerColumns-1-1-1 =< lib.containerColumnsDefault
+tt_content.containerColumns-1-1-1.templateName = ContainerColumns-1-1-1

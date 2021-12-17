@@ -1,12 +1,35 @@
 
-<div class="frame frame-default ge-accordion frame-space-before-{data.space_before_class} frame-space-after-{data.space_after_class}">
+<div id="c{data.uid}" class="frame frame-default frame-container-accordion containerAccordion frame-space-before-{data.space_before_class} frame-space-after-{data.space_after_class}">
     <f:for each="{children_101}" as="element">
-        <div class="ge-accordion-section">
-            <a href="#acc{element.uid}" class="ge-accordion-section-title">{element.header}</a>
-            <div id="acc{element.uid}" class="ge-accordion-section-content">
+        <div class="containerAccordion-item">
+            <span class="containerAccordion-title">{element.header}</span>
+            <div class="containerAccordion-content">
 			      {element.renderedContent -> f:format.raw()}
                   <div class="clear"></div>
             </div>
         </div>
 	</f:for>
 </div>
+
+<f:section name="FooterAssets">
+    <script>
+        const accordionTitle = document.getElementsByClassName('containerAccordion-title');
+        for (i = 0; i < accordionTitle.length; i++) {
+          accordionTitle[i].addEventListener('click', function() {
+            let el = this.parentElement.getElementsByClassName('containerAccordion-content')[0];
+            let height = el.scrollHeight;
+            el.style.setProperty('--max-height', height + 'px');
+            if (this.parentElement.classList.contains('act')) {
+              Array.from(this.parentElement.parentElement.getElementsByClassName('act')).forEach(function(el) {
+                el.classList.remove('act');
+              });
+            } else {
+              Array.from(this.parentElement.parentElement.getElementsByClassName('act')).forEach(function(el) {
+                el.classList.remove('act');
+              });
+              this.parentElement.classList.toggle('act');
+            }
+          })
+        }
+    </script>
+</f:section>

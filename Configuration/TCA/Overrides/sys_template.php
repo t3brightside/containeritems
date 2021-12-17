@@ -1,31 +1,31 @@
 <?php
+
 defined('TYPO3_MODE') || die();
 
-call_user_func(function()
-{
-  /**
-   * Temporary variables
-   */
-  $extensionKey = 'microtemplate';
+call_user_func(function () {
+    /**
+     * Temporary variables
+     */
+    $extensionKey = 'containeritems';
 
-  /**
-   * Default TypoScript for Microtemplate
-   */
-  \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-    $extensionKey,
-    'Configuration/TypoScript/Accordion',
-    'Containeritems - Accordion'
-  );
+    /**
+     * Default TypoScript for Microtemplate
+     */
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+        $extensionKey,
+        'Configuration/TypoScript/Accordion',
+        'Containeritems - Accordion'
+    );
 
-  \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-    $extensionKey,
-    'Configuration/TypoScript/Grids',
-    'Containeritems - Grids'
-  );
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+        $extensionKey,
+        'Configuration/TypoScript/Columns',
+        'Containeritems - Columns'
+    );
 
-  \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-    $extensionKey,
-    'Configuration/TypoScript/Grids',
-    'Containeritems - Sections'
-  );
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+        $extensionKey,
+        'Configuration/TypoScript/Sections',
+        'Containeritems - Sections'
+    );
 });

@@ -18,7 +18,7 @@
 
 
 $tempColumns = array(
-    'tx_microtemplate_c_classes' => [
+    'tx_containeritems_s_classes' => [
         'exclude' => 1,
         'label'   => 'Custom Classes',
         'config'  => [
@@ -26,7 +26,7 @@ $tempColumns = array(
             'size' => 20,
         ],
     ],
-    'tx_microtemplate_c_aligncontent' => [
+    'tx_containeritems_s_aligncontent' => [
         'exclude' => 1,
         'label'   => 'Content Alignment',
         'config'  => [
@@ -41,7 +41,7 @@ $tempColumns = array(
             ],
         ],
     ],
-    'tx_microtemplate_c_framepadding' => [
+    'tx_containeritems_s_framepadding' => [
         'exclude' => 1,
         'label'   => 'Frame Padding',
         'config'  => [
@@ -55,7 +55,7 @@ $tempColumns = array(
             ],
         ],
     ],
-    'tx_microtemplate_c_fullwidth' => [
+    'tx_containeritems_s_fullwidth' => [
         'exclude' => 1,
         'label' => 'Full Width',
         'description' => 'Content will be full width of the viewport',
@@ -70,7 +70,7 @@ $tempColumns = array(
             ],
         ]
     ],
-    'tx_microtemplate_c_fullheight' => [
+    'tx_containeritems_s_fullheight' => [
         'exclude' => 1,
         'label' => 'Full Height',
         'description' => 'Section always fills the full height of the viewport',
@@ -85,7 +85,7 @@ $tempColumns = array(
             ],
         ]
     ],
-    'tx_microtemplate_c_vcenter' => [
+    'tx_containeritems_s_vcenter' => [
         'exclude' => 1,
         'label' => 'Vertically Center',
         'description' => 'Content will be placed vertically in middle of the section. Works with Full Height only',
@@ -100,7 +100,7 @@ $tempColumns = array(
             ],
         ]
     ],
-    'tx_microtemplate_c_textcolorselect' => [
+    'tx_containeritems_s_textcolorselect' => [
         'exclude' => 1,
         'label'   => 'Text Color',
         'config'  => [
@@ -114,7 +114,7 @@ $tempColumns = array(
             ],
         ],
     ],
-    'tx_microtemplate_c_textcolor' => [
+    'tx_containeritems_s_textcolor' => [
         'exclude' => 1,
         'label'   => 'Custom Text Color',
         'config'  => [
@@ -122,7 +122,7 @@ $tempColumns = array(
             'size' => 10,
         ],
     ],
-    'tx_microtemplate_c_bgcolorselect' => [
+    'tx_containeritems_s_bgcolorselect' => [
         'exclude' => 1,
         'label'   => 'Background Color',
         'config'  => [
@@ -137,7 +137,7 @@ $tempColumns = array(
             ],
         ],
     ],
-    'tx_microtemplate_c_bgcolor' => [
+    'tx_containeritems_s_bgcolor' => [
         'exclude' => 1,
         'label'   => 'Custom Background Color',
         'config'  => [
@@ -145,7 +145,7 @@ $tempColumns = array(
             'size' => 10,
         ],
     ],
-    'tx_microtemplate_c_bgimagewidth' => [
+    'tx_containeritems_s_bgimagewidth' => [
         'exclude' => 1,
         'label'   => 'Image Width (px)',
         'config'  => [
@@ -153,7 +153,7 @@ $tempColumns = array(
             'size' => 10,
         ],
     ],
-    'tx_microtemplate_c_bgimgeffect' => [
+    'tx_containeritems_s_bgimgeffect' => [
         'exclude' => 1,
         'label'   => 'Image Effect',
         'config'  => [
@@ -169,7 +169,7 @@ $tempColumns = array(
             ],
         ],
     ],
-    'tx_microtemplate_c_bgvideosound' => [
+    'tx_containeritems_s_bgvideosound' => [
         'exclude' => 1,
         'label' => 'Sound Button',
         'description' => 'Adds button to play background video sound',
@@ -184,7 +184,7 @@ $tempColumns = array(
             ],
         ]
     ],
-    'tx_microtemplate_c_bgvideoclearframe' => [
+    'tx_containeritems_s_bgvideoclearframe' => [
         'exclude' => 1,
         'label' => 'Clear Button',
         'description' => 'Adds button to remove content and overlay from the section to view the video',
@@ -199,7 +199,7 @@ $tempColumns = array(
             ],
         ]
     ],
-    'tx_microtemplate_c_bgvideoonoloop' => [
+    'tx_containeritems_s_bgvideoonoloop' => [
         'exclude' => 1,
         'label' => 'Loop',
         'description' => 'Keeps re-playing background video',
@@ -215,7 +215,7 @@ $tempColumns = array(
             ],
         ]
     ],
-    'tx_microtemplate_c_bgplacement' => [
+    'tx_containeritems_s_bgplacement' => [
         'exclude' => 1,
         'label'   => 'Background Placement',
         'description' => 'Defines image and video placement related to the container',
@@ -236,7 +236,7 @@ $tempColumns = array(
             ],
         ],
     ],
-    'tx_microtemplate_c_bgfixed' => [
+    'tx_containeritems_s_bgfixed' => [
         'exclude' => 1,
         'label' => 'Fixed',
         'description' => 'Background does not scroll with the section',
@@ -251,7 +251,7 @@ $tempColumns = array(
             ],
         ]
     ],
-    'tx_microtemplate_c_bgoverlay' => [
+    'tx_containeritems_s_bgoverlay' => [
         'exclude' => 1,
         'label'   => 'Overlay Color',
         'config'  => [
@@ -259,7 +259,7 @@ $tempColumns = array(
             'size' => 10,
         ],
     ],
-    'tx_microtemplate_c_bgoverlaydark' => [
+    'tx_containeritems_s_bgoverlaydark' => [
         'exclude' => 1,
         'label'   => 'Overlay Color (dark mode)',
         'config'  => [
@@ -267,7 +267,7 @@ $tempColumns = array(
             'size' => 10,
         ],
     ],
-    'tx_microtemplate_c_bgoverlayopacity' => [
+    'tx_containeritems_s_bgoverlayopacity' => [
         'exclude' => 1,
         'label'   => 'Overlay Opacity',
         'description' => 'Numbers from 0 to 99',
@@ -296,40 +296,40 @@ $GLOBALS['TCA']['tt_content']['types']['containerSection']['showitem'] = str_rep
 );
 
 $GLOBALS['TCA']['tt_content']['palettes']['sectionSettings']['showitem'] = '
-    tx_microtemplate_c_classes,
-    tx_microtemplate_c_aligncontent,
-    tx_microtemplate_c_framepadding,
+    tx_containeritems_s_classes,
+    tx_containeritems_s_aligncontent,
+    tx_containeritems_s_framepadding,
     --linebreak--,
-    tx_microtemplate_c_fullheight,
-    tx_microtemplate_c_fullwidth,
-    tx_microtemplate_c_vcenter,
+    tx_containeritems_s_fullheight,
+    tx_containeritems_s_fullwidth,
+    tx_containeritems_s_vcenter,
 ';
 $GLOBALS['TCA']['tt_content']['palettes']['sectionColors']['showitem'] = '
-    tx_microtemplate_c_textcolorselect,
-    tx_microtemplate_c_textcolor,
-    tx_microtemplate_c_bgcolorselect,
-    tx_microtemplate_c_bgcolor,
+    tx_containeritems_s_textcolorselect,
+    tx_containeritems_s_textcolor,
+    tx_containeritems_s_bgcolorselect,
+    tx_containeritems_s_bgcolor,
 ';
 $GLOBALS['TCA']['tt_content']['palettes']['sectionBgImage']['showitem'] = '
     image,
     --linebreak--,
-    tx_microtemplate_c_bgimagewidth,
-    tx_microtemplate_c_bgimgeffect,
+    tx_containeritems_s_bgimagewidth,
+    tx_containeritems_s_bgimgeffect,
 ';
 $GLOBALS['TCA']['tt_content']['palettes']['sectionBgVideo']['showitem'] = '
     assets,
     --linebreak--,
-    tx_microtemplate_c_bgvideosound,
-    tx_microtemplate_c_bgvideoclearframe,
-    tx_microtemplate_c_bgvideoonoloop,
+    tx_containeritems_s_bgvideosound,
+    tx_containeritems_s_bgvideoclearframe,
+    tx_containeritems_s_bgvideoonoloop,
 ';
 $GLOBALS['TCA']['tt_content']['palettes']['sectionBgSettings']['showitem'] = '
-    tx_microtemplate_c_bgplacement,
-    tx_microtemplate_c_bgfixed,
+    tx_containeritems_s_bgplacement,
+    tx_containeritems_s_bgfixed,
     --linebreak--,
-    tx_microtemplate_c_bgoverlay,
-    tx_microtemplate_c_bgoverlaydark,
-    tx_microtemplate_c_bgoverlayopacity,
+    tx_containeritems_s_bgoverlay,
+    tx_containeritems_s_bgoverlaydark,
+    tx_containeritems_s_bgoverlayopacity,
 ';
 
 

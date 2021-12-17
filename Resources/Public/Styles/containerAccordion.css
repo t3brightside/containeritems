@@ -1,22 +1,39 @@
-.ge-accordion-section-title {
-    font-family: 'Fira Sans Extra Condensed', sans-serif;
+.containerAccordion-item {
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+}
+
+.containerAccordion-item:last-child {
+    border-bottom: none;
+}
+
+.containerAccordion-title {
     font-size: 1.26em;
     padding: .72em 0;
     position: relative;
     outline: 0;
     box-sizing: border-box;
     display: block;
-    font-weight: 500;
+    font-weight: bold;
     padding-right: 3em;
+    transition: all .3s;
+    font-weight: bold;
+    border-bottom: 1px solid transparent;
 }
 
-.ge-accordion-section-title::after, .ge-accordion-section-title::before {
-    top: 1.37em;
+.containerAccordion-title:hover {
+    cursor: pointer;
+}
+
+.containerAccordion-title::after, .containerAccordion-title::before {
+    top: 1.26em;
     position: absolute;
     content: '';
+    background: #fff;
+    transition: all .3s;
 }
 
-.ge-accordion-section-title::before {
+.containerAccordion-title::before {
     height: 0.8em;
     width: 2px;
     right: 0.4em;
@@ -24,39 +41,29 @@
     margin-top: -0.4em;
 }
 
-.ge-accordion-section-title::after {
+.containerAccordion-title::after {
     width: 0.8em;
     height: 2px;
     right: 0;
     margin-top: -1px;
 }
 
-.ge-accordion-section-title.active::before {
-    transition: all 0.3s ease;
+.act .containerAccordion-title::before {
+    transition: all .3s ease;
     height: 0;
     margin-top: 0;
 }
 
-.ge-accordion-section-content {
+.containerAccordion-content {
+    transition: all .3s ease;
+    overflow: hidden;
+    max-height: 0;
+}
+
+.act .containerAccordion-content {
+    max-height: var(--max-height);
+}
+
+.containerAccordion-content div:first-child header {
     display: none;
-}
-
-.ge-accordion-section {
-    border-bottom: 1px solid #ddd;
-}
-
-.ge-accordion-section-content div:first-child header {
-    display: none;
-}
-
-.ge-accordion-section:last-child {
-    border-bottom: none;
-}
-
-.ge-accordion-section-title.active, .ge-accordion-section-title:hover {
-    text-decoration: none;
-}
-
-.ge-accordion-section-title.active {
-    border-bottom: none;
 }
