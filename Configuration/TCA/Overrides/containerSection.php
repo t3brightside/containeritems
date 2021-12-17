@@ -37,7 +37,7 @@ $tempColumns = array(
                 ['Default', '0'],
                 ['Center', 'center'],
                 ['Left', 'left'],
-                ['Left', 'right'],
+                ['Right', 'right'],
             ],
         ],
     ],
