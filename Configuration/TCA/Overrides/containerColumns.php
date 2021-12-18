@@ -14,7 +14,7 @@
             ]
         )
     )
-    ->setIcon('EXT:container/Resources/Public/Icons/container-2col.svg')
+    ->setIcon('EXT:containeritems/Resources/Public/Icons/containerColumns-1-1.svg')
 );
 
 
@@ -32,7 +32,7 @@
             ]
         )
     )
-    ->setIcon('EXT:container/Resources/Public/Icons/container-2col-left.svg')
+    ->setIcon('EXT:containeritems/Resources/Public/Icons/containerColumns-2-1.svg')
 );
 
 \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)-> configureContainer(
@@ -49,7 +49,7 @@
             ]
         )
     )
-    ->setIcon('EXT:container/Resources/Public/Icons/container-2col-right.svg')
+    ->setIcon('EXT:containeritems/Resources/Public/Icons/containerColumns-1-2.svg')
 );
 
 \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)-> configureContainer(
@@ -67,7 +67,7 @@
             ]
         )
     )
-    ->setIcon('EXT:container/Resources/Public/Icons/container-3col.svg')
+    ->setIcon('EXT:containeritems/Resources/Public/Icons/containerColumns-1-1-1.svg')
 );
 
 \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)-> configureContainer(
@@ -86,7 +86,7 @@
             ]
         )
     )
-    ->setIcon('EXT:container/Resources/Public/Icons/container-3col.svg')
+    ->setIcon('EXT:containeritems/Resources/Public/Icons/containerColumns-1-1-1-1.svg')
 );
 
 $GLOBALS['TCA']['tt_content']['types']['containerColumns-1-1']['showitem'] = str_replace(
