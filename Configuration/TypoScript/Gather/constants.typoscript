@@ -1,0 +1,4 @@
+# cat=Containeritems Gather/containeritems; type=string; label= Template Root Paths
+containerGather.templateRootPaths = EXT:containeritems/Resources/Private/Templates/
+# cat=Containeritems Gather/containeritems; type=string; label= Partial Root Paths
+containerGather.partialRootPaths = EXT:containeritems/Resources/Private/Partials/

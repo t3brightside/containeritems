@@ -28,4 +28,10 @@ call_user_func(function () {
         'Configuration/TypoScript/Section',
         'Containeritems - Section'
     );
+
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+        $extensionKey,
+        'Configuration/TypoScript/Gather',
+        'Containeritems - Gather'
+    );
 });
