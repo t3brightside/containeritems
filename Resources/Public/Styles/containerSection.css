@@ -194,8 +194,16 @@
     text-align: center;
 }
 
+.containerSection.align-right {
+    text-align: right;
+}
+
 .containerSection.align-center p, .containerSection.align-center ol, .containerSection.align-center ul, .containerSection.align-center {
     margin: auto;
+}
+
+.containerSection.align-right p, .containerSection.align-right ol, .containerSection.align-right ul, .containerSection.align-right {
+    margin-left: auto;
 }
 
 /* dark and light BG colors are set in template constants */

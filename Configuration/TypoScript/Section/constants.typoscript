@@ -10,3 +10,5 @@ containerSection.partialRootPaths = EXT:containeritems/Resources/Private/Partial
 containerSection.bgImageWidth = 1400
 # cat=Containeritems Section/containeritems; type=int[10-100]; label= Section background jpg quality
 containerSection.bgImageQuality = 80
+# cat=Containeritems Section/containeritems; type=options[left,center,right]; label= Default content alignment
+containerSection.defaultAlignment = left

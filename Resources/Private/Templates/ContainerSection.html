@@ -1,7 +1,7 @@
 	<div
 		id="c{data.uid}"
 		class="containerSection {data.tx_containeritems_s_classes}
-            {f:if(condition: '{data.tx_containeritems_s_aligncontent}', then: 'align-{data.tx_containeritems_s_aligncontent}')}
+            {f:if(condition: '{data.tx_containeritems_s_aligncontent}', then: 'align-{data.tx_containeritems_s_aligncontent}', else: 'align-{defaultAlignment}')}
             {f:if(condition: '{data.tx_containeritems_s_framepadding}', then: 'frame-padding-{data.tx_containeritems_s_framepadding}')}
 			{f:if(condition: '{data.tx_containeritems_s_fullheight}==1', then: 'fullheight')}
 			{f:if(condition: '{data.tx_containeritems_s_fullheight}==1&&{data.tx_containeritems_s_vcenter}==1', then: 'vcenter')}
