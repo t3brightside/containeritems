@@ -4,7 +4,7 @@
 [![Downloads](https://poser.pugx.org/t3brightside/containeritems/downloads)](https://packagist.org/packages/t3brightside/containeritems)
 [![Brightside](https://img.shields.io/badge/by-t3brightside.com-orange.svg?style=flat)](https://t3brightside.com)
 
-**TYPO3 CMS layout containers for columns, accordion, content sections with background images and videos.**
+**TYPO3 CMS layout containers for columns, accordion and content sections.**
 
 - **[Demo](https://microtemplate.t3brightside.com)**
 
@@ -16,11 +16,12 @@
 - container
 
 ## Features
-- Easy to customise using TypoScript constants
-- Columns: 4-col, 3-col, 2-col, 2-col with sidebar
-- Accordions
-- Sections with background image and video
-- Minimal CSS and JavaScript no frameworks needed
+- Containers
+    - Columns (1-1, 1-1-1, 1-1-1-1, 2-1, 1-2)
+    - Accordion
+    - Gather
+    - Sections (bg image, bg image effects, bg video, bg placement, bg overlay, content alignment, etc). To all the features of a section jQuery is needed.
+- Minimal CSS and JS
 
 ## Install
 - `composer req t3brightside/containeritems` or from TYPO3 extension repository **[containeritems](https://extensions.typo3.org/extension/containeritems/)**
