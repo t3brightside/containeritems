@@ -5,18 +5,13 @@ $(window).scroll(function() {
     var bottom_of_element = $(this).offset().top + $(this).parent().outerHeight();
     var bottom_of_screen = $(window).scrollTop() + window.innerHeight;
     var top_of_screen = $(window).scrollTop();
-    if ((bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)) {
+    if (
+      (bottom_of_screen > top_of_element) &&
+      (top_of_screen < bottom_of_element)
+    ) {
       $(this)[0].play();
     } else {
       $(this)[0].pause();
-      /* bring back hidden menu and content if out of viewport */
-      if ($(this).parent().hasClass('active')) {
-        $('#header').fadeToggle();
-        $(this).parent().children('.contentWidth, .overlay').fadeToggle();
-        $(this).parent().children('.clearframe').removeClass('active');
-        $(this).parent().removeClass('active');
-        $(this).parent().css('height', '');
-      }
     }
   });
   $('.containerSection').each(function() {
@@ -24,10 +19,11 @@ $(window).scroll(function() {
     var bottom_of_element = $(this).offset().top + $(this).outerHeight();
     var bottom_of_screen = $(window).scrollTop() + window.innerHeight;
     var top_of_screen = $(window).scrollTop();
-    if ((bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)) {
-
-    } else {
-      /* bring back hidden menu and content if out of viewport */
+    if (
+      (bottom_of_screen > top_of_element) &&
+      (top_of_screen < bottom_of_element)
+    ) {} else {
+/* bring back hidden menu and content if out of viewport */
       if ($(this).hasClass('active')) {
         $('#header').fadeToggle();
         $(this).children('.contentWidth, .overlay').fadeToggle();
@@ -39,8 +35,9 @@ $(window).scroll(function() {
   });
 });
 
-/* hide header and content if sound button is clicked */
 $(document).ready(function() {
+
+/* unmute/mute bg video sound */
   $(".sound").click(function() {
     if ($(this).parent().children('.bg-video').prop('muted')) {
       $(this).parent().children('.bg-video').prop('muted', false);
@@ -49,6 +46,9 @@ $(document).ready(function() {
     }
     $(this).toggleClass('active');
   });
+
+/* hide header and content if clear button is clicked */
+
   $(".clearframe").click(function() {
     var height = $(this).parent().height();
     if (!$(this).parent().hasClass('fullheight')) {
