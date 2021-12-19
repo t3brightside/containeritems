@@ -3,7 +3,7 @@
     'title' => 'Containeritems',
     'description' => 'EXT:container layouts for columns, accordions and content sections.',
     'category' => 'fe',
-    'version' => '1.0.0',
+    'version' => '1.0.1',
     'state' => 'stable',
     'clearCacheOnLoad' => 1,
     'author' => 'Tanel Põld',
