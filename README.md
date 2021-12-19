@@ -4,7 +4,7 @@
 [![Downloads](https://poser.pugx.org/t3brightside/containeritems/downloads)](https://packagist.org/packages/t3brightside/containeritems)
 [![Brightside](https://img.shields.io/badge/by-t3brightside.com-orange.svg?style=flat)](https://t3brightside.com)
 
-**TYPO3 CMS layout containers for columns, accordion and content sections.**
+**TYPO3 CMS ext:container layouts for columns, accordions and content sections.**
 
 - **[Demo](https://microtemplate.t3brightside.com)**
 

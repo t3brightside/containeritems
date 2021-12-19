@@ -1,9 +1,9 @@
 <?php
   $EM_CONF[$_EXTKEY] = [
     'title' => 'Containeritems',
-    'description' => 'Container elements like column grids, accordion, page sections etc.',
+    'description' => 'EXT:container layouts for columns, accordions and content sections.',
     'category' => 'fe',
-    'version' => '0.1.0',
+    'version' => '1.0.0',
     'state' => 'stable',
     'clearCacheOnLoad' => 1,
     'author' => 'Tanel Põld',

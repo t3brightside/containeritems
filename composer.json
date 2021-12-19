@@ -1,6 +1,6 @@
 {
 	"name": "t3brightside/containeritems",
-	"description": "Container elements like column grids, accordion, page sections etc.",
+	"description": "TYPO3 CMS ext:container layouts for columns, accordions and content sections.",
 	"type": "typo3-cms-extension",
 	"keywords": ["TYPO3", "template", "grids", "columns", "structure"],
 	"homepage": "https://microtemplate.t3brightside.com/",
