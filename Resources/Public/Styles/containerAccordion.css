@@ -59,6 +59,7 @@
 
 .containerAccordion-item.act .containerAccordion-content {
     max-height: var(--max-height);
+    margin-bottom: 1em;
 }
 
 .containerAccordion-content div:first-child header {
