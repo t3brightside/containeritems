@@ -1,3 +1,10 @@
+function vh() {
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+vh();
+window.addEventListener('resize',vh);
+
 $(window).scroll(function() {
   /* play background videos only if in viewport */
   $('.bg-video').each(function() {
@@ -36,7 +43,6 @@ $(window).scroll(function() {
 });
 
 $(document).ready(function() {
-
 /* unmute/mute bg video sound */
   $(".sound").click(function() {
     if ($(this).parent().children('.bg-video').prop('muted')) {
@@ -46,9 +52,7 @@ $(document).ready(function() {
     }
     $(this).toggleClass('active');
   });
-
 /* hide header and content if clear button is clicked */
-
   $(".clearframe").click(function() {
     var height = $(this).parent().height();
     if (!$(this).parent().hasClass('fullheight')) {
