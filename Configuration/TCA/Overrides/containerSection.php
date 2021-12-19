@@ -18,7 +18,7 @@
 
 
 $tempColumns = array(
-    'tx_containeritems_s_classes' => [
+    'tx_containeritems_classes' => [
         'exclude' => 1,
         'label'   => 'Custom Classes',
         'config'  => [
@@ -296,7 +296,7 @@ $GLOBALS['TCA']['tt_content']['types']['containerSection']['showitem'] = str_rep
 );
 
 $GLOBALS['TCA']['tt_content']['palettes']['sectionSettings']['showitem'] = '
-    tx_containeritems_s_classes,
+    tx_containeritems_classes,
     tx_containeritems_s_aligncontent,
     tx_containeritems_s_framepadding,
     --linebreak--,

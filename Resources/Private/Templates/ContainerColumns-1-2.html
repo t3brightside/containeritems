@@ -1,13 +1,13 @@
 <f:variable name="narrowColWidth">{100 - wideColOfTwoWidth - spaceWidth}</f:variable>
 
-<div id="c{data.uid}" class="frame frame-type-container containerColumns containerColumns-1-2 {f:if(condition: '{data.space_before_class}', then: 'frame-space-before-{data.space_before_class}')} {f:if(condition: '{data.space_after_class}', then: 'frame-space-after-{data.space_after_class}')}">
-    <div class="col" style="width: {narrowColWidth}%">
+<div id="c{data.uid}" class="frame frame-type-container {data.tx_containeritems_classes} containerColumns containerColumns-1-2 {f:if(condition: '{data.space_before_class}', then: 'frame-space-before-{data.space_before_class}')} {f:if(condition: '{data.space_after_class}', then: 'frame-space-after-{data.space_after_class}')}">
+    <div class="col col-1" style="width: {narrowColWidth}%">
         <f:for each="{children_101}" as="element">
 			{element.renderedContent -> f:format.raw()}
 		</f:for>
 	</div>
     <div class="space" style="width: {spaceWidth}%"></div>
-    <div class="col" style="width: {wideColOfTwoWidth}%">
+    <div class="col col-2" style="width: {wideColOfTwoWidth}%">
         <f:for each="{children_102}" as="element">
 			{element.renderedContent -> f:format.raw()}
 		</f:for>
