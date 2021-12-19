@@ -1,7 +1,7 @@
 <?php
   $EM_CONF[$_EXTKEY] = [
     'title' => 'Containeritems',
-    'description' => 'EXT:container layouts for columns, accordions and content sections.',
+    'description' => 'EXT:container layouts for columns, accordions and content sections. Demo at: https://microtemplate.t3brightside.com',
     'category' => 'fe',
     'version' => '1.0.1',
     'state' => 'stable',
