@@ -20,7 +20,7 @@
     - Columns (1-1, 1-1-1, 1-1-1-1, 2-1, 1-2)
     - Accordion
     - Gather
-    - Sections (bg image, bg image effects, bg video, bg placement, bg overlay, content alignment, etc). To all the features of a section jQuery is needed.
+    - Sections (bg image, bg image effects, bg video, bg placement, bg overlay, content alignment, etc). Some of the section features require jQuery.
 - Minimal CSS and JS
 
 ## Install
