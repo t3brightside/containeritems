@@ -13,8 +13,7 @@
 	"require": {
 		"typo3/cms-core": "^11.5",
 		"typo3/cms-fluid-styled-content": "^11.5",
-		"b13/container": "^1.4",
-		"ichhabrecht/content-defender": "^3.2"
+		"b13/container": "^1"
 	},
 	"extra": {
 		"typo3/cms": {
