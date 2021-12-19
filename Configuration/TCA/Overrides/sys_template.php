@@ -3,13 +3,11 @@
 defined('TYPO3_MODE') || die();
 
 call_user_func(function () {
-    /**
-     * Temporary variables
-     */
+
     $extensionKey = 'containeritems';
 
     /**
-     * Default TypoScript for Microtemplate
+     * TypoScript Templates for inclusion
      */
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
         $extensionKey,
@@ -25,13 +23,14 @@ call_user_func(function () {
 
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
         $extensionKey,
-        'Configuration/TypoScript/Section',
-        'Containeritems - Section'
+        'Configuration/TypoScript/Gather',
+        'Containeritems - Gather'
     );
 
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
         $extensionKey,
-        'Configuration/TypoScript/Gather',
-        'Containeritems - Gather'
+        'Configuration/TypoScript/Section',
+        'Containeritems - Section'
     );
+
 });

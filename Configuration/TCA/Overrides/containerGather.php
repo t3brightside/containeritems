@@ -13,7 +13,7 @@
             ]
         )
     )
-    ->setIcon('EXT:containeritems/Resources/Public/Icons/containerSection.svg')
+    ->setIcon('EXT:containeritems/Resources/Public/Icons/Containers/containerSection.svg')
 );
 
 $GLOBALS['TCA']['tt_content']['types']['containerGather']['showitem'] = str_replace(

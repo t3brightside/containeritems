@@ -13,7 +13,7 @@
             ]
         )
     )
-    ->setIcon('EXT:containeritems/Resources/Public/Icons/containerSection.svg')
+    ->setIcon('EXT:containeritems/Resources/Public/Icons/Containers/containerSection.svg')
 );
 
 

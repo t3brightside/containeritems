@@ -13,7 +13,7 @@
             ]
         )
     )
-    ->setIcon('EXT:containeritems/Resources/Public/Icons/containerAccordion.svg')
+    ->setIcon('EXT:containeritems/Resources/Public/Icons/Containers/containerAccordion.svg')
 );
 
 $GLOBALS['TCA']['tt_content']['types']['containerAccordion']['showitem'] = str_replace(
