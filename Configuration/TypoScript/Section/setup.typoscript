@@ -1,4 +1,6 @@
 page.includeCSS.containerSection = {$containerSection.styles}
+page.includeCSS.containerSection.inline = 1
+
 page.includeJSFooterlibs.containerSection = {$containerSection.javaScript}
 
 tt_content.containerSection =< lib.contentElement
