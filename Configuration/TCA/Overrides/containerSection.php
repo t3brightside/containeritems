@@ -24,6 +24,9 @@ $tempColumns = array(
         'config'  => [
             'type'     => 'input',
             'size' => 20,
+            'behaviour' => [
+                'allowLanguageSynchronization' => true,
+            ],
         ],
     ],
     'tx_containeritems_s_aligncontent' => [
@@ -39,6 +42,9 @@ $tempColumns = array(
                 ['Left', 'left'],
                 ['Right', 'right'],
             ],
+            'behaviour' => [
+                'allowLanguageSynchronization' => true,
+            ],
         ],
     ],
     'tx_containeritems_s_framepadding' => [
@@ -52,6 +58,9 @@ $tempColumns = array(
                 ['Default', '0'],
                 ['None', 'none'],
                 ['Small', 'small'],
+            ],
+            'behaviour' => [
+                'allowLanguageSynchronization' => true,
             ],
         ],
     ],
@@ -68,6 +77,9 @@ $tempColumns = array(
                     1 => '',
                 ]
             ],
+            'behaviour' => [
+                'allowLanguageSynchronization' => true,
+            ],
         ]
     ],
     'tx_containeritems_s_fullheight' => [
@@ -82,6 +94,9 @@ $tempColumns = array(
                     0 => '',
                     1 => '',
                 ]
+            ],
+            'behaviour' => [
+                'allowLanguageSynchronization' => true,
             ],
         ]
     ],
@@ -98,6 +113,9 @@ $tempColumns = array(
                     1 => '',
                 ]
             ],
+            'behaviour' => [
+                'allowLanguageSynchronization' => true,
+            ],
         ]
     ],
     'tx_containeritems_s_textcolorselect' => [
@@ -112,6 +130,9 @@ $tempColumns = array(
                 ['Light', 'text-light'],
                 ['Dark', 'text-dark'],
             ],
+            'behaviour' => [
+                'allowLanguageSynchronization' => true,
+            ],
         ],
     ],
     'tx_containeritems_s_textcolor' => [
@@ -120,6 +141,9 @@ $tempColumns = array(
         'config'  => [
             'type'     => 'input',
             'size' => 10,
+            'behaviour' => [
+                'allowLanguageSynchronization' => true,
+            ],
         ],
     ],
     'tx_containeritems_s_bgcolorselect' => [
@@ -135,6 +159,9 @@ $tempColumns = array(
                 ['Dark', 'bg-dark'],
                 ['Black', 'bg-black'],
             ],
+            'behaviour' => [
+                'allowLanguageSynchronization' => true,
+            ],
         ],
     ],
     'tx_containeritems_s_bgcolor' => [
@@ -143,6 +170,9 @@ $tempColumns = array(
         'config'  => [
             'type'     => 'input',
             'size' => 10,
+            'behaviour' => [
+                'allowLanguageSynchronization' => true,
+            ],
         ],
     ],
     'tx_containeritems_s_bgimagewidth' => [
@@ -151,6 +181,9 @@ $tempColumns = array(
         'config'  => [
             'type'     => 'input',
             'size' => 10,
+            'behaviour' => [
+                'allowLanguageSynchronization' => true,
+            ],
         ],
     ],
     'tx_containeritems_s_bgimgeffect' => [
@@ -167,6 +200,9 @@ $tempColumns = array(
                 ['Blur', '30'],
                 ['Blur More', '40'],
             ],
+            'behaviour' => [
+                'allowLanguageSynchronization' => true,
+            ],
         ],
     ],
     'tx_containeritems_s_bgvideosound' => [
@@ -181,6 +217,9 @@ $tempColumns = array(
                     0 => '',
                     1 => '',
                 ]
+            ],
+            'behaviour' => [
+                'allowLanguageSynchronization' => true,
             ],
         ]
     ],
@@ -197,6 +236,9 @@ $tempColumns = array(
                     1 => '',
                 ]
             ],
+            'behaviour' => [
+                'allowLanguageSynchronization' => true,
+            ],
         ]
     ],
     'tx_containeritems_s_bgvideoonoloop' => [
@@ -212,6 +254,9 @@ $tempColumns = array(
                     1 => '',
                     'invertStateDisplay' => true,
                 ]
+            ],
+            'behaviour' => [
+                'allowLanguageSynchronization' => true,
             ],
         ]
     ],
@@ -234,6 +279,9 @@ $tempColumns = array(
                 ['Right Center', '7'],
                 ['Right Bottom', '8'],
             ],
+            'behaviour' => [
+                'allowLanguageSynchronization' => true,
+            ],
         ],
     ],
     'tx_containeritems_s_bgfixed' => [
@@ -249,6 +297,9 @@ $tempColumns = array(
                     1 => '',
                 ]
             ],
+            'behaviour' => [
+                'allowLanguageSynchronization' => true,
+            ],
         ]
     ],
     'tx_containeritems_s_bgoverlay' => [
@@ -257,6 +308,9 @@ $tempColumns = array(
         'config'  => [
             'type'     => 'input',
             'size' => 10,
+            'behaviour' => [
+                'allowLanguageSynchronization' => true,
+            ],
         ],
     ],
     'tx_containeritems_s_bgoverlaydark' => [
@@ -265,6 +319,9 @@ $tempColumns = array(
         'config'  => [
             'type'     => 'input',
             'size' => 10,
+            'behaviour' => [
+                'allowLanguageSynchronization' => true,
+            ],
         ],
     ],
     'tx_containeritems_s_bgoverlayopacity' => [
@@ -275,6 +332,9 @@ $tempColumns = array(
             'type'     => 'input',
             'eval' => 'num',
             'size' => 1,
+            'behaviour' => [
+                'allowLanguageSynchronization' => true,
+            ],
         ],
     ],
 );
