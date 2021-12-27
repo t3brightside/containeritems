@@ -1,6 +1,18 @@
 page.includeCSS.containerSection = {$containerSection.styles}
 page.includeCSS.containerSection.inline = 1
 
+["{$containerSection.fadeInContent}" == "1"]
+  page.headerData {
+    109991 = TEXT
+    109991.value (
+      <style>
+        .frame { opacity: 0; transition: opacity .3s ease-in }
+        .frame.isInViewport { opacity: 1 }
+      </style>
+    )
+  }
+[END]
+
 page.includeJSFooterlibs.containerSection = {$containerSection.javaScript}
 
 tt_content.containerSection =< lib.contentElement
