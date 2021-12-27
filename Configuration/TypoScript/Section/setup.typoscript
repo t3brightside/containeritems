@@ -6,8 +6,8 @@ page.includeCSS.containerSection.inline = 1
     109991 = TEXT
     109991.value (
       <style>
-        .contentSection .frame { opacity: 0; transition: opacity .3s ease-in }
-        .contentSection .frame.isInViewport { opacity: 1 }
+        .containerSection .frame { opacity: 0; transition: opacity .3s ease-in }
+        .containerSection .frame.isInViewport { opacity: 1 }
       </style>
     )
   }
