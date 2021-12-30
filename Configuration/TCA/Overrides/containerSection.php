@@ -100,23 +100,23 @@ $tempColumns = array(
             ],
         ]
     ],
-    'tx_containeritems_s_vcenter' => [
+    'tx_containeritems_s_valign' => [
         'exclude' => 1,
-        'label' => 'Vertically Center',
-        'description' => 'Content will be placed vertically in middle of the section. Works with Full Height only',
-        'config' => [
-            'type' => 'check',
-            'renderType' => 'checkboxToggle',
+        'label'   => 'Vertical Alignment',
+        'config'  => [
+            'type'     => 'select',
+            'renderType' => 'selectSingle',
+            'default' => 0,
             'items' => [
-                [
-                    0 => '',
-                    1 => '',
-                ]
+                ['Default', '0'],
+                ['Top', 'top'],
+                ['Center', 'center'],
+                ['Bottom', 'bottom'],
             ],
             'behaviour' => [
                 'allowLanguageSynchronization' => true,
             ],
-        ]
+        ],
     ],
     'tx_containeritems_s_textcolorselect' => [
         'exclude' => 1,
@@ -362,7 +362,7 @@ $GLOBALS['TCA']['tt_content']['palettes']['sectionSettings']['showitem'] = '
     --linebreak--,
     tx_containeritems_s_fullheight,
     tx_containeritems_s_fullwidth,
-    tx_containeritems_s_vcenter,
+    tx_containeritems_s_valign,
 ';
 $GLOBALS['TCA']['tt_content']['palettes']['sectionColors']['showitem'] = '
     tx_containeritems_s_textcolorselect,
