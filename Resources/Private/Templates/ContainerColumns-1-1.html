@@ -1,6 +1,6 @@
 <f:variable name="colWidth">{100 - spaceWidth / 2}</f:variable>
 
-<div id="c{data.uid}" class="frame frame-type-container containerColumns {data.tx_containeritems_classes} containerColumns-1-1 {f:if(condition: '{data.space_before_class}', then: 'frame-space-before-{data.space_before_class}')} {f:if(condition: '{data.space_after_class}', then: 'frame-space-after-{data.space_after_class}')}">
+<div id="c{data.uid}" class="frame frame-type-container c-columns {data.tx_containeritems_classes} c-columns-1-1 {f:if(condition: '{data.space_before_class}', then: 'frame-space-before-{data.space_before_class}')} {f:if(condition: '{data.space_after_class}', then: 'frame-space-after-{data.space_after_class}')}">
 	<div class="col col-1" style="width: {colWidth}%">
         <f:for each="{children_101}" as="element">
 			{element.renderedContent -> f:format.raw()}
