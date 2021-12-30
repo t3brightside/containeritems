@@ -1,17 +1,17 @@
-.containerColumns {
+.c-columns {
   width: 100%;
 }
 
-.containerColumns>.col, .containerColumns>.space {
+.c-columns>.col, .c-columns>.space {
   float: left;
   min-height: 1px;
 }
 
 @media screen and (max-width: 640px) {
-  .containerColumns>.col {
+  .c-columns>.col {
     width: 100% !important;
   }
-  .containerColumns>.space {
+  .c-columns>.space {
     display: none;
   }
 }

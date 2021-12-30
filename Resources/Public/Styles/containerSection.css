@@ -1,56 +1,56 @@
 /* gridelements page sections and column layouts */
-.containerSection {
+.c-section {
     padding-top: 7em;
     padding-bottom: 7em;
     float: left;
     width: 100%;
     position: relative;
 }
-.containerSection.bg0 {
+.c-section.bg0 {
     background-position: center center !important;
 }
-.containerSection.bg1 {
+.c-section.bg1 {
     background-position: left top !important;
 }
 
-.containerSection.bg2 {
+.c-section.bg2 {
     background-position: left center !important;
 }
 
-.containerSection.bg3 {
+.c-section.bg3 {
     background-position: left bottom !important;
 }
 
-.containerSection.bg4 {
+.c-section.bg4 {
     background-position: center top !important;
 }
 
-.containerSection.bg5 {
+.c-section.bg5 {
     background-position: center bottom !important;
 }
 
-.containerSection.bg6 {
+.c-section.bg6 {
     background-position: right top !important;
 }
 
-.containerSection.bg7 {
+.c-section.bg7 {
     background-position: right center !important;
 }
 
-.containerSection.bg8 {
+.c-section.bg8 {
     background-position: right bottom !important;
 }
 
-.containerSection.fixed {
+.c-section.fixed {
     background-attachment: fixed !important;
 }
 
-.containerSection.has-bg-video {
+.c-section.has-bg-video {
     background-color: transparent !important;
     overflow: hidden;
 }
 
-.containerSection .videobuttons {
+.c-section .videobuttons {
     background: rgba(255, 255, 255, 0.2);
     color: #fff;
     text-transform: uppercase;
@@ -64,45 +64,54 @@
     z-index: 3;
 }
 
-.containerSection .videobuttons:hover {
+.c-section .videobuttons:hover {
     cursor: pointer;
 }
 
-.containerSection .sound.hasclearframebutton {
+.c-section .sound.hasclearframebutton {
     right: 7.5em;
 }
 
-.containerSection .videobuttons svg {
+.c-section .videobuttons svg {
     height: 1.5em;
     width: auto;
 }
 
-.containerSection .sound .on, .containerSection .clearframe .on {
+.c-section .sound .on, .c-section .clearframe .on {
     display: none;
 }
 
-.containerSection .sound .off, .containerSection .clearframe .off {
+.c-section .sound .off, .c-section .clearframe .off {
     display: block;
 }
 
-.containerSection .sound.active .on, .containerSection .clearframe.active .on {
+.c-section .sound.active .on, .c-section .clearframe.active .on {
     display: block
 }
 
-.containerSection .sound.active .off, .containerSection .clearframe.active .off {
+.c-section .sound.active .off, .c-section .clearframe.active .off {
     display: none
 }
 
-.containerSection .overlay {
+.c-section .overlay {
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     z-index: 1;
+
 }
 
-.containerSection .bg-video {
+.c-section .overlay, .c-section .content {
+    opacity: 1;
+    transition: opacity .3s ease-in-out;
+}
+.c-section.contentIsHidden .overlay, .c-section.contentIsHidden .content {
+    opacity: 0 !important;
+}
+
+.c-section .bg-video {
     min-width: 100%;
     min-height: 100%;
     width: auto;
@@ -114,51 +123,51 @@
     z-index: 1;
 }
 
-.containerSection.bg1 .bg-video {
+.c-section.bg1 .bg-video {
     left: 0;
     top: 50%;
     transform: translateY(-50%);
 }
 
-.containerSection.bg2 .bg-video {
+.c-section.bg2 .bg-video {
     left: auto;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
 }
 
-.containerSection.bg3 .bg-video {
+.c-section.bg3 .bg-video {
     left: 0;
     top: 0;
     transform: none;
 }
 
-.containerSection.bg4 .bg-video {
+.c-section.bg4 .bg-video {
     top: 0;
     transform: translateX(-50%);
 }
 
-.containerSection.bg5 .bg-video {
+.c-section.bg5 .bg-video {
     top: 0;
     left: auto;
     right: 0;
     transform: none;
 }
 
-.containerSection.bg6 .bg-video {
+.c-section.bg6 .bg-video {
     left: 0;
     bottom: 0;
     top: auto;
     transform: none;
 }
 
-.containerSection.bg7 .bg-video {
+.c-section.bg7 .bg-video {
     bottom: 0;
     top: auto;
     transform: translateX(-50%);
 }
 
-.containerSection.bg8 .bg-video {
+.c-section.bg8 .bg-video {
     left: auto;
     right: 0;
     bottom: 0;
@@ -166,112 +175,119 @@
     transform: none;
 }
 
-.containerSection.vcenter.fullheight .contentWidth {
+.c-section.valign-center.fullheight .contentWidth {
     position: absolute;
     width: 100%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
 }
 
-.containerSection.nopadding {
+.c-section.valign-bottom.fullheight .contentWidth {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.c-section.nopadding {
     padding: 0;
 }
 
-.containerSection.fullwidth .contentWidth {
+.c-section.fullwidth .contentWidth {
     max-width: 100%;
     padding: 0;
     margin: 0;
     width: 100% !important;
 }
 
-.containerSection.fullheight {
+.c-section.fullheight {
     min-height: 100vh;
     min-height: calc(var(--vh, 1vh) * 100);
 }
 
-.containerSection.align-center {
+.c-section.align-center {
     text-align: center;
 }
 
-.containerSection.align-right {
+.c-section.align-right {
     text-align: right;
 }
 
-.containerSection.align-center p, .containerSection.align-center ol, .containerSection.align-center ul, .containerSection.align-center {
+.c-section.align-center p, .c-section.align-center ol, .c-section.align-center ul, .c-section.align-center {
     margin: auto;
 }
 
-.containerSection.align-right p, .containerSection.align-right ol, .containerSection.align-right ul, .containerSection.align-right {
+.c-section.align-right p, .c-section.align-right ol, .c-section.align-right ul, .c-section.align-right {
     margin-left: auto;
 }
 
 /* dark and light BG colors are set in template constants */
-.containerSection.bg-dark {
+.c-section.bg-dark {
     -webkit-font-smoothing: antialiased;
 }
 
-.containerSection.bg-black {
+.c-section.bg-black {
     background-color: #000;
     color: #fff;
     -webkit-font-smoothing: antialiased;
 }
 
-.containerSection p, .containerSection ol, .containerSection ul {
+.c-section p, .c-section ol, .c-section ul {
     max-width: 41em;
 }
 
 /* custom section classes */
-.containerSection.home h1 {
+.c-section.home h1 {
     font-size: 5vw;
 }
 
 @media screen and (min-width: 1600px) {
-    .containerSection.home h1 {
+    .c-section.home h1 {
         font-size: 4em;
     }
 }
 
 @media screen and (max-width: 1180px) {
-    .containerSection.home h1 {
+    .c-section.home h1 {
         font-size: 3em;
     }
 }
 
 @media screen and (max-width: 1024px) {
-    .containerSection.fixed {
+    .c-section.fixed {
         background-attachment: scroll !important;
     }
 }
 
 @media screen and (max-width: 960px) {
-    .containerSection {
+    .c-section {
         padding-top: 4em;
         padding-bottom: 4em;
     }
 }
 
 @media screen and (max-width: 680px) {
-    .containerSection.home h1, h1 {
+    .c-section.home h1, h1 {
         font-size: 2.3em;
         line-height: 1.2em;
     }
 }
 
 @media screen and (max-width: 520px) {
-    .containerSection .videobuttons {
+    .c-section .videobuttons {
         right: 2.5em;
         bottom: 2.5em;
     }
 
-    .containerSection .sound.hasclearframebutton {
+    .c-section .sound.hasclearframebutton {
         right: 6em;
     }
 }
 
 @media screen and (max-height: 590px) {
-    .containerSection.fullheight {
+    .c-section.fullheight {
         min-height: 25em;
         height: 100vh;
     }

@@ -1,13 +1,13 @@
-.containerAccordion-item {
+.c-accordion-item {
     width: 100%;
     border-bottom: 1px solid #ddd;
 }
 
-.containerAccordion-item:last-child {
+.c-accordion-item:last-child {
     border-bottom: none;
 }
 
-.containerAccordion-title {
+.c-accordion-title {
     display: block;
     position: relative;
     box-sizing: border-box;
@@ -18,11 +18,11 @@
     border-bottom: 1px solid transparent;
 }
 
-.containerAccordion-title:hover {
+.c-accordion-title:hover {
     cursor: pointer;
 }
 
-.containerAccordion-title::after, .containerAccordion-title::before {
+.c-accordion-title::after, .c-accordion-title::before {
     top: 1.26em;
     position: absolute;
     content: '';
@@ -30,7 +30,7 @@
     transition: all .3s;
 }
 
-.containerAccordion-title::before {
+.c-accordion-title::before {
     height: 0.9em;
     width: 2px;
     right: 0.45em;
@@ -38,30 +38,30 @@
     margin-top: -0.45em;
 }
 
-.containerAccordion-title::after {
+.c-accordion-title::after {
     width: 0.9em;
     height: 2px;
     right: 0;
     margin-top: -1px;
 }
 
-.containerAccordion-item.act .containerAccordion-title::before {
+.c-accordion-item.act .c-accordion-title::before {
     transition: all .3s ease;
     height: 0;
     margin-top: 0;
 }
 
-.containerAccordion-content {
+.c-accordion-content {
     transition: all .3s ease;
     overflow: hidden;
     max-height: 0;
 }
 
-.containerAccordion-item.act .containerAccordion-content {
+.c-accordion-item.act .c-accordion-content {
     max-height: var(--max-height);
     margin-bottom: 1em;
 }
 
-.containerAccordion-content div:first-child header {
+.c-accordion-content div:first-child header {
     display: none;
 }
