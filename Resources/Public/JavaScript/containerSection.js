@@ -1,28 +1,3 @@
-// fade out function
-function ciFadeOut(el) {
-  el.style.opacity = 1;
-  (function fade() {
-    if ((el.style.opacity -= .1) < 0) {
-      el.style.display = "none";
-    } else {
-      requestAnimationFrame(fade);
-    }
-  })();
-};
-
-// fade in function
-function ciFadeIn(el, display) {
-  el.style.opacity = 0;
-  el.style.display = display || "block";
-  (function fade() {
-    var val = parseFloat(el.style.opacity);
-    if (!((val += .1) > 1)) {
-      el.style.opacity = val;
-      requestAnimationFrame(fade);
-    }
-  })();
-};
-
 // fix view height for mobile screens
 function ciVh() {
   let vh = window.innerHeight * 0.01;
@@ -32,82 +7,107 @@ ciVh();
 window.addEventListener('resize', ciVh);
 
 // check if container is in viewport
-function ciIsVisible(el) {
-  const {
-    top,
-    bottom
-  } = el.getBoundingClientRect();
+function isIsInViewport(el) {
+  const {top,bottom} = el.getBoundingClientRect();
   const vHeight = (window.innerHeight || document.documentElement.clientHeight);
-
-  return (
-    (top > 0 || bottom > 0) &&
-    top < vHeight
-  );
+  return ((top > 0 || bottom > 0) && top < vHeight);
 }
 
-// actions to take if item is in or out of viewport
-let sections = document.querySelectorAll('.containerSection');
-let videoSections = document.querySelectorAll('.bg-video');
-let frames = document.querySelectorAll('.frame');
+function onVisibilityChange(el, callback) {
+   var old_visible;
+   return function() {
+      var visible = isElementInViewport(el);
+      if (visible != old_visible) {
+         old_visible = visible;
+         if (typeof callback == 'function') {
+            callback();
+         }
+      }
+   }
+}
 
-document.addEventListener('scroll', function() {
-  sections.forEach(function(s) {
-    if (ciIsVisible(s)) {
-      s.classList.add("isInViewport");
+function toggleViewportClass(el) {
+  el.forEach(function(i) {
+    if (isIsInViewport(i)) {
+      i.classList.add("isInViewport");
     } else {
-      s.classList.remove("isInViewport");
-      if (s.classList.contains('active')) {
-        ciFadeIn(document.getElementById('header'));
-        s.querySelectorAll('.contentWidth')[0].style.display = 'block';
-        s.querySelectorAll('.overlay')[0].style.display = 'block';
-        s.querySelectorAll('.clearframe')[0].classList.remove('active');
-        s.classList.remove('active');
+      i.classList.remove("isInViewport");
+    }
+  });
+}
+
+function restoreHidden(el) {
+  el.forEach(function(i) {
+    if (!isIsInViewport(i)) {
+      // restore hidden content and header if section is scrolled out of viewport
+      if (i.classList.contains('contentIsHidden')) {
+        $('#header').fadeToggle();
+        $(i).children('.content, .overlay').fadeToggle();
+        i.querySelectorAll('.clearframe')[0].classList.remove('active');
+        document.getElementById('header').classList.remove('hidden');
+        i.classList.remove('contentIsHidden');
+        $(i).css('height', '');
       }
     }
   });
-  // pause lay video if in viewport
-  videoSections.forEach(function(s) {
-    if (ciIsVisible(s)) {
-      s.play();
+}
+
+// pause bg video if section is out of the viewport
+function pauseBgVideos(el) {
+  el.forEach(function(i) {
+    if (isIsInViewport(i)) {
+      i.play();
     } else {
-      s.pause();
+      i.pause();
     }
   });
-  frames.forEach(function(s) {
-    if (ciIsVisible(s)) {
-      s.classList.add("isInViewport");
-    } else {
-      s.classList.remove("isInViewport");
-    }
-  });
+}
+
+let sections = document.querySelectorAll('.c-section');
+let bgVideos = document.querySelectorAll('.bg-video');
+let frames = document.querySelectorAll('.frame');
+
+document.addEventListener('scroll', function() {
+  toggleViewportClass(frames);
+  toggleViewportClass(sections);
+  restoreHidden(sections);
+  pauseBgVideos(bgVideos);
 }, {
   passive: true
 });
 
-/* funtions for video sound and clear frame content buttons
-   plan to remove jQuery dependency here */
-$(document).ready(function() {
-  /* unmute/mute bg video sound */
-  $(".sound").click(function() {
-    if ($(this).parent().children('.bg-video').prop('muted')) {
-      $(this).parent().children('.bg-video').prop('muted', false);
-    } else {
-      $(this).parent().children('.bg-video').prop('muted', true);
-    }
-    $(this).toggleClass('active');
-  });
-  /* hide header and content if clear button is clicked */
-  $(".clearframe").click(function() {
-    var height = $(this).parent().height();
-    if (!$(this).parent().hasClass('fullheight')) {
-      $(this).parent().height(height);
-    }
-    if ($(this).parent().css('height') && $(this).parent().hasClass('active')) {
-      $(this).parent().css('height', '');
-    }
-    $("#header").fadeToggle();
-    $(this).toggleClass('active');
-    $(this).parent().toggleClass('active');
-    $(this).parent().children('.contentWidth, .overlay').fadeToggle();
-  });
+// add isInViewport on page load
+window.addEventListener('DOMContentLoaded', (event) => {
+  toggleViewportClass(frames);
 });
+
+// hide header and content if clear button is clicked */
+function hideButton(el) {
+  $('#header').fadeToggle();
+  $(el).parent().children('.content, .overlay').fadeToggle();
+  el.parentNode.classList.toggle('contentIsHidden');
+  el.classList.toggle('active');
+  var parent = el.parentNode;
+  var height = parseFloat(getComputedStyle(parent, null).height.replace("px", ""));
+  if ($(el).parent().hasClass('fullheight') && parent.classList.contains('contentIsHidden')) {
+    parent.style.height = '';
+  }
+  if (parent.style.height) {
+    parent.style.height = '';
+  } else if (!parent.classList.contains('fullHeight')) {
+    parent.style.height = height + 'px';
+  }
+  toggleViewportClass(frames);
+}
+
+// unmute/mute bg video sound
+function soundButton(el) {
+  const video = el.parentNode.querySelectorAll('.bg-video')[0];
+  const muted = el.parentNode.querySelectorAll('.bg-video')[0].muted;
+  if (muted) {
+    video.muted = false;
+  } else {
+    video.muted = true;
+  }
+  el.classList.toggle('active');
+}
