@@ -6,7 +6,7 @@ page.includeCSS.containerSection.inline = 1
     109991 = TEXT
     109991.value (
       <style>
-        .c-section .frame { opacity: 0; transition: opacity .3s ease-in }
+        .c-section .frame { opacity: 0; transition: opacity .6s ease-in }
         .c-section .frame.isInViewport { opacity: 1 }
       </style>
     )
@@ -29,6 +29,11 @@ tt_content.containerSection {
     20 {
       references.fieldName = assets
       as = assets
+    }
+    30 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+    30 {
+      references.fieldName = image
+      as = images
     }
   }
   variables {
@@ -70,9 +75,10 @@ tt_content.containerSection {
             XY = [5.w],[5.h]
             5 = IMAGE
             5.file.import.data = REGISTER:theImage
+            5.file.width = {$containerSection.bgImageWidth}
+            5.file.width.override.field = tx_containeritems_s_bgimagewidth
 
             # predefined image effects
-
             10 = SCALE
             10.params = -fill white -colorize 40%
             10.if.value = 10

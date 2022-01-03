@@ -417,7 +417,7 @@ $GLOBALS['TCA']['tt_content']['types']['containerSection']['columnsOverrides'] =
                     ],
                 ],
             ],
-            'jpeg,jpg,png,gif'
+            'svg,jpeg,jpg,png,gif'
         ),
     ],
     'assets' => [
