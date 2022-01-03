@@ -13,7 +13,7 @@
     box-sizing: border-box;
     padding: .72em 3em .72em 0;
     font-size: 1.26em;
-    font-weight: bold;
+    font-weight: 400;
     transition: all .3s;
     border-bottom: 1px solid transparent;
 }
