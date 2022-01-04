@@ -15,8 +15,8 @@
 			{f:if(condition: '{data.tx_containeritems_s_bgfixed}', then: 'fixed')}
 		"
 		style="
-			{f:if(condition: '{sectionBgImage} && {images.0.originalFile.extension} == svg && !{data.tx_containeritems_s_bgimgeffect} && !{data.tx_containeritems_s_bgimagewidth}', then: 'background: url({images.0.originalFile.publicUrl}) no-repeat;', else: 'background: url(/{sectionBgImage}) no-repeat;')}
-			{f:if(condition: '{sectionBgImage}', then: 'background-size: cover;')}
+            <f:if condition="{sectionBgImage}">{f:if(condition: '{sectionBgImage} && {images.0.originalFile.extension} == svg && !{data.tx_containeritems_s_bgimgeffect} && !{data.tx_containeritems_s_bgimagewidth}', then: 'background: url({images.0.originalFile.publicUrl}) no-repeat;', else: 'background: url(/{sectionBgImage}) no-repeat;')}</f:if>
+        	{f:if(condition: '{sectionBgImage}', then: 'background-size: cover;')}
             {f:if(condition: '{data.tx_containeritems_s_textcolor}', then: 'color: {data.tx_containeritems_s_textcolor};')}
 			{f:if(condition: '{data.tx_containeritems_s_bgcolor}', then: 'background-color: {data.tx_containeritems_s_bgcolor};')}
 		">
