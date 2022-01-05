@@ -6,9 +6,11 @@
     width: 100%;
     position: relative;
 }
+
 .c-section.bg0 {
     background-position: center center !important;
 }
+
 .c-section.bg1 {
     background-position: left top !important;
 }
@@ -100,15 +102,7 @@
     width: 100%;
     height: 100%;
     z-index: 1;
-
-}
-
-.c-section .overlay, .c-section .content {
-    opacity: 1;
-    transition: opacity .3s ease-in-out;
-}
-.c-section.contentIsHidden .overlay, .c-section.contentIsHidden .content {
-    opacity: 0 !important;
+    display: block;
 }
 
 .c-section .bg-video {
@@ -175,7 +169,7 @@
     transform: none;
 }
 
-.c-section.valign-center.fullheight .contentWidth {
+.c-section.valign-center.fullheight .content {
     position: absolute;
     width: 100%;
     top: 50%;
@@ -183,21 +177,23 @@
     transform: translate(-50%, -50%);
 }
 
-.c-section.valign-bottom.fullheight .contentWidth {
+.c-section.valign-bottom.fullheight .content {
     position: absolute;
     width: 100%;
     bottom: 0;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
+.c-section .content {
+    overflow: hidden;
+}
 .c-section.nopadding {
     padding: 0;
 }
 
-.c-section.fullwidth .contentWidth {
+.c-section.fullwidth .content {
     max-width: 100%;
-    padding: 0;
+    padding: 0 6.5em;
     margin: 0;
     width: 100% !important;
 }
