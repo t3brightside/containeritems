@@ -1,2 +1,11 @@
 * 1.0.1
     - full viewport height calculation js/css mobile fix
+* 1.1.0
+    - !note: database update needed
+    - !breaking: change SQL tx_containeritems_s_vcenter chackbox to tx_containeritems_s_valign select
+    - add vertical align select with top, center, and bottom
+    - move sections and columns styles inline
+    - add language sync option for translated records
+    - content inside sections fade-in/out option
+    - change to hyphenated class names
+    - add SVG background option to sections
