@@ -347,11 +347,11 @@ $GLOBALS['TCA']['tt_content']['types']['containerSection']['showitem'] = str_rep
 $GLOBALS['TCA']['tt_content']['palettes']['sectionSettings']['showitem'] = '
     tx_containeritems_classes,
     tx_containeritems_s_aligncontent,
-    tx_containeritems_s_framepadding,
+    tx_containeritems_s_valign,
     --linebreak--,
     tx_containeritems_s_fullheight,
     tx_containeritems_s_fullwidth,
-    tx_containeritems_s_valign,
+    tx_containeritems_s_framepadding,
 ';
 $GLOBALS['TCA']['tt_content']['palettes']['sectionColors']['showitem'] = '
     tx_containeritems_s_textcolorselect,
