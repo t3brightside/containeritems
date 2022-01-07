@@ -57,7 +57,7 @@
 			</button>
 		</f:if>
 		<f:if condition="{assets.0.uid}">
-			<video id="videoid{data.uid}" class="bg-video" playsinline autoplay muted {f:if(condition: '{data.tx_containeritems_s_bgvideoonoloop}', then: '', else: 'loop')}>
+			<video id="videoid{data.uid}" class="bg-video" style="position: {f:if(condition: '{data.tx_containeritems_s_bgfixed}', then: 'is-fixed')}" playsinline autoplay muted {f:if(condition: '{data.tx_containeritems_s_bgvideoonoloop}', then: '', else: 'loop')}>
 				<f:for each="{assets}" as="asset">
 		    		<source src="{asset.publicUrl}" type="{asset.mimetype}">
 		    	</f:for>

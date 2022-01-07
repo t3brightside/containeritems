@@ -169,6 +169,11 @@
     transform: none;
 }
 
+.c-section.isInViewport.has-bg-video.fixed .bg-video {
+    position: fixed;
+    z-index: -1;
+}
+
 .c-section.valign-center.fullheight .content {
     position: absolute;
     width: 100%;
@@ -185,9 +190,11 @@
     transform: translate(-50%, 0);
     margin-bottom: 7em;
 }
+
 .c-section .content {
     overflow: hidden;
 }
+
 .c-section.nopadding {
     padding: 0;
 }
@@ -262,6 +269,7 @@
     .c-section.valign-bottom.fullheight .content {
         margin-bottom: 4em;
     }
+
     .c-section {
         padding-top: 4em;
         padding-bottom: 4em;
