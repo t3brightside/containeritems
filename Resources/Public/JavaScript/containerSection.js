@@ -41,8 +41,10 @@ function restoreHidden(el) {
     if (!isIsInViewport(i)) {
       // restore hidden content and header if section is scrolled out of viewport
       if (i.classList.contains('contentIsHidden')) {
-        $('#header').fadeToggle();
-        $(i).children('.content, .overlay').fadeToggle();
+        if (window.jQuery) {
+          $('#header').fadeToggle();
+          $(i).children('.content, .overlay').fadeToggle();
+        }
         i.querySelectorAll('.clearframe')[0].classList.remove('active');
         document.getElementById('header').classList.remove('hidden');
         i.classList.remove('contentIsHidden');
@@ -83,8 +85,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 // hide header and content if clear button is clicked */
 function hideButton(el) {
-  $('#header').fadeToggle();
-  $(el).parent().children('.content, .overlay').fadeToggle();
+  if (window.jQuery) {
+    $('#header').fadeToggle();
+    $(el).parent().children('.content, .overlay').fadeToggle();
+  }
   el.parentNode.classList.toggle('contentIsHidden');
   el.classList.toggle('active');
   var parent = el.parentNode;
