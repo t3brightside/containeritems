@@ -226,7 +226,7 @@ $tempColumns = array(
     'tx_containeritems_s_bgvideoclearframe' => [
         'exclude' => 1,
         'label' => 'Clear Button',
-        'description' => 'Adds button to remove content and overlay from the section to view the video',
+        'description' => 'Hide content and overlay to see the background',
         'config' => [
             'type' => 'check',
             'renderType' => 'checkboxToggle',
@@ -305,6 +305,7 @@ $tempColumns = array(
     'tx_containeritems_s_bgoverlay' => [
         'exclude' => 1,
         'label'   => 'Overlay Color',
+        'description' => 'Use alpha channel colors',
         'config'  => [
             'type'     => 'input',
             'size' => 10,
@@ -316,22 +317,10 @@ $tempColumns = array(
     'tx_containeritems_s_bgoverlaydark' => [
         'exclude' => 1,
         'label'   => 'Overlay Color (dark mode)',
+        'description' => 'Use alpha channel colors',
         'config'  => [
             'type'     => 'input',
             'size' => 10,
-            'behaviour' => [
-                'allowLanguageSynchronization' => true,
-            ],
-        ],
-    ],
-    'tx_containeritems_s_bgoverlayopacity' => [
-        'exclude' => 1,
-        'label'   => 'Overlay Opacity',
-        'description' => 'Numbers from 0 to 99',
-        'config'  => [
-            'type'     => 'input',
-            'eval' => 'num',
-            'size' => 1,
             'behaviour' => [
                 'allowLanguageSynchronization' => true,
             ],
@@ -380,7 +369,6 @@ $GLOBALS['TCA']['tt_content']['palettes']['sectionBgVideo']['showitem'] = '
     assets,
     --linebreak--,
     tx_containeritems_s_bgvideosound,
-    tx_containeritems_s_bgvideoclearframe,
     tx_containeritems_s_bgvideoonoloop,
 ';
 $GLOBALS['TCA']['tt_content']['palettes']['sectionBgSettings']['showitem'] = '
@@ -389,7 +377,7 @@ $GLOBALS['TCA']['tt_content']['palettes']['sectionBgSettings']['showitem'] = '
     --linebreak--,
     tx_containeritems_s_bgoverlay,
     tx_containeritems_s_bgoverlaydark,
-    tx_containeritems_s_bgoverlayopacity,
+    tx_containeritems_s_bgvideoclearframe,
 ';
 
 
