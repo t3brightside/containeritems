@@ -410,6 +410,7 @@ $GLOBALS['TCA']['tt_content']['types']['containerSection']['columnsOverrides'] =
     ],
     'assets' => [
         'label' => 'Video File',
+        'description' => 'Add multiple for different web formats',
         'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
             'assets',
             [
