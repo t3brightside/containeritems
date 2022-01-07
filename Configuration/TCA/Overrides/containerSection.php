@@ -262,7 +262,7 @@ $tempColumns = array(
     ],
     'tx_containeritems_s_bgplacement' => [
         'exclude' => 1,
-        'label'   => 'Background Placement',
+        'label'   => 'Placement',
         'description' => 'Defines image and video placement related to the container',
         'config'  => [
             'type'     => 'select',
