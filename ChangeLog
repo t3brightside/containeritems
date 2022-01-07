@@ -1,11 +1,14 @@
 * 1.0.1
     - full viewport height calculation js/css mobile fix
-* 1.1.0
+* 2.0.0
     - !note: database update needed
     - !breaking: change SQL tx_containeritems_s_vcenter chackbox to tx_containeritems_s_valign select
-    - add vertical align select with top, center, and bottom
+      add vertical align select with top, center, and bottom
+    - !breaking: remove overlay opacity field and use alpha channel colors instead
     - move sections and columns styles inline
     - add language sync option for translated records
-    - content inside sections fade-in/out option
+    - sections content fade-in/out option with TypoScript constant
     - change to hyphenated class names
     - add SVG background option to sections
+    - fixed placement option for background videos
+    - minimised use of jQuery, now needed only for the 'Clear Button'

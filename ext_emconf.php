@@ -3,7 +3,7 @@
     'title' => 'Containeritems',
     'description' => 'EXT:container layouts for columns, accordions and content sections. Demo at: https://microtemplate.t3brightside.com',
     'category' => 'fe',
-    'version' => '1.1.0',
+    'version' => '2.0.0',
     'state' => 'stable',
     'clearCacheOnLoad' => 1,
     'author' => 'Tanel Põld',
