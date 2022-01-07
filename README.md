@@ -16,16 +16,29 @@
 - container
 
 ## Features
-- Containers
-    - Columns (1-1, 1-1-1, 1-1-1-1, 2-1, 1-2)
-    - Accordion
-    - Gather
-    - Sections (bg image, bg image effects, bg video, bg placement, bg overlay, content alignment, etc). Some of the section features require jQuery.
-- Minimal CSS and JS
+- Columns (1-1, 1-1-1, 1-1-1-1, 2-1, 1-2)
+- Accordion
+- Gather (gathers multiple content elements into one container)
+- Sections
+    - custom classes
+    - content alignment horizontal and vertical
+    - padding, full viewport height, full width
+    - content colors, predefined and custom
+    - bg image
+        - image effects
+        - image width in px
+    - bg video
+        - unmute
+        - loop
+    - bg placement
+    - bg overlay
+    - bg fixed
+    - 'clear button' to hide content for seeing the background
 
 ## Install
 - `composer req t3brightside/containeritems` or from TYPO3 extension repository **[containeritems](https://extensions.typo3.org/extension/containeritems/)**
 - Include desired static templates
+- jQuery is needed only if using 'Clear Button'
 
 ## Sources
 - [GitHub](https://github.com/t3brightside/containeritems)
