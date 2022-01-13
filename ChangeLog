@@ -12,3 +12,5 @@
     - add SVG background option to sections
     - fixed placement option for background videos
     - minimised use of jQuery, now needed only for the 'Clear Button'
+2.0.1
+    - [BUGFIX] No bg color with hidden bg videos
