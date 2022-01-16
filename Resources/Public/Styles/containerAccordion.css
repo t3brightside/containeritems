@@ -26,7 +26,7 @@
     top: 1.26em;
     position: absolute;
     content: '';
-    background: #fff;
+    background: #666;
     transition: all .3s;
 }
 
