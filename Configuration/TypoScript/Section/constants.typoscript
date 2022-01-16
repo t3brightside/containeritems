@@ -9,7 +9,7 @@ containerSection.partialRootPaths = EXT:containeritems/Resources/Private/Partial
 # cat=Containeritems Section/containeritems; type=int; label= Section background image width (px)
 containerSection.bgImageWidth = 1600
 # cat=Containeritems Section/containeritems; type=int[10-100]; label= Section background jpg quality
-containerSection.bgImageQuality = 65
+containerSection.bgImageQuality = 80
 # cat=Containeritems Section/containeritems; type=options[left,center,right]; label= Default content alignment
 containerSection.defaultAlignment = left
 # cat=Containeritems Section/containeritems; type=boolean; label= Enable content frames to fade-in/out on scrolling
