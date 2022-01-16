@@ -233,7 +233,7 @@
 }
 
 .c-section.bg-black {
-    background-color: #000;
+    background-color: #000 !important;
     color: #fff;
     -webkit-font-smoothing: antialiased;
 }
