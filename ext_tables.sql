@@ -3,7 +3,7 @@ CREATE TABLE tt_content (
 	tx_containeritems_a_firstopen int(1) DEFAULT '0' NOT NULL,
 	tx_containeritems_classes varchar(25),
 	tx_containeritems_s_aligncontent varchar(25),
-  tx_containeritems_s_framepadding int(1) DEFAULT '0' NOT NULL,
+  tx_containeritems_s_framepadding varchar(25),
 	tx_containeritems_s_fullwidth int(1) DEFAULT '0' NOT NULL,
   tx_containeritems_s_fullheight int(1) DEFAULT '0' NOT NULL,
   tx_containeritems_s_valign varchar(7),
