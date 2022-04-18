@@ -186,25 +186,6 @@ $tempColumns = array(
             ],
         ],
     ],
-    'tx_containeritems_s_bgimgeffect' => [
-        'exclude' => 1,
-        'label'   => 'Image Effect',
-        'config'  => [
-            'type'     => 'select',
-            'renderType' => 'selectSingle',
-            'default' => 0,
-            'items' => [
-                ['None', '0'],
-                ['Lighten', '10'],
-                ['Darken', '20'],
-                ['Blur', '30'],
-                ['Blur More', '40'],
-            ],
-            'behaviour' => [
-                'allowLanguageSynchronization' => true,
-            ],
-        ],
-    ],
     'tx_containeritems_s_bgvideosound' => [
         'exclude' => 1,
         'label' => 'Unmute Button',
@@ -226,7 +207,7 @@ $tempColumns = array(
     'tx_containeritems_s_bgvideoclearframe' => [
         'exclude' => 1,
         'label' => 'Clear Button',
-        'description' => 'Shows button to hide content and overlay',
+        'description' => 'Shows button to hide content and overlay to see the background image or video',
         'config' => [
             'type' => 'check',
             'renderType' => 'checkboxToggle',
@@ -304,7 +285,7 @@ $tempColumns = array(
     ],
     'tx_containeritems_s_bgoverlay' => [
         'exclude' => 1,
-        'label'   => 'Overlay Color',
+        'label'   => 'Color',
         'description' => 'Use alpha channel colors',
         'config'  => [
             'type'     => 'input',
@@ -316,11 +297,138 @@ $tempColumns = array(
     ],
     'tx_containeritems_s_bgoverlaydark' => [
         'exclude' => 1,
-        'label'   => 'Overlay Color (dark mode)',
+        'label'   => 'Color (dark mode)',
         'description' => 'Use alpha channel colors',
         'config'  => [
             'type'     => 'input',
             'size' => 10,
+            'behaviour' => [
+                'allowLanguageSynchronization' => true,
+            ],
+        ],
+    ],
+    'tx_containeritems_s_bgoverlayfilters' => [
+        'exclude' => 1,
+        'label' => 'Filters',
+        'config' => [
+            'type' => 'check',
+            'renderType' => 'checkboxToggle',
+            'items' => [
+                [
+                    0 => '',
+                    1 => '',
+                ]
+            ],
+            'behaviour' => [
+                'allowLanguageSynchronization' => true,
+            ],
+        ]
+    ],
+    'tx_containeritems_s_bgoverlayblur' => [
+        'exclude' => 1,
+        'label'   => 'Blur',
+        'description' => 'Clear: 0',
+        'config' => [
+            'type' => 'input',
+            'size' => 2,
+            'eval' => 'trim,int',
+            'range' => [
+                'lower' => 0,
+                'upper' => 200,
+            ],
+            'default' => 0,
+            'slider' => [
+                'step' => 1,
+                'width' => 100,
+            ],
+            'behaviour' => [
+                'allowLanguageSynchronization' => true,
+            ],
+        ],
+    ],
+    'tx_containeritems_s_bgoverlaysaturate' => [
+        'exclude' => 1,
+        'label'   => 'Saturation',
+        'description' => 'Natural: 100',
+        'config' => [
+            'type' => 'input',
+            'size' => 2,
+            'eval' => 'trim,int',
+            'range' => [
+                'lower' => 0,
+                'upper' => 900,
+            ],
+            'default' => 100,
+            'slider' => [
+                'step' => 1,
+                'width' => 100,
+            ],
+            'behaviour' => [
+                'allowLanguageSynchronization' => true,
+            ],
+        ],
+    ],
+    'tx_containeritems_s_bgoverlayhue' => [
+        'exclude' => 1,
+        'label'   => 'Hue Radius',
+        'description' => 'Natural: 0',
+        'config' => [
+            'type' => 'input',
+            'size' => 2,
+            'eval' => 'trim,int',
+            'range' => [
+                'lower' => 0,
+                'upper' => 360,
+            ],
+            'default' => 0,
+            'slider' => [
+                'step' => 1,
+                'width' => 100,
+            ],
+            'behaviour' => [
+                'allowLanguageSynchronization' => true,
+            ],
+        ],
+    ],
+    'tx_containeritems_s_bgoverlaybrightness' => [
+        'exclude' => 1,
+        'label'   => 'Brightness',
+        'description' => 'Natural: 100',
+        'config' => [
+            'type' => 'input',
+            'size' => 2,
+            'eval' => 'trim,int',
+            'range' => [
+                'lower' => 0,
+                'upper' => 1000,
+            ],
+            'default' => 100,
+            'slider' => [
+                'step' => 1,
+                'width' => 100,
+            ],
+            'behaviour' => [
+                'allowLanguageSynchronization' => true,
+            ],
+        ],
+    ],
+    'tx_containeritems_s_bgoverlaysepia' => [
+        'exclude' => 1,
+        'label'   => 'Sepia',
+        'description' => 'Natural: 0',
+        'config' => [
+            'type' => 'input',
+            'size' => 2,
+            'eval' => 'trim,int',
+            'range' => [
+                'lower' => 0,
+                'upper' => 100,
+            ],
+            'default' => 0,
+            'slider' => [
+                'step' => 1,
+                'width' => 100,
+            ],
             'behaviour' => [
                 'allowLanguageSynchronization' => true,
             ],
@@ -340,7 +448,8 @@ $GLOBALS['TCA']['tt_content']['types']['containerSection']['showitem'] = str_rep
     --palette--;Colors;sectionColors,
     --palette--;Background Image;sectionBgImage,
     --palette--;Background Video;sectionBgVideo,
-    --palette--;Background Settings;sectionBgSettings,',
+    --palette--;Background Settings;sectionBgPlacement,
+    --palette--;Background Overlay;sectionBgOverlay,',
     $GLOBALS['TCA']['tt_content']['types']['containerSection']['showitem']
 );
 
@@ -363,7 +472,6 @@ $GLOBALS['TCA']['tt_content']['palettes']['sectionBgImage']['showitem'] = '
     image,
     --linebreak--,
     tx_containeritems_s_bgimagewidth,
-    tx_containeritems_s_bgimgeffect,
 ';
 $GLOBALS['TCA']['tt_content']['palettes']['sectionBgVideo']['showitem'] = '
     assets,
@@ -371,13 +479,22 @@ $GLOBALS['TCA']['tt_content']['palettes']['sectionBgVideo']['showitem'] = '
     tx_containeritems_s_bgvideosound,
     tx_containeritems_s_bgvideoonoloop,
 ';
-$GLOBALS['TCA']['tt_content']['palettes']['sectionBgSettings']['showitem'] = '
+$GLOBALS['TCA']['tt_content']['palettes']['sectionBgPlacement']['showitem'] = '
+    tx_containeritems_s_bgvideoclearframe,
     tx_containeritems_s_bgplacement,
     tx_containeritems_s_bgfixed,
-    --linebreak--,
+';
+$GLOBALS['TCA']['tt_content']['palettes']['sectionBgOverlay']['showitem'] = '
     tx_containeritems_s_bgoverlay,
     tx_containeritems_s_bgoverlaydark,
-    tx_containeritems_s_bgvideoclearframe,
+    --linebreak--,
+    tx_containeritems_s_bgoverlayfilters,
+    --linebreak--,
+    tx_containeritems_s_bgoverlayblur,
+    tx_containeritems_s_bgoverlaysaturate,
+    tx_containeritems_s_bgoverlayhue,
+    tx_containeritems_s_bgoverlaybrightness,
+    tx_containeritems_s_bgoverlaysepia,
 ';
 
 

@@ -15,8 +15,7 @@
         {f:if(condition: '{data.tx_containeritems_s_bgfixed}', then: 'fixed')}
     "
     style="
-        <f:if condition="{sectionBgImage}">{f:if(condition: '{sectionBgImage} && {images.0.originalFile.extension} == svg && !{data.tx_containeritems_s_bgimgeffect} && !{data.tx_containeritems_s_bgimagewidth}', then: 'background: url({images.0.originalFile.publicUrl}) no-repeat;', else: 'background: url(/{sectionBgImage}) no-repeat;')}</f:if>
-        {f:if(condition: '{sectionBgImage}', then: 'background-size: cover;')}
+    <f:if condition="{images.0}">background: url({f:uri.image(image: '{images.0}', width: '{bgImageWidth}')}) no-repeat; background-size: cover;</f:if>
         {f:if(condition: '{data.tx_containeritems_s_textcolor}', then: 'color: {data.tx_containeritems_s_textcolor};')}
         {f:if(condition: '{data.tx_containeritems_s_bgcolor}', then: 'background-color: {data.tx_containeritems_s_bgcolor};')}
     ">
@@ -63,8 +62,14 @@
             </f:for>
         </video>
     </f:if>
-    <f:if condition="{data.tx_containeritems_s_bgoverlay} || {data.tx_containeritems_s_bgoverlaydark}">
-        <div id="overlay-{data.uid}" class="overlay" style="background: {data.tx_containeritems_s_bgoverlay};"></div>
+    <f:if condition="{data.tx_containeritems_s_bgoverlay} || {data.tx_containeritems_s_bgoverlaydark} || {data.tx_containeritems_s_bgoverlayfilters}">
+        <div id="overlay-{data.uid}" class="overlay" style="
+          background: {data.tx_containeritems_s_bgoverlay};
+          <f:if condition="{data.tx_containeritems_s_bgoverlayfilters}">
+            backdrop-filter: brightness({data.tx_containeritems_s_bgoverlaybrightness}%) hue-rotate({data.tx_containeritems_s_bgoverlayhue}deg) saturate({data.tx_containeritems_s_bgoverlaysaturate}%) blur({data.tx_containeritems_s_bgoverlayblur}px) sepia({data.tx_containeritems_s_bgoverlaysepia}%);
+            -webkit-backdrop-filter:  hue-rotate({data.tx_containeritems_s_bgoverlayhue}deg) saturate({data.tx_containeritems_s_bgoverlaysaturate}%) blur({data.tx_containeritems_s_bgoverlayblur}px);
+          </f:if>
+        "></div>
     </f:if>
     <div class="contentWidth content">
         <f:for each="{children_101}" as="element">

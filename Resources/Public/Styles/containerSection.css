@@ -170,7 +170,7 @@
 
 .c-section.isInViewport.has-bg-video.fixed .bg-video {
     position: fixed;
-    z-index: -1;
+    z-index: 0;
 }
 
 .c-section.valign-center.fullheight .content {
