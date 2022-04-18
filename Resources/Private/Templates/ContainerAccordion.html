@@ -1,7 +1,7 @@
 
 <div id="c{data.uid}" class="frame frame-default frame-container-accordion c-accordion frame-space-before-{data.space_before_class} frame-space-after-{data.space_after_class}">
-    <f:for each="{children_101}" as="element">
-        <div class="c-accordion-item">
+    <f:for each="{children_101}" as="element" iteration="iterator">
+        <div class="c-accordion-item stayopen-{data.tx_containeritems_a_stayopen} {f:if(condition: '{data.tx_containeritems_a_firstopen} && {iterator.isFirst}', then: 'act')}">
             <span class="c-accordion-title">
                 <f:if condition="{element.header_layout} != 100">
                     <f:then>{element.header}</f:then>
@@ -24,15 +24,21 @@
             let el = this.parentElement.getElementsByClassName('c-accordion-content')[0];
             let height = el.scrollHeight;
             el.style.setProperty('--max-height', height + 'px');
-            if (this.parentElement.classList.contains('act')) {
-              Array.from(this.parentElement.parentElement.getElementsByClassName('act')).forEach(function(el) {
-                el.classList.remove('act');
-              });
-            } else {
-              Array.from(this.parentElement.parentElement.getElementsByClassName('act')).forEach(function(el) {
-                el.classList.remove('act');
-              });
-              this.parentElement.classList.toggle('act');
+            if (this.parentElement.classList.contains('stayopen-1')) {
+                this.parentElement.classList.toggle('act');
+            }
+            else {
+                if (this.parentElement.classList.contains('act')) {
+                  Array.from(this.parentElement.parentElement.getElementsByClassName('act')).forEach(function(el) {
+                    el.classList.remove('act');
+                  });
+                }
+                else {
+                  Array.from(this.parentElement.parentElement.getElementsByClassName('act')).forEach(function(el) {
+                    el.classList.remove('act');
+                  });
+                  this.parentElement.classList.toggle('act');
+                }
             }
           })
         }
