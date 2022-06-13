@@ -309,7 +309,7 @@ $tempColumns = array(
     ],
     'tx_containeritems_s_bgoverlayfilters' => [
         'exclude' => 1,
-        'label' => 'Filters',
+        'label' => 'Filters (experimental)',
         'config' => [
             'type' => 'check',
             'renderType' => 'checkboxToggle',
@@ -492,8 +492,10 @@ $GLOBALS['TCA']['tt_content']['palettes']['sectionBgOverlay']['showitem'] = '
     --linebreak--,
     tx_containeritems_s_bgoverlayblur,
     tx_containeritems_s_bgoverlaysaturate,
+    --linebreak--,
     tx_containeritems_s_bgoverlayhue,
     tx_containeritems_s_bgoverlaybrightness,
+    --linebreak--,
     tx_containeritems_s_bgoverlaysepia,
 ';
 
