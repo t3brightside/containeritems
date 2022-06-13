@@ -14,3 +14,10 @@
     - minimised use of jQuery, now needed only for the 'Clear Button'
 2.0.1
     - [BUGFIX] No bg color with hidden bg videos
+3.0.0
+    - [BUGFIX] Change tx_containeritems_s_framepadding to varchar for string values
+    - [FEATURE] Remove Gifbuilder background effects
+    - [FEATURE] Backgrounds on Acid! backdrop-filter effects for content sections
+                (experimental, works properly only on webkit browsers)
+    - [FEATURE] Add 'stay open' and 'first open on load' settings for accordion
+    - [FEATURE] Custom class option for gather container type
