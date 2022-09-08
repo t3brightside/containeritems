@@ -25,14 +25,13 @@
     - padding, full viewport height, full width
     - content colors, predefined and custom
     - bg image
-        - image effects
-        - image width in px
     - bg video
         - unmute
         - loop
     - bg placement
     - bg overlay
     - bg fixed
+    - bg effects
     - 'clear button' to hide content for seeing the background
 
 ## Install
