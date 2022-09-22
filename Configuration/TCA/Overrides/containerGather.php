@@ -5,7 +5,7 @@
         new \B13\Container\Tca\ContainerConfiguration(
             'containerGather',
             'Gather',
-            'For gathering multiple elements into one container',
+            'Gather multiple elements to one',
             [
                 [
                     ['name' => 'Gather', 'colPos' => 101],
