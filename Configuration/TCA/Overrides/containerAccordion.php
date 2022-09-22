@@ -16,9 +16,7 @@
     ->setIcon('EXT:containeritems/Resources/Public/Icons/Containers/containerAccordion.svg')
 );
 
-
 $tempColumns = array(
-
     'tx_containeritems_a_stayopen' => [
         'exclude' => 1,
         'label' => 'Stay Open',

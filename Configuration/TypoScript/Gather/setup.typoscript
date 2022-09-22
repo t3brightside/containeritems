@@ -5,8 +5,6 @@ tt_content.containerGather {
   templateRootPaths.20 = {$containerAccordion.templateRootPaths}
   partialRootPaths.10 = EXT:containeritems/Resources/Private/Partials/
   partialRootPaths.20 = {$containerAccordion.partialRootPaths}
-  dataProcessing.13 = B13\Container\DataProcessing\ContainerProcessor
-
   templateName = ContainerGather
   dataProcessing.13 = B13\Container\DataProcessing\ContainerProcessor
 }
