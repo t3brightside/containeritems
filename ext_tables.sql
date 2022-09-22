@@ -26,4 +26,5 @@ CREATE TABLE tt_content (
 	tx_containeritems_s_bgoverlayhue smallint DEFAULT NULL,
 	tx_containeritems_s_bgoverlaybrightness smallint DEFAULT NULL,
 	tx_containeritems_s_bgoverlaysepia smallint DEFAULT NULL,
+	tx_containeritems_b_style varchar(25),
 );

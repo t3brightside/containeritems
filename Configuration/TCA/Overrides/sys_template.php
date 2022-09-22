@@ -33,4 +33,10 @@ call_user_func(function () {
         'Containeritems - Section'
     );
 
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+        $extensionKey,
+        'Configuration/TypoScript/Box',
+        'Containeritems - Box'
+    );
+
 });

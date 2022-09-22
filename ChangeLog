@@ -21,3 +21,5 @@
                 (experimental, works properly only on webkit browsers)
     - [FEATURE] Add 'stay open' and 'first open on load' settings for accordion
     - [FEATURE] Custom class option for gather container type
+3.1.0
+    - [FEATURE] Box content element for attention, warning, success, etc

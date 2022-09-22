@@ -19,6 +19,7 @@
 - Columns (1-1, 1-1-1, 1-1-1-1, 2-1, 1-2)
 - Accordion
 - Gather (gathers multiple content elements into one container)
+- Box (notifications, warnings, etc)
 - Sections
     - custom classes
     - content alignment horizontal and vertical
@@ -37,7 +38,7 @@
 ## Install
 - `composer req t3brightside/containeritems` or from TYPO3 extension repository **[containeritems](https://extensions.typo3.org/extension/containeritems/)**
 - Include desired static templates
-- jQuery is needed only if using 'Clear Button'
+- jQuery is needed only if using 'Clear Button' in Sections
 
 ## Sources
 - [GitHub](https://github.com/t3brightside/containeritems)
