@@ -1,6 +1,10 @@
+<f:section name="HeaderAssets">
+    <f:render partial="SectionStyles" arguments="{_all}" />
+</f:section>
 <div
     id="c{data.uid}"
-    class="c-section {data.tx_containeritems_classes}
+    class="c-section
+        {data.tx_containeritems_classes}
         {f:if(condition: '{data.tx_containeritems_s_aligncontent}', then: 'align-{data.tx_containeritems_s_aligncontent}', else: 'align-{defaultAlignment}')}
         {f:if(condition: '{data.tx_containeritems_s_framepadding}', then: 'frame-padding-{data.tx_containeritems_s_framepadding}')}
         {f:if(condition: '{data.tx_containeritems_s_fullheight}==1', then: 'fullheight')}
@@ -78,9 +82,12 @@
     </div>
 </div>
 <f:if condition="{data.tx_containeritems_s_bgoverlaydark}">
-<script>
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) { // If media query matches
-      document.getElementById('overlay-{data.uid}').style.backgroundColor = '{data.tx_containeritems_s_bgoverlaydark}';
-    }
-</script>
+    <script>
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) { // If media query matches
+          document.getElementById('overlay-{data.uid}').style.backgroundColor = '{data.tx_containeritems_s_bgoverlaydark}';
+        }
+    </script>
 </f:if>
+<f:section name="FooterAssets">
+    <f:render partial="SectionJavaScript" arguments="{_all}" />
+</f:section>

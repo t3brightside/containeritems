@@ -27,4 +27,9 @@ CREATE TABLE tt_content (
 	tx_containeritems_s_bgoverlaybrightness smallint DEFAULT NULL,
 	tx_containeritems_s_bgoverlaysepia smallint DEFAULT NULL,
 	tx_containeritems_b_style varchar(25),
+	tx_containeritems_siema_style varchar(25),
+	tx_containeritems_siema_startindex int(1) DEFAULT NULL,
+	tx_containeritems_siema_loop int(1) DEFAULT NULL,
+	tx_containeritems_siema_pagination varchar(25),
+	tx_containeritems_siema_nav int(1) DEFAULT NULL,
 );

@@ -23,3 +23,12 @@
     - [FEATURE] Custom class option for gather container type
 3.1.0
     - [FEATURE] Box content element for attention, warning, success, etc
+4.0.0
+    - [!! BREAKING CHANGES!!]
+    - [FEATURE] All FE assets moved to Fluid templates, load only with the content type present
+    - [FEATURE] Add Siema carousel container - still kinda experimental
+    - [TASK] Move all TS setup to one file and optimize
+    - [TASK] Clean up TS constants
+    - [TASK] TYPO3 12 friendly
+    - [!! UPGRADE] Make sure to include Containeritems TypoScript template again
+                   Make sure your custom styles, templates and partials get loaded

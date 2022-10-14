@@ -1,6 +1,5 @@
 <?php
-
-defined('TYPO3_MODE') || die();
+defined('TYPO3_MODE') || defined('TYPO3') || die('Access denied.');
 
 call_user_func(function () {
 
@@ -11,32 +10,7 @@ call_user_func(function () {
      */
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
         $extensionKey,
-        'Configuration/TypoScript/Accordion',
-        'Containeritems - Accordion'
+        'Configuration/TypoScript',
+        'Containeritems'
     );
-
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-        $extensionKey,
-        'Configuration/TypoScript/Columns',
-        'Containeritems - Columns'
-    );
-
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-        $extensionKey,
-        'Configuration/TypoScript/Gather',
-        'Containeritems - Gather'
-    );
-
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-        $extensionKey,
-        'Configuration/TypoScript/Section',
-        'Containeritems - Section'
-    );
-
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-        $extensionKey,
-        'Configuration/TypoScript/Box',
-        'Containeritems - Box'
-    );
-
 });

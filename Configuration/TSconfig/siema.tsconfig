@@ -1,0 +1,11 @@
+TCEFORM.tt_content.tx_containeritems_siema_style.addItems {
+  0 = In Content
+  hero = Hero
+  home = Home
+}
+TCEFORM.tt_content.tx_containeritems_siema_pagination.addItems {
+  0 = None
+  dots = Dots
+  numbers = Numbers
+  count = Count out of Total
+}

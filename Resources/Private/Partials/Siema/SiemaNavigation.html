@@ -1,0 +1,59 @@
+<f:if condition="{data.tx_containeritems_siema_nav}">
+    <button id="prev{data.uid}" class="siema-navigation prev" onclick="prev(cSiema{data.uid})"><i></i></button>
+    <button id="next{data.uid}" class="siema-navigation next" onclick="next(cSiema{data.uid})"><i></i></button>
+</f:if>
+<f:if condition="{data.tx_containeritems_siema_pagination} == 'dots'">
+    <div id="siema-pagination{data.uid}" class="siema-pagination {data.tx_containeritems_siema_pagination}">
+        <f:for each="{children_101}" as="element" iteration="fooIterator">
+            <button class="" onclick="page(cSiema{data.uid},{fooIterator.index})"></button>
+        </f:for>
+    </div>
+</f:if>
+<f:if condition="{data.tx_containeritems_siema_pagination} == 'numbers'">
+    <div id="siema-pagination{data.uid}" class="siema-pagination {data.tx_containeritems_siema_pagination}">
+        <f:for each="{children_101}" as="element" iteration="fooIterator">
+            <button class="" onclick="page(cSiema{data.uid},{fooIterator.index})">
+                {fooIterator.cycle}
+            </button>
+        </f:for>
+    </div>
+</f:if>
+<f:if condition="{data.tx_containeritems_siema_pagination} == 'count'">
+    <div class="siema-pagination {data.tx_containeritems_siema_pagination}">
+        <i id="siema-index-<f:format.raw>{data.uid}</f:format.raw>"></i>&nbsp;/&nbsp;<i id="siema-count" class="siema-index">{children_101 -> f:count()}</i>
+    </div>
+</f:if>
+<script>
+    function paginationUpdate() {
+        var current = this.currentSlide;
+        var count = this.innerElements.length;
+
+        <f:comment>Set slide count number</f:comment>
+        <f:if condition="{data.tx_containeritems_siema_pagination} == 'count'">
+            document.querySelector('#siema-index-<f:format.raw>{data.uid}</f:format.raw>').innerHTML = current + 1;
+        </f:if>
+
+        <f:comment>Set active pagination dot or number</f:comment>
+        <f:if condition="{data.tx_containeritems_siema_pagination} == 'numbers' || 'dots'">
+                var buttons = document.querySelectorAll('#siema-pagination<f:format.raw>{data.uid}</f:format.raw>>button');
+                for (const button of buttons) {
+                  button.classList.remove('act');
+                }
+                buttons?.[current]?.classList?.add('act');
+        </f:if>
+
+        <f:comment>Hide navigation arrow if beginning or end of carousel and loop is not active</f:comment>
+        <f:if condition='{data.tx_containeritems_siema_nav} && {data.tx_containeritems_siema_loop} != 1'>
+            if (current == 0) {
+                document.querySelector('#prev<f:format.raw>{data.uid}</f:format.raw>').classList.add('hide');
+            } else {
+                document.querySelector('#prev<f:format.raw>{data.uid}</f:format.raw>').classList.remove('hide');
+            }
+            if (current + 1 == count) {
+                document.querySelector('#next<f:format.raw>{data.uid}</f:format.raw>').classList.add('hide');
+            } else {
+                document.querySelector('#next<f:format.raw>{data.uid}</f:format.raw>').classList.remove('hide');
+            }
+        </f:if>
+    }
+</script>

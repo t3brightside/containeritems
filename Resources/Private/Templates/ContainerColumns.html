@@ -1,16 +1,14 @@
 <f:section name="HeaderAssets">
-    <f:render partial="BoxStyles" arguments="{_all}" />
+    <f:render partial="ColumnsStyles" arguments="{_all}" />
 </f:section>
 <div id="c{data.uid}" class="
     frame
     frame-type-container
-    c-box
+    c-columns
+    c-{data.CType}
     {data.tx_containeritems_classes}
     {f:if(condition: '{data.space_before_class}', then: 'frame-space-before-{data.space_before_class}')}
     {f:if(condition: '{data.space_after_class}', then: 'frame-space-after-{data.space_after_class}')}
-    {f:if(condition: '{data.tx_containeritems_b_style}', then: '{data.tx_containeritems_b_style}')}
 ">
-    <f:for each="{children_101}" as="element">
-        {element.renderedContent -> f:format.raw()}
-    </f:for>
+    <f:render partial="{data.CType}" arguments="{_all}" />
 </div>

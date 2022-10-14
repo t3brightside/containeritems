@@ -1,6 +1,0 @@
-# cat=Containeritems Accordion/containeritems; type=string; label= Styles File
-containerAccordion.styles = EXT:containeritems/Resources/Public/Styles/containerAccordion.css
-# cat=Containeritems Accordion/containeritems; type=string; label= Template Root Paths
-containerAccordion.templateRootPaths = EXT:containeritems/Resources/Private/Templates/
-# cat=Containeritems Accordion/containeritems; type=string; label= Partial Root Paths
-containerAccordion.partialRootPaths = EXT:containeritems/Resources/Private/Partials/

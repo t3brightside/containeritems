@@ -1,0 +1,26 @@
+<script>
+    const accordionTitle = document.getElementsByClassName('c-accordion-title');
+    for (i = 0; i < accordionTitle.length; i++) {
+      accordionTitle[i].addEventListener('click', function() {
+        let el = this.parentElement.getElementsByClassName('c-accordion-content')[0];
+        let height = el.scrollHeight;
+        el.style.setProperty('--max-height', height + 'px');
+        if (this.parentElement.classList.contains('stayopen-1')) {
+            this.parentElement.classList.toggle('act');
+        }
+        else {
+            if (this.parentElement.classList.contains('act')) {
+              Array.from(this.parentElement.parentElement.getElementsByClassName('act')).forEach(function(el) {
+                el.classList.remove('act');
+              });
+            }
+            else {
+              Array.from(this.parentElement.parentElement.getElementsByClassName('act')).forEach(function(el) {
+                el.classList.remove('act');
+              });
+              this.parentElement.classList.toggle('act');
+            }
+        }
+      })
+    }
+</script>

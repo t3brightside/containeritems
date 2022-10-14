@@ -1,0 +1,24 @@
+# cat=Containeritems/containeritems; type=string; label= Template Root Paths
+containerItems.templateRootPaths = EXT:containeritems/Resources/Private/Templates/
+# cat=Containeritems/containeritems; type=string; label= Partial Root Paths
+containerItems.partialRootPaths = EXT:containeritems/Resources/Private/Partials/
+# cat=Containeritems/containeritems; type=string; label= Partial Root Paths for Accordion
+containerItems.accordion.partialRootPaths = EXT:containeritems/Resources/Private/Partials/Accordion/
+# cat=Containeritems/containeritems; type=string; label= Partial Root Paths for Box
+containerItems.box.partialRootPaths = EXT:containeritems/Resources/Private/Partials/Box/
+# cat=Containeritems/containeritems; type=string; label= Partial Root Paths for Columns
+containerItems.columns.partialRootPaths = EXT:containeritems/Resources/Private/Partials/Columns/
+# cat=Containeritems/containeritems; type=string; label= Partial Root Paths for Section
+containerItems.section.partialRootPaths = EXT:containeritems/Resources/Private/Partials/Section/
+# cat=Containeritems/containeritems; type=string; label= Partial Root Paths for Siema Carousel
+containerItems.siema.partialRootPaths = EXT:containeritems/Resources/Private/Partials/Siema/
+# cat=Containeritems/containeritems; type=string; label= Columns - Space width in %
+containerColumns.spaceWidth = 5
+# cat=Containeritems/containeritems; type=string; label= Columns - Width of wider column of two in %
+containerColumns.wideColOfTwoWidth = 60
+# cat=Containeritems/containeritems; type=int; label= Section - Background image width (px)
+containerSection.bgImageWidth = 1600
+# cat=Containeritems/containeritems; type=options[left,center,right]; label= Section - Default content alignment
+containerSection.defaultAlignment = left
+# cat=Containeritems/containeritems; type=boolean; label= Section - Enable content frames to fade-in/out on scrolling
+containerSection.fadeInContent = 1

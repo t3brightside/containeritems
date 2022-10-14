@@ -1,1 +1,1 @@
-@import 'EXT:containeritems/Configuration/TSconfig/box.tsconfig'
+@import 'EXT:containeritems/Configuration/TSconfig/*.tsconfig'
