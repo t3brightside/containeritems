@@ -20,6 +20,7 @@
 - Accordion
 - Gather (gathers multiple content elements into one container)
 - Box (notifications, warnings, etc)
+- Siema Carousel
 - Sections
     - custom classes
     - content alignment horizontal and vertical
