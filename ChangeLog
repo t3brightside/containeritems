@@ -35,3 +35,4 @@
 4.1.0
     - [TASK] Remove need for jQuery
     – [TASK] Rename JS functions for better semantics
+    - [BUGFIX] Column styles file
