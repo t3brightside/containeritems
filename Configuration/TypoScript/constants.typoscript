@@ -21,4 +21,4 @@ containerSection.bgImageWidth = 1600
 # cat=Containeritems/containeritems; type=options[left,center,right]; label= Section - Default content alignment
 containerSection.defaultAlignment = left
 # cat=Containeritems/containeritems; type=boolean; label= Section - Enable content frames to fade-in/out on scrolling
-containerSection.fadeInContent = 1
+containerSection.fadeInContent = 0
