@@ -105,6 +105,8 @@ tt_content.containerSection {
     defaultAlignment.value = {$containerSection.defaultAlignment}
     bgImageWidth = TEXT
     bgImageWidth.value = {$containerSection.bgImageWidth}
+    bgImageWidth.override.field = tx_containeritems_s_bgimagewidth
+
   }
 }
 
