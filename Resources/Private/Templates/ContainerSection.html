@@ -24,7 +24,7 @@
         {f:if(condition: '{data.tx_containeritems_s_bgcolor}', then: 'background-color: {data.tx_containeritems_s_bgcolor};')}
     ">
     <f:if condition="{data.tx_containeritems_s_bgvideosound} && {assets.0.uid}">
-        <button onclick="soundButton(this)" class="videobuttons sound {f:if(condition: '{data.tx_containeritems_s_bgvideoclearframe}', then: 'hasclearframebutton')}" style="border: none">
+        <button onclick="enableBgVideoSoundButton(this)" class="videobuttons sound {f:if(condition: '{data.tx_containeritems_s_bgvideoclearframe}', then: 'hasclearframebutton')}" style="border: none">
             <svg class="off" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                  viewBox="0 0 23.8 19.9" style="enable-background:new 0 0 23.8 19.9;" xml:space="preserve">
             <title>Sound</title>
@@ -45,7 +45,7 @@
         </button>
     </f:if>
     <f:if condition="{data.tx_containeritems_s_bgvideoclearframe}">
-        <button onclick="hideButton(this)" class="videobuttons clearframe" style="border: none">
+        <button onclick="hideSectionContentButton(this)" class="videobuttons clearframe" style="border: none">
             <svg class="off" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.81 17.86"><title>Hide Content</title><polygon class="a" points="23.82 5.95 21.83 5.95 21.83 1.99 17.86 1.99 17.86 0 23.82 0 23.82 5.95"/><polygon class="a" points="17.86 17.86 17.86 15.88 21.83 15.88 21.83 11.91 23.82 11.91 23.82 17.86 17.86 17.86"/><polygon class="a" points="0 11.91 1.99 11.91 1.99 15.88 5.95 15.88 5.95 17.86 0 17.86 0 11.91"/><polygon class="a" points="5.95 0 5.95 1.99 1.99 1.99 1.99 5.95 0 5.95 0 0 5.95 0"/><rect class="a" x="3.97" y="3.97" width="15.88" height="9.92"/></svg>
             <svg class="on" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                  viewBox="0 0 23.8 17.9" style="enable-background:new 0 0 23.8 17.9;" xml:space="preserve">

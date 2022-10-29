@@ -14,19 +14,6 @@
           return ((top > 0 || bottom > 0) && top < vHeight);
         }
 
-        function onVisibilityChange(el, callback) {
-           var old_visible;
-           return function() {
-              var visible = isElementInViewport(el);
-              if (visible != old_visible) {
-                 old_visible = visible;
-                 if (typeof callback == 'function') {
-                    callback();
-                 }
-              }
-           }
-        }
-
         function toggleViewportClass(el) {
           el.forEach(function(i) {
             if (isIsInViewport(i)) {
@@ -37,20 +24,44 @@
           });
         }
 
-        function restoreHidden(el) {
+        function toggleSectionContent(el) {
+            let content = el.querySelector('.content');
+            let overlay = el.querySelector('.overlay');
+
+            if (header) {
+                if(header.style.display == 'none') {
+                    header.style.display = 'block';
+                }
+                else {
+                    header.style.display = 'none';
+                }
+            }
+            if (overlay) {
+                if(overlay.style.display == 'none') {
+                    overlay.style.display = 'block';
+                }
+                else {
+                    overlay.style.display = 'none';
+                }
+            }
+            if (content) {
+                if(content.style.display == 'none') {
+                    content.style.display = 'block';
+                }
+                else {
+                    content.style.display = 'none';
+                }
+            }
+        }
+
+        function restoreSectionContent(el) {
           el.forEach(function(i) {
             if (!isIsInViewport(i)) {
               // restore hidden content and header if section is scrolled out of viewport
-              if (i.classList.contains('contentIsHidden')) {
-                if (window.jQuery) {
-                  $('#header').fadeToggle();
-                  $(i).children('.content, .overlay').fadeToggle();
-                }
+                toggleSectionContent(i);
                 i.querySelectorAll('.clearframe')[0].classList.remove('active');
-                document.getElementById('header').classList.remove('hidden');
                 i.classList.remove('contentIsHidden');
-                $(i).css('height', '');
-              }
+                i.style.height = '';
             }
           });
         }
@@ -70,10 +81,12 @@
         let bgVideos = document.querySelectorAll('.bg-video');
         let frames = document.querySelectorAll('.frame');
 
+
         document.addEventListener('scroll', function() {
+          let hiddenContentSections = document.querySelectorAll('.contentIsHidden');
           toggleViewportClass(frames);
           toggleViewportClass(sections);
-          restoreHidden(sections);
+          restoreSectionContent(hiddenContentSections);
           pauseBgVideos(bgVideos);
         }, {
           passive: true
@@ -85,16 +98,13 @@
         });
 
         // hide header and content if clear button is clicked */
-        function hideButton(el) {
-          if (window.jQuery) {
-            $('#header').fadeToggle();
-            $(el).parent().children('.content, .overlay').fadeToggle();
-          }
+        function hideSectionContentButton(el) {
+          let parent = el.parentNode;
+          let height = parent.offsetHeight;
+          toggleSectionContent(el.parentNode);
           el.parentNode.classList.toggle('contentIsHidden');
           el.classList.toggle('active');
-          var parent = el.parentNode;
-          var height = parseFloat(getComputedStyle(parent, null).height.replace("px", ""));
-          if ($(el).parent().hasClass('fullheight') && parent.classList.contains('contentIsHidden')) {
+          if (el.parentNode.classList.contains('fullheight') && parent.classList.contains('contentIsHidden')) {
             parent.style.height = '';
           }
           if (parent.style.height) {
@@ -106,7 +116,7 @@
         }
 
         // unmute/mute bg video sound
-        function soundButton(el) {
+        function enableBgVideoSoundButton(el) {
           const video = el.parentNode.querySelectorAll('.bg-video')[0];
           const muted = el.parentNode.querySelectorAll('.bg-video')[0].muted;
           if (muted) {
@@ -116,4 +126,5 @@
           }
           el.classList.toggle('active');
         }
+
     </script>

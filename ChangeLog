@@ -32,3 +32,6 @@
     - [TASK] TYPO3 12 friendly
     - [!! UPGRADE] Make sure to include Containeritems TypoScript template again
                    Make sure your custom styles, templates and partials get loaded
+4.1.0
+    - [TASK] Remove need for jQuery
+    – [TASK] Rename JS functions for better semantics
