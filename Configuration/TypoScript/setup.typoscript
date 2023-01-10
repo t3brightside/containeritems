@@ -1,6 +1,6 @@
 # Container Items Defualt
 
-lib.containerItems =< lib.contentElement
+lib.containerItems < lib.contentElement
 lib.containerItems {
   templateRootPaths.10 = EXT:containeritems/Resources/Private/Templates/
   templateRootPaths.20 = {$containerItems.templateRootPaths}
@@ -10,7 +10,7 @@ lib.containerItems {
 }
 
 # Accordion
-tt_content.containerAccordion =< lib.containerItems
+tt_content.containerAccordion < lib.containerItems
 tt_content.containerAccordion {
   templateName = ContainerAccordion
   partialRootPaths.30 = EXT:containeritems/Resources/Private/Partials/Accordion/
@@ -18,14 +18,14 @@ tt_content.containerAccordion {
 }
 
 # Box
-tt_content.containerBox =< lib.containerItems
+tt_content.containerBox < lib.containerItems
 tt_content.containerBox {
   partialRootPaths.30 = EXT:containeritems/Resources/Private/Partials/Box/
   partialRootPaths.40 = {$containerItems.columns.partialRootPaths}
   templateName = ContainerBox
 }
 # Columns
-lib.containerColumnsDefault =< lib.containerItems
+lib.containerColumnsDefault < lib.containerItems
 lib.containerColumnsDefault {
   partialRootPaths.30 = EXT:containeritems/Resources/Private/Partials/Columns/
   partialRootPaths.40 = {$containerItems.columns.partialRootPaths}
@@ -37,14 +37,14 @@ lib.containerColumnsDefault {
     wideColOfTwoWidth.value = {$containerColumns.wideColOfTwoWidth}
   }
 }
-tt_content.containerColumns-1-1 =< lib.containerColumnsDefault
-tt_content.containerColumns-2-1 =< lib.containerColumnsDefault
-tt_content.containerColumns-1-2 =< lib.containerColumnsDefault
-tt_content.containerColumns-1-1-1 =< lib.containerColumnsDefault
-tt_content.containerColumns-1-1-1-1 =< lib.containerColumnsDefault
+tt_content.containerColumns-1-1 < lib.containerColumnsDefault
+tt_content.containerColumns-2-1 < lib.containerColumnsDefault
+tt_content.containerColumns-1-2 < lib.containerColumnsDefault
+tt_content.containerColumns-1-1-1 < lib.containerColumnsDefault
+tt_content.containerColumns-1-1-1-1 < lib.containerColumnsDefault
 
 # Gather
-tt_content.containerGather =< lib.containerItems
+tt_content.containerGather < lib.containerItems
 tt_content.containerGather.templateName = ContainerGather
 
 # Section
@@ -61,7 +61,7 @@ tt_content.containerGather.templateName = ContainerGather
 [END]
 
 # Paginated
-tt_content.containerPaginated =< lib.containerItems
+tt_content.containerPaginated < lib.containerItems
 tt_content.containerPaginated {
   dataProcessing.13 {
     pagination {
@@ -83,7 +83,7 @@ tt_content.containerPaginated {
 }
 
 # Sections
-tt_content.containerSection =< lib.containerItems
+tt_content.containerSection < lib.containerItems
 tt_content.containerSection {
   partialRootPaths.30 = EXT:containeritems/Resources/Private/Partials/Section/
   partialRootPaths.40 = {$containerItems.section.partialRootPaths}
@@ -111,7 +111,7 @@ tt_content.containerSection {
 }
 
 # Siema
-tt_content.containerSiema =< lib.containerItems
+tt_content.containerSiema < lib.containerItems
 tt_content.containerSiema {
   templateName = ContainerSiema
   partialRootPaths.30 = EXT:containeritems/Resources/Private/Partials/Siema/
