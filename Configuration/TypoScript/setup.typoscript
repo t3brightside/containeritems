@@ -1,6 +1,6 @@
 # Container Items Defualt
 
-lib.containerItems < lib.contentElement
+lib.containerItems =< lib.contentElement
 lib.containerItems {
   templateRootPaths.10 = EXT:containeritems/Resources/Private/Templates/
   templateRootPaths.20 = {$containerItems.templateRootPaths}
@@ -59,28 +59,6 @@ tt_content.containerGather.templateName = ContainerGather
     )
   }
 [END]
-
-# Paginated
-tt_content.containerPaginated < lib.containerItems
-tt_content.containerPaginated {
-  dataProcessing.13 {
-    pagination {
-      isActive.field = tx_paginatedprocessors_paginationenabled
-      uniqueId.field = uid
-      uniqueId.override.field = tx_paginatedprocessors_urlsegment
-      itemsPerPage = tx_paginatedprocessors_itemsperpage
-      itemsPerPage.field = tx_paginatedprocessors_itemsperpage
-      pageLinksShown = 5
-      pageLinksShown.override.field = tx_paginatedprocessors_pagelinksshown
-      anchorActive.field = tx_paginatedprocessors_anchor
-      anchorId.field = uid
-      anchorId.override.field = tx_paginatedprocessors_anchorid
-    }
-  }
-  templateName = ContainerPaginated
-  partialRootPaths.30 = EXT:containeritems/Resources/Private/Partials/Paginated/
-  partialRootPaths.40 = {$containerItems.paginated.partialRootPaths}
-}
 
 # Sections
 tt_content.containerSection < lib.containerItems
