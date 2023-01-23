@@ -5,7 +5,7 @@
         new \B13\Container\Tca\ContainerConfiguration(
             'containerSection',
             'Section',
-            'Content section',
+            'Content sections with optional background image or video',
             [
                 [
                     ['name' => 'Section Content', 'colPos' => 101],

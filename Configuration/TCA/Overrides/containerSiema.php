@@ -4,11 +4,11 @@
     (
         new \B13\Container\Tca\ContainerConfiguration(
             'containerSiema',
-            'Siema Carousel',
-            'Simple content element carousel',
+            'Slider',
+            'Content elements as slides',
             [
                 [
-                    ['name' => 'Carousel Items', 'colPos' => 101],
+                    ['name' => 'Slider Items', 'colPos' => 101],
                 ]
             ]
         )
@@ -47,7 +47,7 @@ $tempColumns = array(
     'tx_containeritems_siema_loop' => [
         'exclude' => 1,
         'label' => 'Loop',
-        'description' => 'Loop through carousel items',
+        'description' => 'Loop through slider items',
         'config' => [
             'type' => 'check',
             'renderType' => 'checkboxToggle',

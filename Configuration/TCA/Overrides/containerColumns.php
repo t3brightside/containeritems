@@ -4,8 +4,8 @@
     (
         new \B13\Container\Tca\ContainerConfiguration(
             'containerColumns-1-1',
-            '2 Columns 50/50',
-            'Dividing the content area into two equal columns',
+            '2 Columns',
+            'Layout with two equal columns',
             [
                 [
                     ['name' => 'Left', 'colPos' => 101],
@@ -23,7 +23,7 @@
         new \B13\Container\Tca\ContainerConfiguration(
             'containerColumns-2-1',
             '2 Columns 60/40',
-            'Dividing the content area into two columns with left column being wider',
+            'Layout with two columns, wider left',
             [
                 [
                     ['name' => 'Wider Left', 'colPos' => 101],
@@ -40,7 +40,7 @@
         new \B13\Container\Tca\ContainerConfiguration(
             'containerColumns-1-2',
             '2 Columns 40/60',
-            'Dividing the content area into two columns with right column being wider',
+            'Layout with two columns, wider right',
             [
                 [
                     ['name' => 'Left', 'colPos' => 101],
@@ -56,8 +56,8 @@
     (
         new \B13\Container\Tca\ContainerConfiguration(
             'containerColumns-1-1-1',
-            '3 Columns 33/33/33',
-            'Dividing the content area into three equal columns',
+            '3 Columns',
+            'Layout with three equal columns',
             [
                 [
                     ['name' => 'Left', 'colPos' => 101],
@@ -74,8 +74,8 @@
     (
         new \B13\Container\Tca\ContainerConfiguration(
             'containerColumns-1-1-1-1',
-            '4 Columns 25/25/25/25',
-            'Dividing the content area into four equal columns',
+            '4 Columns',
+            'Layout with four equal columns',
             [
                 [
                     ['name' => 'Left', 'colPos' => 101],
