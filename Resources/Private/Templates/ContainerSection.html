@@ -34,8 +34,7 @@
         {f:if(condition: '{assets.0.uid}', then: 'has-bg-video')}
         {f:if(condition: '{data.tx_containeritems_s_bgfixed}', then: 'fixed')}
         {f:if(condition: '{data.tx_containeritems_s_bgcolorselect}', then: '{data.tx_containeritems_s_bgcolorselect}')}
-    "
-    style="z-index: {data.sorting};">
+    ">
 
     <f:if condition="{images.0} && !{assets.0.uid}">
         <f:image
@@ -48,8 +47,7 @@
     <f:if condition="{assets.0.uid}">
         <video oncanplay="this.classList.add('loaded')"
             id="videoid{data.uid}"
-            style=""
-            class="bg-video bg-media {f:if(condition: '{data.tx_containeritems_s_bgmediaeffect}', then: '{data.tx_containeritems_s_bgmediaeffect}')} {f:if(condition: '{data.tx_containeritems_s_bgplacement}', then: 'bg{data.tx_containeritems_s_bgplacement}', else: 'bg0')}" style="position: {f:if(condition: '{data.tx_containeritems_s_bgfixed}', then: 'is-fixed')}" playsinline autoplay muted {f:if(condition: '!{data.tx_containeritems_s_bgvideoonoloop}', then: 'loop')}>
+            class="bg-video bg-media {f:if(condition: '{data.tx_containeritems_s_bgmediaeffect}', then: '{data.tx_containeritems_s_bgmediaeffect}')} {f:if(condition: '{data.tx_containeritems_s_bgplacement}', then: 'bg{data.tx_containeritems_s_bgplacement}', else: 'bg0')}" playsinline autoplay muted {f:if(condition: '!{data.tx_containeritems_s_bgvideoonoloop}', then: 'loop')}>
             <f:for each="{assets}" as="asset">
                 <source src="{asset.publicUrl}" type="{asset.mimetype}">
             </f:for>
