@@ -1,1 +1,60 @@
 @import 'EXT:containeritems/Configuration/TSconfig/*.tsconfig'
+
+# Background image effect after fully loaded
+
+TCEFORM.tt_content.tx_containeritems_s_contentwidth.addItems {
+  0 = Default
+  narrow = Narrow
+  regular = Regular
+  wide = Wide
+  full = Full
+  auto = Auto
+}
+
+
+TCEFORM.tt_content.tx_containeritems_s_textcolorselect.addItems {
+  0 = Default
+  text-light = Light
+  text-dark = Dark
+  bg-white = White
+  bg-black = Black
+}
+
+TCEFORM.tt_content.tx_containeritems_s_bgcolorselect.addItems {
+  0 = Default
+  bg-light = Light
+  bg-dark = Dark
+  bg-white = White
+  bg-black = Black
+}
+
+
+
+TCEFORM.tt_content.tx_containeritems_s_bgmediaeffect.addItems {
+  0 = Lazy load
+  1 = Immediate
+  fade-in = Fade in
+  slide-down = Slide down
+  slide-up = Slide up
+}
+
+TCEFORM.tt_content.tx_containeritems_b_style.addItems {
+  0 = Default
+  bg-light = Light Background
+  bg-dark = Dark Background
+  attention = Attention
+  warning = Warning
+  success = Success
+}
+
+TCEFORM.tt_content.tx_containeritems_siema_style.addItems {
+  0 = In Content
+  hero = Hero
+  home = Home
+}
+TCEFORM.tt_content.tx_containeritems_siema_pagination.addItems {
+  0 = None
+  dots = Dots
+  numbers = Numbers
+  count = Count out of Total
+}

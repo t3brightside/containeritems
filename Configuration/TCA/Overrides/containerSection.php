@@ -29,6 +29,17 @@ $tempColumns = array(
             ],
         ],
     ],
+    'tx_containeritems_customid' => [
+        'exclude' => 1,
+        'label'   => 'Custom ID (overrides default)',
+        'config'  => [
+            'type'     => 'input',
+            'size' => 20,
+            'behaviour' => [
+                'allowLanguageSynchronization' => true,
+            ],
+        ],
+    ],
     'tx_containeritems_s_aligncontent' => [
         'exclude' => 1,
         'label'   => 'Content Alignment',
@@ -64,19 +75,14 @@ $tempColumns = array(
             ],
         ],
     ],
-    'tx_containeritems_s_fullwidth' => [
+    'tx_containeritems_s_contentwidth' => [
         'exclude' => 1,
-        'label' => 'Full Width',
-        'description' => 'Content will be full width of the viewport',
+        'label' => 'Content Width',
+        'description' => 'Preset content widths',
         'config' => [
-            'type' => 'check',
-            'renderType' => 'checkboxToggle',
-            'items' => [
-                [
-                    0 => '',
-                    1 => '',
-                ]
-            ],
+            'type' => 'select',
+            'renderType' => 'selectSingle',
+            'items'    => array(),
             'behaviour' => [
                 'allowLanguageSynchronization' => true,
             ],
@@ -108,8 +114,7 @@ $tempColumns = array(
             'renderType' => 'selectSingle',
             'default' => 0,
             'items' => [
-                ['Default', '0'],
-                ['Top', 'top'],
+                ['Top', '0'],
                 ['Center', 'center'],
                 ['Bottom', 'bottom'],
             ],
@@ -125,22 +130,7 @@ $tempColumns = array(
             'type'     => 'select',
             'renderType' => 'selectSingle',
             'default' => 0,
-            'items' => [
-                ['Default', '0'],
-                ['Light', 'text-light'],
-                ['Dark', 'text-dark'],
-            ],
-            'behaviour' => [
-                'allowLanguageSynchronization' => true,
-            ],
-        ],
-    ],
-    'tx_containeritems_s_textcolor' => [
-        'exclude' => 1,
-        'label'   => 'Custom Text Color',
-        'config'  => [
-            'type'     => 'input',
-            'size' => 10,
+            'items'    => array(),
             'behaviour' => [
                 'allowLanguageSynchronization' => true,
             ],
@@ -153,23 +143,7 @@ $tempColumns = array(
             'type'     => 'select',
             'renderType' => 'selectSingle',
             'default' => 0,
-            'items' => [
-                ['Default', '0'],
-                ['Light', 'bg-light'],
-                ['Dark', 'bg-dark'],
-                ['Black', 'bg-black'],
-            ],
-            'behaviour' => [
-                'allowLanguageSynchronization' => true,
-            ],
-        ],
-    ],
-    'tx_containeritems_s_bgcolor' => [
-        'exclude' => 1,
-        'label'   => 'Custom Background Color',
-        'config'  => [
-            'type'     => 'input',
-            'size' => 10,
+            'items'    => array(),
             'behaviour' => [
                 'allowLanguageSynchronization' => true,
             ],
@@ -181,6 +155,19 @@ $tempColumns = array(
         'config'  => [
             'type'     => 'input',
             'size' => 10,
+            'behaviour' => [
+                'allowLanguageSynchronization' => true,
+            ],
+        ],
+    ],
+    'tx_containeritems_s_bgmediaeffect' => [
+        'exclude' => 1,
+        'label'   => 'Background media loading style',
+        'config'  => [
+            'type'     => 'select',
+            'renderType' => 'selectSingle',
+            'default' => 0,
+            'items'    => array(),
             'behaviour' => [
                 'allowLanguageSynchronization' => true,
             ],
@@ -244,7 +231,7 @@ $tempColumns = array(
     'tx_containeritems_s_bgplacement' => [
         'exclude' => 1,
         'label'   => 'Placement',
-        'description' => 'Defines image and video placement related to the container',
+        'description' => 'Defines background media placement related to the section frame',
         'config'  => [
             'type'     => 'select',
             'renderType' => 'selectSingle',
@@ -459,14 +446,12 @@ $GLOBALS['TCA']['tt_content']['palettes']['sectionSettings']['showitem'] = '
     tx_containeritems_s_valign,
     --linebreak--,
     tx_containeritems_s_fullheight,
-    tx_containeritems_s_fullwidth,
+    tx_containeritems_s_contentwidth,
     tx_containeritems_s_framepadding,
 ';
 $GLOBALS['TCA']['tt_content']['palettes']['sectionColors']['showitem'] = '
     tx_containeritems_s_textcolorselect,
-    tx_containeritems_s_textcolor,
     tx_containeritems_s_bgcolorselect,
-    tx_containeritems_s_bgcolor,
 ';
 $GLOBALS['TCA']['tt_content']['palettes']['sectionBgImage']['showitem'] = '
     image,
@@ -483,6 +468,7 @@ $GLOBALS['TCA']['tt_content']['palettes']['sectionBgPlacement']['showitem'] = '
     tx_containeritems_s_bgvideoclearframe,
     tx_containeritems_s_bgplacement,
     tx_containeritems_s_bgfixed,
+    tx_containeritems_s_bgmediaeffect,
 ';
 $GLOBALS['TCA']['tt_content']['palettes']['sectionBgOverlay']['showitem'] = '
     tx_containeritems_s_bgoverlay,
