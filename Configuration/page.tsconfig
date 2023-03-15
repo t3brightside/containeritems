@@ -1,16 +1,10 @@
-@import 'EXT:containeritems/Configuration/TSconfig/*.tsconfig'
-
-# Background image effect after fully loaded
-
 TCEFORM.tt_content.tx_containeritems_s_contentwidth.addItems {
   0 = Default
-  narrow = Narrow
   regular = Regular
   wide = Wide
   full = Full
   auto = Auto
 }
-
 
 TCEFORM.tt_content.tx_containeritems_s_textcolorselect.addItems {
   0 = Default
@@ -27,8 +21,6 @@ TCEFORM.tt_content.tx_containeritems_s_bgcolorselect.addItems {
   bg-white = White
   bg-black = Black
 }
-
-
 
 TCEFORM.tt_content.tx_containeritems_s_bgmediaeffect.addItems {
   0 = Lazy load
@@ -52,6 +44,7 @@ TCEFORM.tt_content.tx_containeritems_siema_style.addItems {
   hero = Hero
   home = Home
 }
+
 TCEFORM.tt_content.tx_containeritems_siema_pagination.addItems {
   0 = None
   dots = Dots
