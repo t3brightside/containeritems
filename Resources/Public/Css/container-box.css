@@ -1,0 +1,65 @@
+.c-box {
+    padding: 1.5em;
+    border: 1px solid #ccc;
+    background: #f8f8f8;
+    position: relative
+}
+
+.c-columns .c-box {
+    font-size: 0.75em;
+    line-height: 1.5em
+}
+
+.c-box.attention {
+    background: #FFFCD9;
+    border-color: #E6D300
+}
+
+.c-box.warning {
+    background: #FFE8EE;
+    border-color: #F3B1C6
+}
+
+.c-box.success {
+    background: #ECFFE8;
+    border-color: #80DD6E
+}
+
+.c-box.bg-light {
+    background: #f5f5f5
+}
+
+.c-box.bg-dark {
+    background: #353535;
+    color: #fff
+}
+
+.c-box>div:nth-of-type(1) h2,
+.c-box>div:nth-of-type(1) h3,
+.c-box>div:nth-of-type(1) h4 {
+    padding-top: 0;
+    margin-top: -0.1em
+}
+
+.c-box>div:last-child p:last-of-type {
+    padding-bottom: 0;
+    margin-bottom: 0
+}
+
+@media (prefers-color-scheme:dark) {
+    .c-box {
+        background: #333
+    }
+
+    .c-box.attention {
+        background: #504d00
+    }
+
+    .c-box.warning {
+        background: #6d2c5e
+    }
+
+    .c-box.success {
+        background: #004f00
+    }
+}

@@ -1,6 +1,6 @@
-<f:section name="HeaderAssets">
-    <f:render partial="BoxStyles" arguments="{_all}" />
-</f:section>
+{namespace ea=Brightside\Embedassets\ViewHelpers}
+<ea:asset.css embed="{settings.cssEmbed}" priority="{settings.boxCssPriority}" identifier="boxCss" href="{settings.boxCssFile}" />
+
 <div id="c{data.uid}" class="
     frame
     frame-type-container

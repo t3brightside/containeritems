@@ -7,28 +7,44 @@ lib.containerItems {
   partialRootPaths.10 = EXT:containeritems/Resources/Private/Partials/
   partialRootPaths.20 = {$containerItems.partialRootPaths}
   dataProcessing.13 = B13\Container\DataProcessing\ContainerProcessor
+  settings {
+    accordionCssFile = {$containerItems.accordionCssFile}
+    accordionCssPriority = {$containerItems.accordionCssFilePriority}
+    boxCssFile = {$containerItems.boxCssFile}
+    boxCssPriority = {$containerItems.boxCssFilePriority}
+    columnsCssFile = {$containerItems.columnsCssFile}
+    columnsCssPriority = {$containerItems.columnsCssFilePriority}
+    columnsSpaceWidth = {$containerItems.columnsSpaceWidth}
+    columnsWiderColOfTwo = {$containerItems.columnsWidthOfWider}
+    popupCssFile = {$containerItems.popupCssFile}
+    popupCssPriority = {$containerItems.popupCssFilePriority}
+    sectionCssFile = {$containerItems.sectionCssFile}
+    sectionCssPriority = {$containerItems.sectionCssFilePriority}
+    sectionDefaultAlignment = {$containerItems.sectionDefaultAlignment}
+    sectionBgImageWidth = {$containerItems.sectionBgImageWidth}
+    sectionScrollInEffectCssFile = {$containerItems.sectionScrollInEffectCssFile}
+    sectionScrollInEffectCssPriority = {$containerItems.sectionScrollInEffectCssPriority}
+    sectionScrollInEffect = {$containerItems.sectionScrollInEffect}
+    siemaCssFile = {$containerItems.siemaCssFile}
+    siemaCssPriority = {$containerItems.siemaCssFilePriority}
+    cssEmbed = {$containerItems.cssEmbed}
+  }
 }
 
 # Accordion
 tt_content.containerAccordion < lib.containerItems
 tt_content.containerAccordion {
   templateName = ContainerAccordion
-  partialRootPaths.30 = EXT:containeritems/Resources/Private/Partials/Accordion/
-  partialRootPaths.40 = {$containerItems.accordion.partialRootPaths}
 }
 
 # Box
 tt_content.containerBox < lib.containerItems
 tt_content.containerBox {
-  partialRootPaths.30 = EXT:containeritems/Resources/Private/Partials/Box/
-  partialRootPaths.40 = {$containerItems.columns.partialRootPaths}
   templateName = ContainerBox
 }
 # Columns
 lib.containerColumnsDefault < lib.containerItems
 lib.containerColumnsDefault {
-  partialRootPaths.30 = EXT:containeritems/Resources/Private/Partials/Columns/
-  partialRootPaths.40 = {$containerItems.columns.partialRootPaths}
   templateName = ContainerColumns
   variables {
     spaceWidth = TEXT
@@ -47,24 +63,15 @@ tt_content.containerColumns-1-1-1-1 < lib.containerColumnsDefault
 tt_content.containerGather < lib.containerItems
 tt_content.containerGather.templateName = ContainerGather
 
-# Section
-["{$containerSection.fadeInContent}" == "1"]
-  page.headerData {
-    109991 = TEXT
-    109991.value (
-      <style>
-        .c-section .frame { opacity: 0; transition: opacity .6s ease-in }
-        .c-section .frame.isInViewport { opacity: 1 }
-      </style>
-    )
-  }
-[END]
+# Box
+tt_content.containerPopup < lib.containerItems
+tt_content.containerPopup {
+  templateName = ContainerPopup
+}
 
 # Sections
 tt_content.containerSection < lib.containerItems
 tt_content.containerSection {
-  partialRootPaths.30 = EXT:containeritems/Resources/Private/Partials/Section/
-  partialRootPaths.40 = {$containerItems.section.partialRootPaths}
   templateName = ContainerSection
   dataProcessing {
     20 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
@@ -78,13 +85,15 @@ tt_content.containerSection {
       as = images
     }
   }
+  settings {
+    defaultScrollInEffect = {$containerSection.defaultScrollInEffect}
+  }
   variables {
     defaultAlignment = TEXT
     defaultAlignment.value = {$containerSection.defaultAlignment}
     bgImageWidth = TEXT
     bgImageWidth.value = {$containerSection.bgImageWidth}
     bgImageWidth.override.field = tx_containeritems_s_bgimagewidth
-
   }
 }
 
@@ -92,6 +101,4 @@ tt_content.containerSection {
 tt_content.containerSiema < lib.containerItems
 tt_content.containerSiema {
   templateName = ContainerSiema
-  partialRootPaths.30 = EXT:containeritems/Resources/Private/Partials/Siema/
-  partialRootPaths.40 = {$containerItems.siema.partialRootPaths}
 }

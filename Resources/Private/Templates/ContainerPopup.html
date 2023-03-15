@@ -1,0 +1,14 @@
+{namespace ea=Brightside\Embedassets\ViewHelpers}
+<ea:asset.css embed="{settings.cssEmbed}" priority="{settings.popupCssPriority}" identifier="popupCss" href="{settings.popupCssFile}" />
+
+<div id="{f:if(condition: '{data.tx_containeritems_customid}', then: '{data.tx_containeritems_customid}', else: 'c{data.uid}')}" style="z-index: 999{data.sorting}" class="frame frame-default frame-container-popup frame-space-before-{data.space_before_class} frame-space-after-{data.space_after_class} c-popup">
+    <button class="c-popup-close" name="{f:if(condition: '{data.tx_containeritems_customid}', then: '{data.tx_containeritems_customid}', else: 'c{data.uid}')}" aria-label="Close"></button>
+    <div class="c-popup-content">
+        <f:for each="{children_101}" as="element">
+            {element.renderedContent -> f:format.raw()}
+        </f:for>
+        <div style="clear:both"></div>
+    </div>
+</div>
+
+<ea:asset.script embed="1" identifier="containerPopup" src="EXT:containeritems/Resources/Public/JavaScript/container-popup.js" />

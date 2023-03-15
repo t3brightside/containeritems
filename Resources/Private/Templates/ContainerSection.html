@@ -1,94 +1,122 @@
-<f:section name="HeaderAssets">
-    <f:render partial="SectionStyles" arguments="{_all}" />
-</f:section>
+{namespace ea=Brightside\Embedassets\ViewHelpers}
+<ea:asset.css embed="{settings.cssEmbed}" priority="{settings.sectionCssPriority}" identifier="sectionCss" href="{settings.sectionCssFile}" />
+
+
+<f:if condition="{settings.sectionScrollInEffect}">
+    <ea:asset.css embed="{settings.cssEmbed}" priority="{settings.sectionScrollInEffectCssPriority}" identifier="sectionScrollInEffectCss" href="{settings.sectionScrollInEffectCssFile}" />
+</f:if>
+<f:if condition="{data.tx_containeritems_s_bgoverlaydark} || {data.tx_containeritems_s_bgoverlay}">
+    <ea:asset.css priority="1" identifier="containerSection-{data.uid}">
+        #overlay-{data.uid} {
+          background-color: {data.tx_containeritems_s_bgoverlay};
+        }
+        @media (prefers-color-scheme: dark) {
+          #overlay-{data.uid} {
+            background-color: {data.tx_containeritems_s_bgoverlaydark};
+          }
+        }
+    </ea:asset.css>
+</f:if>
 <div
     id="c{data.uid}"
     class="c-section
         {data.tx_containeritems_classes}
-        {f:if(condition: '{data.tx_containeritems_s_aligncontent}', then: 'align-{data.tx_containeritems_s_aligncontent}', else: 'align-{defaultAlignment}')}
+        {f:if(condition: '{data.tx_containeritems_s_contentwidth}', then: 'content-width-{data.tx_containeritems_s_contentwidth}', else: 'content-with-{settings.content-width-default}')}
+        {f:if(condition: '{data.tx_containeritems_s_aligncontent}', then: 'align-{data.tx_containeritems_s_aligncontent}', else: 'align-{settings.sectionDefaultAlignment}')}
+        {f:if(condition: '{settings.sectionScrollInEffect}', then: 'scroll-in-{settings.sectionScrollInEffect}')}
         {f:if(condition: '{data.tx_containeritems_s_framepadding}', then: 'frame-padding-{data.tx_containeritems_s_framepadding}')}
         {f:if(condition: '{data.tx_containeritems_s_fullheight}==1', then: 'fullheight')}
         {f:if(condition: '{data.tx_containeritems_s_fullheight}==1&&{data.tx_containeritems_s_valign}', then: 'valign-{data.tx_containeritems_s_valign}')}
         {f:if(condition: '{data.tx_containeritems_s_fullwidth}==1', then: 'fullwidth')}
-        {f:if(condition: '{data.tx_containeritems_s_bgcolorselect}', then: '{data.tx_containeritems_s_bgcolorselect}')}
         {f:if(condition: '{data.tx_containeritems_s_textcolorselect}', then: '{data.tx_containeritems_s_textcolorselect}')}
         {f:if(condition: '{data.space_before_class}', then: 'frame-space-before-{data.space_before_class}')}
         {f:if(condition: '{data.space_after_class}', then: 'frame-space-after-{data.space_after_class}')}
-        {f:if(condition: '{data.tx_containeritems_s_bgplacement}', then: 'bg{data.tx_containeritems_s_bgplacement}', else: 'bg0')}
         {f:if(condition: '{assets.0.uid}', then: 'has-bg-video')}
         {f:if(condition: '{data.tx_containeritems_s_bgfixed}', then: 'fixed')}
+        {f:if(condition: '{data.tx_containeritems_s_bgcolorselect}', then: '{data.tx_containeritems_s_bgcolorselect}')}
     "
-    style="
-    <f:if condition="{images.0}">background: url({f:uri.image(image: '{images.0}', width: '{bgImageWidth}')}) no-repeat; background-size: cover;</f:if>
-        {f:if(condition: '{data.tx_containeritems_s_textcolor}', then: 'color: {data.tx_containeritems_s_textcolor};')}
-        {f:if(condition: '{data.tx_containeritems_s_bgcolor}', then: 'background-color: {data.tx_containeritems_s_bgcolor};')}
-    ">
-    <f:if condition="{data.tx_containeritems_s_bgvideosound} && {assets.0.uid}">
-        <button onclick="enableBgVideoSoundButton(this)" class="videobuttons sound {f:if(condition: '{data.tx_containeritems_s_bgvideoclearframe}', then: 'hasclearframebutton')}" style="border: none">
-            <svg class="off" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                 viewBox="0 0 23.8 19.9" style="enable-background:new 0 0 23.8 19.9;" xml:space="preserve">
-            <title>Sound</title>
-            <polygon class="st0" points="6,5 13.9,0 13.9,19.9 6,14.9 "/>
-            <rect y="5" class="st0" width="4" height="9.9"/>
-            <g>
-                <rect x="18.7" y="5.1" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -1.2715 16.7804)" class="st0" width="1.9" height="9.6"/>
-                <rect x="18.7" y="5.1" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 26.4754 30.8165)" class="st0" width="1.9" height="9.6"/>
-            </g>
-            </svg>
-            <svg class="on" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                 viewBox="0 0 23.8 19.9" style="enable-background:new 0 0 23.8 19.9;" xml:space="preserve">
-            <title>Mute</title>
-            <path class="st0" d="M6,5l7.9-5v19.9l-7.9-5V5z M0,14.9h4V5H0V14.9z M20.1,1.7l-1.5,1.5c1.9,1.7,3,4.2,3,6.7c0,2.6-1.1,5-3,6.7
-                l1.5,1.5c2.3-2.1,3.7-5.1,3.7-8.2C23.8,6.8,22.4,3.8,20.1,1.7z M19.6,9.9c0-2-0.9-4-2.4-5.3l-1.5,1.5c1,1,1.6,2.4,1.6,3.9
-                c0,1.4-0.6,2.8-1.6,3.9l1.5,1.5C18.7,13.9,19.6,12,19.6,9.9z"/>
-            </svg>
-        </button>
-    </f:if>
-    <f:if condition="{data.tx_containeritems_s_bgvideoclearframe}">
-        <button onclick="hideSectionContentButton(this)" class="videobuttons clearframe" style="border: none">
-            <svg class="off" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.81 17.86"><title>Hide Content</title><polygon class="a" points="23.82 5.95 21.83 5.95 21.83 1.99 17.86 1.99 17.86 0 23.82 0 23.82 5.95"/><polygon class="a" points="17.86 17.86 17.86 15.88 21.83 15.88 21.83 11.91 23.82 11.91 23.82 17.86 17.86 17.86"/><polygon class="a" points="0 11.91 1.99 11.91 1.99 15.88 5.95 15.88 5.95 17.86 0 17.86 0 11.91"/><polygon class="a" points="5.95 0 5.95 1.99 1.99 1.99 1.99 5.95 0 5.95 0 0 5.95 0"/><rect class="a" x="3.97" y="3.97" width="15.88" height="9.92"/></svg>
-            <svg class="on" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                 viewBox="0 0 23.8 17.9" style="enable-background:new 0 0 23.8 17.9;" xml:space="preserve">
-            <title>Show Content</title>
-            <g>
-                <polygon class="st0" points="23.8,6 21.8,6 21.8,2 17.9,2 17.9,0 23.8,0 	"/>
-                <polygon class="st0" points="17.9,17.9 17.9,15.9 21.8,15.9 21.8,11.9 23.8,11.9 23.8,17.9 	"/>
-                <polygon class="st0" points="0,11.9 2,11.9 2,15.9 6,15.9 6,17.9 0,17.9 	"/>
-                <polygon class="st0" points="6,0 6,2 2,2 2,6 0,6 0,0 	"/>
-            </g>
-            </svg>
-        </button>
+    style="z-index: {data.sorting};">
+
+    <f:if condition="{images.0} && !{assets.0.uid}">
+        <f:image
+            class="bg-image bg-media {f:if(condition: '{data.tx_containeritems_s_bgmediaeffect}', then: '{data.tx_containeritems_s_bgmediaeffect}')} {f:if(condition: '{data.tx_containeritems_s_bgplacement}', then: 'bg{data.tx_containeritems_s_bgplacement}', else: 'bg0')}"
+            image="{images.0}" width="{settings.sectionBgImageWidth}"
+            additionalAttributes="{onload: 'this.classList.add(\'loaded\')'}"
+            loading="{f:if(condition: '{data.tx_containeritems_s_bgmediaeffect} == 0', then: 'lazy')}"
+        />
     </f:if>
     <f:if condition="{assets.0.uid}">
-        <video id="videoid{data.uid}" class="bg-video" style="position: {f:if(condition: '{data.tx_containeritems_s_bgfixed}', then: 'is-fixed')}" playsinline autoplay muted {f:if(condition: '{data.tx_containeritems_s_bgvideoonoloop}', then: '', else: 'loop')}>
+        <video oncanplay="this.classList.add('loaded')"
+            id="videoid{data.uid}"
+            style=""
+            class="bg-video bg-media {f:if(condition: '{data.tx_containeritems_s_bgmediaeffect}', then: '{data.tx_containeritems_s_bgmediaeffect}')} {f:if(condition: '{data.tx_containeritems_s_bgplacement}', then: 'bg{data.tx_containeritems_s_bgplacement}', else: 'bg0')}" style="position: {f:if(condition: '{data.tx_containeritems_s_bgfixed}', then: 'is-fixed')}" playsinline autoplay muted {f:if(condition: '!{data.tx_containeritems_s_bgvideoonoloop}', then: 'loop')}>
             <f:for each="{assets}" as="asset">
                 <source src="{asset.publicUrl}" type="{asset.mimetype}">
             </f:for>
         </video>
     </f:if>
     <f:if condition="{data.tx_containeritems_s_bgoverlay} || {data.tx_containeritems_s_bgoverlaydark} || {data.tx_containeritems_s_bgoverlayfilters}">
-        <div id="overlay-{data.uid}" class="overlay" style="
-          <f:if condition="{data.tx_containeritems_s_bgoverlay}">background: {data.tx_containeritems_s_bgoverlay};
-        </f:if>
-          <f:if condition="{data.tx_containeritems_s_bgoverlayfilters}">
-            backdrop-filter: brightness({data.tx_containeritems_s_bgoverlaybrightness}%) hue-rotate({data.tx_containeritems_s_bgoverlayhue}deg) saturate({data.tx_containeritems_s_bgoverlaysaturate}%) blur({data.tx_containeritems_s_bgoverlayblur}px) sepia({data.tx_containeritems_s_bgoverlaysepia}%);
-            -webkit-backdrop-filter:  hue-rotate({data.tx_containeritems_s_bgoverlayhue}deg) saturate({data.tx_containeritems_s_bgoverlaysaturate}%) blur({data.tx_containeritems_s_bgoverlayblur}px);
-          </f:if>
-        "></div>
+        <div id="overlay-{data.uid}"
+             class="overlay"
+             style="
+                <f:if condition="{data.tx_containeritems_s_bgoverlayfilters}">
+                    backdrop-filter: brightness({data.tx_containeritems_s_bgoverlaybrightness}%) hue-rotate({data.tx_containeritems_s_bgoverlayhue}deg) saturate({data.tx_containeritems_s_bgoverlaysaturate}%) blur({data.tx_containeritems_s_bgoverlayblur}px) sepia({data.tx_containeritems_s_bgoverlaysepia}%);
+                    -webkit-backdrop-filter: brightness({data.tx_containeritems_s_bgoverlaybrightness}%) hue-rotate({data.tx_containeritems_s_bgoverlayhue}deg) saturate({data.tx_containeritems_s_bgoverlaysaturate}%) blur({data.tx_containeritems_s_bgoverlayblur}px) sepia({data.tx_containeritems_s_bgoverlaysepia}%);
+                </f:if>
+            ">
+        </div>
     </f:if>
-    <div class="contentWidth content">
+
+    <div class="contentWidth content" style="">
         <f:for each="{children_101}" as="element">
             {element.renderedContent -> f:format.raw()}
         </f:for>
     </div>
+    <div class="c-section-buttons">
+        <f:if condition="{data.tx_containeritems_s_bgvideosound} && {assets.0.uid}">
+            <button class="sound" style="border: none;">
+                <svg class="off" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    viewBox="0 0 23.8 19.9" style="enable-background:new 0 0 23.8 19.9;" xml:space="preserve">
+                <title>Sound</title>
+                <polygon class="st0" points="6,5 13.9,0 13.9,19.9 6,14.9 "/>
+                <rect y="5" class="st0" width="4" height="9.9"/>
+                <g>
+                    <rect x="18.7" y="5.1" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -1.2715 16.7804)" class="st0" width="1.9" height="9.6"/>
+                    <rect x="18.7" y="5.1" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 26.4754 30.8165)" class="st0" width="1.9" height="9.6"/>
+                </g>
+                </svg>
+                <svg class="on" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    viewBox="0 0 23.8 19.9" style="enable-background:new 0 0 23.8 19.9;" xml:space="preserve">
+                <title>Mute</title>
+                <path class="st0" d="M6,5l7.9-5v19.9l-7.9-5V5z M0,14.9h4V5H0V14.9z M20.1,1.7l-1.5,1.5c1.9,1.7,3,4.2,3,6.7c0,2.6-1.1,5-3,6.7
+                    l1.5,1.5c2.3-2.1,3.7-5.1,3.7-8.2C23.8,6.8,22.4,3.8,20.1,1.7z M19.6,9.9c0-2-0.9-4-2.4-5.3l-1.5,1.5c1,1,1.6,2.4,1.6,3.9
+                    c0,1.4-0.6,2.8-1.6,3.9l1.5,1.5C18.7,13.9,19.6,12,19.6,9.9z"/>
+                </svg>
+            </button>
+        </f:if>
+
+        <f:if condition="{data.tx_containeritems_s_bgvideoclearframe}">
+            <button class="clearframe" style="border: none;">
+                <svg class="off" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.81 17.86"><title>Show Background</title><polygon class="a" points="23.82 5.95 21.83 5.95 21.83 1.99 17.86 1.99 17.86 0 23.82 0 23.82 5.95"/><polygon class="a" points="17.86 17.86 17.86 15.88 21.83 15.88 21.83 11.91 23.82 11.91 23.82 17.86 17.86 17.86"/><polygon class="a" points="0 11.91 1.99 11.91 1.99 15.88 5.95 15.88 5.95 17.86 0 17.86 0 11.91"/><polygon class="a" points="5.95 0 5.95 1.99 1.99 1.99 1.99 5.95 0 5.95 0 0 5.95 0"/><rect class="a" x="3.97" y="3.97" width="15.88" height="9.92"/></svg>
+                <svg class="on" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    viewBox="0 0 23.8 17.9" style="enable-background:new 0 0 23.8 17.9;" xml:space="preserve">
+                <title>Show Content</title>
+                <g>
+                    <polygon class="st0" points="23.8,6 21.8,6 21.8,2 17.9,2 17.9,0 23.8,0 	"/>
+                    <polygon class="st0" points="17.9,17.9 17.9,15.9 21.8,15.9 21.8,11.9 23.8,11.9 23.8,17.9 	"/>
+                    <polygon class="st0" points="0,11.9 2,11.9 2,15.9 6,15.9 6,17.9 0,17.9 	"/>
+                    <polygon class="st0" points="6,0 6,2 2,2 2,6 0,6 0,0 	"/>
+                </g>
+                </svg>
+            </button>
+        </f:if>
+    </div>
 </div>
-<f:if condition="{data.tx_containeritems_s_bgoverlaydark}">
-    <script>
-        if (window.matchMedia('(prefers-color-scheme: dark)').matches) { // If media query matches
-          document.getElementById('overlay-{data.uid}').style.backgroundColor = '{data.tx_containeritems_s_bgoverlaydark}';
-        }
-    </script>
+
+<ea:asset.script embed="1" identifier="containerSection" src="EXT:containeritems/Resources/Public/JavaScript/container-section.js" />
+<f:if condition="{assets.0.uid}">
+    <ea:asset.script embed="1" identifier="containerSectionVideo" src="EXT:containeritems/Resources/Public/JavaScript/container-section-video.js" />
 </f:if>
-<f:section name="FooterAssets">
-    <f:render partial="SectionJavaScript" arguments="{_all}" />
-</f:section>
+<f:if condition="{settings.sectionScrollInEffect}">
+    <ea:asset.script embed="1" identifier="sectionScrollInEffect" src="EXT:containeritems/Resources/Public/JavaScript/container-section-effects.js" />
+</f:if>

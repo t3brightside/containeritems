@@ -1,9 +1,7 @@
-<f:section name="HeaderAssets">
-    <f:render partial="SiemaStyles" arguments="{_all}" />
-    <f:render partial="SiemaJavaScript" arguments="{_all}" />
-</f:section>
-<f:asset.css identifier="siemaStyles">
-</f:asset.css>
+{namespace ea=Brightside\Embedassets\ViewHelpers}
+<ea:asset.css embed="{settings.cssEmbed}" priority="{settings.siemaCssPriority}" identifier="siemaCss" href="{settings.siemaCssFile}" />
+
+<f:asset.script identifier="siema" priority="1" src="EXT:containeritems/Resources/Public/JavaScript/Libs/siema_1.5.1.min.js" />
 
 <div id="c{data.uid}" class="
         frame
@@ -24,7 +22,42 @@
     <f:if condition='{children_101 -> f:count()} > 1'>
         <f:render partial="SiemaNavigation" arguments="{_all}" />
     </f:if>
-    <f:render partial="SiemaLoader" arguments="{_all}" />
+    <script type="text/javascript">
+
+        <f:if condition='{data.tx_containeritems_siema_loop} && {children_101 -> f:count()} > 1'>
+            <f:then>
+                var looping<f:format.raw>{data.uid}</f:format.raw> = true;
+            </f:then>
+            <f:else>
+                var looping<f:format.raw>{data.uid}</f:format.raw> = false;
+            </f:else>
+        </f:if>
+
+        const cSiema{data.uid} = new Siema({
+            selector: '#siema-<f:format.raw>{data.uid}</f:format.raw>',
+            duration: 200,
+            easing: 'ease-out',
+            perPage: 1,
+            startIndex: 0,
+            draggable: true,
+            multipleDrag: true,
+            threshold: 20,
+            loop:  looping<f:format.raw>{data.uid}</f:format.raw>,
+            rtl: false,
+            onInit: paginationUpdate,
+            onChange: paginationUpdate,
+        });
+    </script>
 </div>
 
-
+<f:asset.script identifier="siemaFunctions">
+    function page(slider, slide) {
+        slider.goTo(slide);
+    }
+    function next(slider) {
+        slider.next();
+    }
+    function prev(slider) {
+        slider.prev();
+    }
+</f:asset.script>

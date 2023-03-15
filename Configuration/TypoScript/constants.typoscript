@@ -1,24 +1,44 @@
 # cat=Containeritems/containeritems; type=string; label= Template Root Paths
-containerItems.templateRootPaths = EXT:containeritems/Resources/Private/Templates/
+  containerItems.templateRootPaths = EXT:containeritems/Resources/Private/Templates/
 # cat=Containeritems/containeritems; type=string; label= Partial Root Paths
-containerItems.partialRootPaths = EXT:containeritems/Resources/Private/Partials/
-# cat=Containeritems/containeritems; type=string; label= Partial Root Paths for Accordion
-containerItems.accordion.partialRootPaths = EXT:containeritems/Resources/Private/Partials/Accordion/
-# cat=Containeritems/containeritems; type=string; label= Partial Root Paths for Box
-containerItems.box.partialRootPaths = EXT:containeritems/Resources/Private/Partials/Box/
-# cat=Containeritems/containeritems; type=string; label= Partial Root Paths for Columns
-containerItems.columns.partialRootPaths = EXT:containeritems/Resources/Private/Partials/Columns/
-# cat=Containeritems/containeritems; type=string; label= Partial Root Paths for Section
-containerItems.section.partialRootPaths = EXT:containeritems/Resources/Private/Partials/Section/
-# cat=Containeritems/containeritems; type=string; label= Partial Root Paths for Siema Carousel
-containerItems.siema.partialRootPaths = EXT:containeritems/Resources/Private/Partials/Siema/
+  containerItems.partialRootPaths = EXT:containeritems/Resources/Private/Partials/
+# cat=Containeritems/containeritems; type=string; label= Css file for accordion
+	containerItems.accordionCssFile = EXT:containeritems/Resources/Public/Css/container-accordion.css
+# cat=Containeritems/containeritems; type=boolean; label= Css priority for accordion, 0 means CSS is put in page footer
+  containerItems.accordionCssPriority = 1
+# cat=Containeritems/containeritems; type=string; label= Css file for box
+	containerItems.boxCssFile = EXT:containeritems/Resources/Public/Css/container-box.css
+# cat=Containeritems/containeritems; type=boolean; label= Css priority for box, 0 means CSS is put in page footer
+  containerItems.boxCssPriority = 1
+# cat=Containeritems/containeritems; type=string; label= Css file for columns
+	containerItems.columnsCssFile = EXT:containeritems/Resources/Public/Css/container-columns.css
+# cat=Containeritems/containeritems; type=boolean; label= Css priority for columns, 0 means CSS is put in page footer
+  containerItems.columnsCssPriority = 1
 # cat=Containeritems/containeritems; type=string; label= Columns - Space width in %
-containerColumns.spaceWidth = 5
+  containerItems.columnsSpaceWidth = 5
 # cat=Containeritems/containeritems; type=string; label= Columns - Width of wider column of two in %
-containerColumns.wideColOfTwoWidth = 60
-# cat=Containeritems/containeritems; type=int; label= Section - Background image width (px)
-containerSection.bgImageWidth = 1600
-# cat=Containeritems/containeritems; type=options[left,center,right]; label= Section - Default content alignment
-containerSection.defaultAlignment = left
-# cat=Containeritems/containeritems; type=boolean; label= Section - Enable content frames to fade-in/out on scrolling
-containerSection.fadeInContent = 0
+  containerItems.columnsWidthOfWider = 60
+# cat=Containeritems/containeritems; type=string; label= Css file for popup
+	containerItems.popupCssFile = EXT:containeritems/Resources/Public/Css/container-popup.css
+# cat=Containeritems/containeritems; type=boolean; label= Css priority for popup, 0 means CSS is put in page footer
+  containerItems.popupCssPriority = 0
+# cat=Containeritems/containeritems; type=string; label= Css file for section
+	containerItems.sectionCssFile = EXT:containeritems/Resources/Public/Css/container-section.css
+# cat=Containeritems/containeritems; type=boolean; label= Css priority for section, 0 means CSS is put in page footer
+  containerItems.sectionCssPriority = 1
+# cat=Containeritems/containeritems; type=options[left,center,right]; label= Default content alignment in section
+  containerItems.sectionDefaultAlignment = left
+# cat=Containeritems/containeritems; type=int; label= Default bg image width in px for section
+  containerItems.sectionBgImageWidth = 1400
+# cat=Containeritems/containeritems; type=string; label= Css file for section scroll in effects
+  containerItems.sectionScrollInEffectCssFile = EXT:containeritems/Resources/Public/Css/container-section-scroll-in-effects.css
+# cat=Containeritems/containeritems; type=boolean; label= Css priority for section scroll in effects, 0 means CSS is put in page footer
+  containerItems.sectionScrollInEffectCssPriority = 1
+# cat=Containeritems/containeritems; type=options[slide-from-below,slide-from-left,slide-from-right]; label= Content effect as section scrolls into view
+  containerItems.sectionScrollInEffect =
+# cat=Containeritems/containeritems; type=string; label= Css file for siema
+	containerItems.siemaCssFile = EXT:containeritems/Resources/Public/Css/container-siema.css
+# cat=Containeritems/containeritems; type=boolean; label= Css priority for siema, 0 means CSS is put in page footer
+  containerItems.siemaCssPriority = 1
+# cat=Containeritems/containeritems; type=boolean; label= Css minified and embed into HTML
+  containerItems.cssEmbed = 1

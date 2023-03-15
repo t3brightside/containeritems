@@ -1,6 +1,6 @@
-<f:section name="HeaderAssets">
-    <f:render partial="AccordionStyles" arguments="{_all}" />
-</f:section>
+{namespace ea=Brightside\Embedassets\ViewHelpers}
+<ea:asset.css embed="{settings.cssEmbed}" priority="{settings.accordionCssPriority}" identifier="accordionCss" href="{settings.accordionCssFile}" />
+
 <div id="c{data.uid}" class="frame frame-default frame-container-accordion c-accordion frame-space-before-{data.space_before_class} frame-space-after-{data.space_after_class}">
     <f:for each="{children_101}" as="element" iteration="iterator">
         <div class="c-accordion-item stayopen-{data.tx_containeritems_a_stayopen} {f:if(condition: '{data.tx_containeritems_a_firstopen} && {iterator.isFirst}', then: 'act')}">
@@ -17,6 +17,4 @@
         </div>
 	</f:for>
 </div>
-<f:section name="FooterAssets">
-    <f:render partial="AccordionJavaScript" arguments="{_all}" />
-</f:section>
+<ea:asset.script embed="1" identifier="containerAccordion" src="EXT:containeritems/Resources/Public/JavaScript/container-accordion.js" />

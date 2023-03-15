@@ -1,6 +1,6 @@
-<f:section name="HeaderAssets">
-    <f:render partial="ColumnsStyles" arguments="{_all}" />
-</f:section>
+{namespace ea=Brightside\Embedassets\ViewHelpers}
+<ea:asset.css embed="{settings.cssEmbed}" priority="{settings.columnsCssPriority}" identifier="columnsCss" href="{settings.columnsCssFile}" />
+
 <div id="c{data.uid}" class="
     frame
     frame-type-container

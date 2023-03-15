@@ -1,6 +1,8 @@
-<f:variable name="narrowColWidth">{100 - wideColOfTwoWidth - spaceWidth}</f:variable>
+<f:variable name="spaceWidth">{settings.columnsSpaceWidth}</f:variable>
+<f:variable name="widerCol">{settings.columnsWiderColOfTwo}</f:variable>
+<f:variable name="narrowColWidth">{100 - widerCol - spaceWidth}</f:variable>
 
-<div class="col col-1" style="width: {wideColOfTwoWidth}%">
+<div class="col col-1" style="width: {widerCol}%">
     <f:for each="{children_101}" as="element">
 		{element.renderedContent -> f:format.raw()}
 	</f:for>
