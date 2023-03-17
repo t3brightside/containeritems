@@ -14,7 +14,7 @@ popupCloses.forEach(button => {
     const closeButtonName = event.target.name;
     document.getElementById(closeButtonName).classList.remove('open');
     if (!document.querySelectorAll('.c-popup.open').length) {
-      document.body.style.overflow = 'scroll';
+      document.body.style.overflow = '';
     }
   });
 });
