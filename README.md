@@ -6,7 +6,7 @@
 
 **TYPO3 CMS ext:container layouts for columns, accordions and content sections.**
 
-- **[Demo](https://microtemplate.t3brightside.com)**
+It's the backbone for the Microtemplate extension. See the **[demo site](https://microtemplate.t3brightside.com)**
 
 
 ## System requirements

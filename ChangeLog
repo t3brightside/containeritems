@@ -33,6 +33,17 @@
     - [!! UPGRADE] Make sure to include Containeritems TypoScript template again
                    Make sure your custom styles, templates and partials get loaded
 4.1.0
-    - [TASK] Remove need for jQuery
-    – [TASK] Rename JS functions for better semantics
+    - [!!BREAKING CHANGES!!]
+    - [FEATURE] CSS files defined through TS constants
+    - [FEATURE] Load CSS and JS on demand with ext:embedassets viewhelpers
+    - [FEATURE] Effect options for when bg image fully loaded or video ready to play
+    - [TASK] Move section bg images from css background to img
+    - [TASK] Optimize JS and CSS
+    - [TASK] Remove jQuery and the need for it
+    - [TASK] Move predefined colour options for text and background to PageTS
+    - [TASK] (!BREAKING!) Remove custom colour fields for text and background
+    - [TASK] (!BREAKING!) Rename TS constants for better semantics
     - [BUGFIX] Column styles file
+    - [!!UPGRADE!!]
+      - TS constants need to be revised
+      - Database upgrade needed
