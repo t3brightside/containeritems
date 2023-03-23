@@ -1,4 +1,5 @@
 .c-section {
+    box-sizing: border-box;
     padding-top: 7em;
     padding-bottom: 7em;
     width: 100%;
@@ -6,13 +7,10 @@
     display: flex;
     height: auto;
 }
-.c-section .content {
 
-}
 .c-section.frame-padding-none {
     padding: 0 !important;
 }
-
 
 .c-section .bg-media {
     object-fit: cover;
@@ -32,6 +30,7 @@
 .c-section.valign-bottom {
     align-items: flex-end;
 }
+
 .c-section.valign-bottom .content {
     margin-bottom: 0;
 }
@@ -39,18 +38,22 @@
 .c-section.nopadding {
     padding: 0
 }
+
 .c-section>.content {
     width: 100%;
     max-width: 62rem;
 }
+
 .c-section.content-width-wide>.content {
     max-width: 80rem;
     width: 100%;
 }
+
 .c-section.content-width-full>.content {
     max-width: 100%;
     width: 100%;
 }
+
 .c-section.content-width-auto>.content {
     max-width: auto;
     width: auto;
@@ -182,6 +185,7 @@
 .c-section.frame-padding-small .content {
     padding: 1.8rem;
 }
+
 .c-section .overlay,
 .c-section .content {
     transition: all .4s ease-in-out;
