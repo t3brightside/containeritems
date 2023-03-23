@@ -47,3 +47,5 @@
     - [!!UPGRADE!!]
       - TS constants need to be revised
       - Database upgrade needed
+4.1.1
+    - [TASK] Add tabindex for focusing
