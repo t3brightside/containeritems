@@ -49,3 +49,6 @@
       - Database upgrade needed
 4.1.1
     - [TASK] Add tabindex for focusing
+4.1.2
+    - [TASK] Set tabindex to -1 for sections
+    - [TASK] Replace section div with section
