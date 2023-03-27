@@ -10,35 +10,33 @@
 .scroll-in-slide-from-right .content>.frame {
     opacity: 0;
     transition: all .4s ease-out;
-    translate: 5rem;
+    transform: translate(5rem);
 }
 
 .scroll-in-slide-from-right .content>.frame.isInViewport {
     opacity: 1;
     transition: all .4s ease-out;
-    translate: 0;
 }
 
 .scroll-in-slide-from-left .content>.frame {
     opacity: 0;
     transition: all .4s ease-out;
-    translate: -5rem;
 }
 
 .scroll-in-slide-from-left .content>.frame.isInViewport {
     opacity: 1;
     transition: all .4s ease-out;
-    translate: 0;
+    transform: translate(0);
 }
 
 .scroll-in-slide-from-below .content>.frame {
     opacity: 0;
     transition: all .4s ease-out;
-    translate: 0 5rem;
+    transform: translate(0,5rem);
 }
 
 .scroll-in-slide-from-below .content>.frame.isInViewport {
     opacity: 1;
     transition: all .4s ease-out;
-    translate: 0 0;
+    transform: translate(0,0);
 }
