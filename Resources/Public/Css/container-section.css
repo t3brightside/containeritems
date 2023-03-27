@@ -55,7 +55,7 @@
 }
 
 .c-section.content-width-auto>.content {
-    max-width: auto;
+    max-width: revert;
     width: auto;
 }
 
@@ -180,8 +180,6 @@
     display: block
 }
 
-
-
 .c-section.frame-padding-small .content {
     padding: 1.8rem;
 }
@@ -254,16 +252,5 @@
     h1 {
         font-size: 2.3em;
         line-height: 1.2em
-    }
-}
-
-@media screen and (max-width:520px) {
-    .c-section .videobuttons {
-        right: 2.5em;
-        bottom: 2.5em
-    }
-
-    .c-section .sound.hasclearframebutton {
-        right: 6em
     }
 }
