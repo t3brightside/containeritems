@@ -7,14 +7,15 @@
 </f:if>
 <f:if condition="{data.tx_containeritems_s_bgoverlaydark} || {data.tx_containeritems_s_bgoverlay}">
     <ea:asset.css priority="1" identifier="containerSection-{data.uid}">
-        #overlay-{data.uid} {
+        <f:if condition="{data.tx_containeritems_s_bgoverlay}">#overlay-{data.uid} {
           background-color: {data.tx_containeritems_s_bgoverlay};
-        }
+        }</f:if>
+        <f:if condition="{data.tx_containeritems_s_bgoverlaydark}">
         @media (prefers-color-scheme: dark) {
           #overlay-{data.uid} {
             background-color: {data.tx_containeritems_s_bgoverlaydark};
           }
-        }
+        }</f:if>
     </ea:asset.css>
 </f:if>
 <section
