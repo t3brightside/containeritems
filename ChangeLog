@@ -52,3 +52,8 @@
 4.1.2
     - [TASK] Set tabindex to -1 for sections
     - [TASK] Replace section div with section
+4.1.3
+    - [TASK] change to transform: translate vor validation
+    - [BUGFIX] add overlay colors only if present
+    - [TASK] no render bg buttons div if no buttons
+    - [BUGFIX] section auto with max-width to revertt
