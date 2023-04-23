@@ -57,3 +57,7 @@
     - [BUGFIX] add overlay colors only if present
     - [TASK] no render bg buttons div if no buttons
     - [BUGFIX] section auto with max-width to revertt
+4.2.0
+    - [FEATURE] add JS to open popups with anchor links
+    - [BUGFIX] Allow multiple accordions on same page
+    - [TASK] Remove default max-width from section
