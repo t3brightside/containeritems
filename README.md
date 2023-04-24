@@ -21,6 +21,7 @@ It's the backbone for the Microtemplate extension. See the **[demo site](https:/
 - Gather (gathers multiple content elements into one container)
 - Box (notifications, warnings, etc)
 - Siema Carousel
+- Popup containers that open from anchors
 - Sections
     - custom classes
     - content alignment horizontal and vertical
