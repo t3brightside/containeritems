@@ -8,39 +8,74 @@ popupOpeners.forEach(button => {
   });
 });
 
-const popupCloses = document.querySelectorAll('.c-popup-close');
-popupCloses.forEach(button => {
-  button.addEventListener('mouseup', () => {
-    const closeButtonName = event.target.name;
-    document.getElementById(closeButtonName).classList.remove('open');
-    if (!document.querySelectorAll('.c-popup.open').length) {
-      document.body.style.overflow = '';
-    }
-  });
-});
-
 
 const allanchors = document.getElementsByTagName('a');
-
-// Loop through the anchor elements and add a click event listener to the ones with an href containing "#"
 for (let i = 0; i < allanchors.length; i++) {
   const href = allanchors[i].getAttribute('href');
   if (href && href.indexOf('#') !== -1) {
     allanchors[i].addEventListener('click', function(event) {
-      // Get the target element with the same ID as the anchor link's href
       const targetId = href.substring(href.indexOf('#') + 1);
       const target = document.getElementById(targetId);
-
-      // Check if a target element was found and add the "my-class" class to it if it has the "c-popup" class
       if (target && target.classList.contains('c-popup')) {
-        // Prevent the default behavior of the anchor link
-        document.body.style.overflow = 'hidden';
-
         event.preventDefault();
-
-        // Add the "my-class" class to the target element
+        const subpageUrl = window.location.pathname + window.location.search;
+        const popupUrl = `${subpageUrl}#${targetId}`;
+        history.pushState({}, '', popupUrl);
+        document.body.style.overflow = 'hidden';
         target.classList.add('open');
       }
     });
   }
 }
+
+const allPopups = document.querySelectorAll('.c-popup');
+
+function closeTopMost() {
+  let topmostPopup = null;
+  let maxZIndex = -1;
+  let numOpenPopups = 0;
+  allPopups.forEach(function(popup) {
+    if (popup.classList.contains('open')) {
+      const zIndex = parseInt(window.getComputedStyle(popup).getPropertyValue('z-index'));
+      if (zIndex > maxZIndex) {
+        maxZIndex = zIndex;
+        topmostPopup = popup;
+      }
+      numOpenPopups++;
+    }
+  });
+  if (topmostPopup) {
+    if (numOpenPopups === 1 && topmostPopup.classList.contains('open')) {
+      document.body.style.overflow = '';
+      const subpageUrl = window.location.pathname + window.location.search;
+      history.replaceState({}, '', subpageUrl);
+    }
+    topmostPopup.classList.remove('open');
+  }
+}
+
+const popupCloses = document.querySelectorAll('.c-popup-close');
+popupCloses.forEach(button => {
+  button.addEventListener('mouseup', () => {
+    closeTopMost();
+  });
+});
+
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape') {
+    closeTopMost();
+  }
+});
+
+window.addEventListener('popstate', function(event) {
+  closeTopMost();
+});
+
+window.addEventListener('load', function(event) {
+  const targetId = window.location.hash.substring(1);
+  const target = document.getElementById(targetId);
+  if (target && target.classList.contains('c-popup')) {
+    document.body.style.overflow = 'hidden';
+    target.classList.add('open');
+  }
+});
