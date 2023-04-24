@@ -61,3 +61,5 @@
     - [FEATURE] add JS to open popups with anchor links
     - [BUGFIX] Allow multiple accordions on same page
     - [TASK] Remove default max-width from section
+4.2.1
+    - [TASK] Improve popup opening and closing
