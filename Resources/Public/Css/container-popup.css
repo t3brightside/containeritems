@@ -56,7 +56,6 @@
     transform: rotate(-45deg);
 }
 
-
 @media screen and (max-width: 860px) {
     .c-popup {
         padding: 4rem 1.5rem;
@@ -64,6 +63,5 @@
     .c-popup-close {
         right: .55rem;
         margin-top: -3.05rem;
-        background: #fff;
     }
 }
