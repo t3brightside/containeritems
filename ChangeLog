@@ -63,3 +63,5 @@
     - [TASK] Remove default max-width from section
 4.2.1
     - [TASK] Improve popup opening and closing
+4.2.2
+    - [TASK] Remove close button bg on mobile
