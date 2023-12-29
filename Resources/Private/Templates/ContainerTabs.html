@@ -1,0 +1,21 @@
+{namespace ea=Brightside\Embedassets\ViewHelpers}
+<ea:asset.css embed="{settings.cssEmbed}" priority="{settings.tabsCssPriority}" identifier="tabsCss" href="{settings.tabsCssFile}" />
+
+<div id="c{data.uid}" class="frame frame-default frame-container-tabs c-tabs frame-space-before-{data.space_before_class} frame-space-after-{data.space_after_class}">
+    <div class="c-tabs-header">
+        <f:for each="{children_101}" as="element" iteration="iterator">
+            <button class="c-tabs-title">
+                {element.header}
+            </button>
+	    </f:for>
+    </div>
+    <div class="c-tabs-elements">
+        <f:for each="{children_101}" as="element" iteration="iterator">
+            <div class="c-tabs-content">
+			      {element.renderedContent -> f:format.raw()}
+                  <div class="clear"></div>
+            </div>
+    	</f:for>
+    </div>
+</div>
+<ea:asset.script embed="1" identifier="containerTabs" src="EXT:containeritems/Resources/Public/JavaScript/container-tabs.js" />

@@ -18,6 +18,7 @@ It's the backbone for the Microtemplate extension. See the **[demo site](https:/
 ## Features
 - Columns (1-1, 1-1-1, 1-1-1-1, 2-1, 1-2)
 - Accordion
+- Tabs
 - Gather (gathers multiple content elements into one container)
 - Box (notifications, warnings, etc)
 - Siema Carousel

@@ -1,0 +1,30 @@
+.c-tabs {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+}
+.c-tabs-header {
+    margin-bottom: 3rem;
+}
+.c-tabs-title {
+    cursor: pointer;
+    padding: .5rem 1.5rem;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-bottom: 4px solid transparent;
+    background: none;
+    font-weight: bold;
+}
+
+.c-tabs-title.active {
+    border-bottom: 4px solid black;
+}
+.c-tabs-content {
+    display: none;
+}
+
+.c-tabs-content.active {
+    display: block;
+}

@@ -6,6 +6,10 @@
 	containerItems.accordionCssFile = EXT:containeritems/Resources/Public/Css/container-accordion.css
 # cat=Containeritems/containeritems; type=boolean; label= Css priority for accordion, 0 means CSS is put in page footer
   containerItems.accordionCssPriority = 1
+  # cat=Containeritems/containeritems; type=string; label= Css file for tabs
+	containerItems.tabsCssFile = EXT:containeritems/Resources/Public/Css/container-tabs.css
+# cat=Containeritems/containeritems; type=boolean; label= Css priority for tabs, 0 means CSS is put in page footer
+  containerItems.tabsCssPriority = 1
 # cat=Containeritems/containeritems; type=string; label= Css file for box
 	containerItems.boxCssFile = EXT:containeritems/Resources/Public/Css/container-box.css
 # cat=Containeritems/containeritems; type=boolean; label= Css priority for box, 0 means CSS is put in page footer

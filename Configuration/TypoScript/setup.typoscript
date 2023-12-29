@@ -10,6 +10,8 @@ lib.containerItems {
   settings {
     accordionCssFile = {$containerItems.accordionCssFile}
     accordionCssPriority = {$containerItems.accordionCssFilePriority}
+    tabsCssFile = {$containerItems.tabsCssFile}
+    tabsCssPriority = {$containerItems.tabsCssFilePriority}
     boxCssFile = {$containerItems.boxCssFile}
     boxCssPriority = {$containerItems.boxCssFilePriority}
     columnsCssFile = {$containerItems.columnsCssFile}
@@ -35,6 +37,12 @@ lib.containerItems {
 tt_content.containerAccordion < lib.containerItems
 tt_content.containerAccordion {
   templateName = ContainerAccordion
+}
+
+# Tabs
+tt_content.containerTabs < lib.containerItems
+tt_content.containerTabs {
+  templateName = ContainerTabs
 }
 
 # Box
