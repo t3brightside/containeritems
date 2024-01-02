@@ -68,3 +68,5 @@
 4.3.0
     - [TASK] Add tabs container
     - [TASK] Add TYPO3 icons
+4.3.1
+    - [BUGFIX] Add missing tabs icon
