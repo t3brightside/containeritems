@@ -1,6 +1,8 @@
 # Containeritems
 [![License](https://poser.pugx.org/t3brightside/containeritems/license)](LICENSE.txt)
 [![Packagist](https://img.shields.io/packagist/v/t3brightside/containeritems.svg?style=flat)](https://packagist.org/packages/t3brightside/containeritems)
+[![TYPO3](https://img.shields.io/badge/TYPO3-v11-orange.svg?style=flat)](https://extensions.typo3.org/extension/containeritems)
+[![TYPO3](https://img.shields.io/badge/TYPO3-v12-orange.svg?style=flat)](https://extensions.typo3.org/extension/containeritems)
 [![Downloads](https://poser.pugx.org/t3brightside/containeritems/downloads)](https://packagist.org/packages/t3brightside/containeritems)
 [![Brightside](https://img.shields.io/badge/by-t3brightside.com-orange.svg?style=flat)](https://t3brightside.com)
 
