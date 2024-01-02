@@ -65,3 +65,6 @@
     - [TASK] Improve popup opening and closing
 4.2.2
     - [TASK] Remove close button bg on mobile
+4.3.0
+    - [TASK] Add tabs container
+    - [TASK] Add TYPO3 icons
