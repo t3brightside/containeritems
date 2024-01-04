@@ -16,6 +16,9 @@
 		"b13/container": "^1.6 || ^2.2",
 		"t3brightside/embedassets": "^1.2 || @dev"
 	},
+	"suggest": {
+		"quellenform/t3x-iconpack": "For tab, accordion and menu icons"
+	},
 	"autoload": {
 		"psr-4": {
 			"Brightside\\Containeritems\\": "Classes"

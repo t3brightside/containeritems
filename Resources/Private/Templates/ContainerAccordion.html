@@ -1,14 +1,13 @@
 {namespace ea=Brightside\Embedassets\ViewHelpers}
+{namespace i=Quellenform\Iconpack\ViewHelpers}
+
 <ea:asset.css embed="{settings.cssEmbed}" priority="{settings.accordionCssPriority}" identifier="accordionCss" href="{settings.accordionCssFile}" />
 
 <div id="c{data.uid}" class="frame frame-default frame-container-accordion c-accordion frame-space-before-{data.space_before_class} frame-space-after-{data.space_after_class}">
     <f:for each="{children_101}" as="element" iteration="iterator">
         <div class="c-accordion-item stayopen-{data.tx_containeritems_a_stayopen} {f:if(condition: '{data.tx_containeritems_a_firstopen} && {iterator.isFirst}', then: 'act')}">
-            <span class="c-accordion-title">
-                <f:if condition="{element.header_layout} != 100">
-                    <f:then>{element.header}</f:then>
-                    <f:else>&nbsp;</f:else>
-                </f:if>
+            <span class="c-accordion-title{f:if(condition: '!{element.header}', then: ' no-text')}">
+                <f:if condition="{element.header_icon}"><i:icon iconfig="{element.header_icon}" preferredRenderTypes="svgInline,webfont" /></f:if>{element.header}
             </span>
             <div class="c-accordion-content">
 			      {element.renderedContent -> f:format.raw()}

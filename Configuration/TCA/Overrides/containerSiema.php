@@ -90,6 +90,6 @@ $tempColumns = array(
 
 $GLOBALS['TCA']['tt_content']['types']['containerSiema']['showitem'] = str_replace(
     'header;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header.ALT.div_formlabel,',
-    'header;Title (not shown),header_layout,tx_containeritems_classes,tx_containeritems_siema_style,tx_containeritems_siema_pagination,tx_containeritems_siema_loop,tx_containeritems_siema_nav,',
+    'header;Title (not shown),header_icon,header_layout,tx_containeritems_classes,tx_containeritems_siema_style,tx_containeritems_siema_pagination,tx_containeritems_siema_loop,tx_containeritems_siema_nav,',
     $GLOBALS['TCA']['tt_content']['types']['containerSiema']['showitem']
 );

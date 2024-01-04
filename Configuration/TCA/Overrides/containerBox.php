@@ -39,6 +39,6 @@ $tempColumns = array(
 
 $GLOBALS['TCA']['tt_content']['types']['containerBox']['showitem'] = str_replace(
     'header;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header.ALT.div_formlabel,',
-    'header;Title (not shown),header_layout,tx_containeritems_classes,tx_containeritems_b_style,',
+    'header;Title (not shown),header_icon,header_layout,tx_containeritems_classes,tx_containeritems_b_style,',
     $GLOBALS['TCA']['tt_content']['types']['containerBox']['showitem']
 );

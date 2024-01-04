@@ -3,9 +3,11 @@
     flex-direction: column;
     align-content: flex-start;
 }
+
 .c-tabs-header {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
+
 .c-tabs-title {
     cursor: pointer;
     padding: .5rem 1.5rem;
@@ -18,13 +20,28 @@
     font-weight: bold;
 }
 
+.c-tabs-title .iconpack {
+    margin-right: .5rem;
+}
+
+.c-tabs-title.no-text .iconpack {
+    margin-right: 0;
+}
+
 .c-tabs-title.active {
     border-bottom: 4px solid black;
 }
+
 .c-tabs-content {
     display: none;
 }
 
 .c-tabs-content.active {
     display: block;
+}
+
+.c-tabs-content h1:first-child,
+.c-tabs-content h2:first-child,
+.c-tabs-content h3:first-child {
+    margin-top: 0;
 }

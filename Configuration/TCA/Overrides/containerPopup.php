@@ -18,7 +18,7 @@
 
 $GLOBALS['TCA']['tt_content']['types']['containerPopup']['showitem'] = str_replace(
     'header;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header.ALT.div_formlabel,',
-    'header;Title (shown in special cases only),header_layout,
+    'header;Title (shown in special cases only),header_icon,header_layout,
     tx_containeritems_classes,tx_containeritems_customid,',
     $GLOBALS['TCA']['tt_content']['types']['containerPopup']['showitem']
 );

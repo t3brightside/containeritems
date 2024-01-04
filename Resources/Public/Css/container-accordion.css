@@ -18,6 +18,10 @@
     border-bottom: 1px solid transparent
 }
 
+.c-accordion-title .iconpack {
+    margin-right: 1rem;
+}
+
 .c-accordion-title:hover {
     cursor: pointer
 }
