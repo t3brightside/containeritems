@@ -24,7 +24,7 @@ It's the backbone for the Microtemplate extension. See the **[demo site](https:/
 - Gather (gathers multiple content elements into one container)
 - Box (notifications, warnings, etc)
 - Siema Carousel
-- Popup containers that open from anchors
+- Popup, containers that open from anchor links
 - Sections
     - custom classes
     - content alignment horizontal and vertical
@@ -39,10 +39,12 @@ It's the backbone for the Microtemplate extension. See the **[demo site](https:/
     - bg fixed
     - bg effects
     - 'clear button' to hide content for seeing the background
+- t3x-iconpack support
 
 ## Install
 - `composer req t3brightside/containeritems` or from TYPO3 extension repository **[containeritems](https://extensions.typo3.org/extension/containeritems/)**
 - Include desired static templates
+- install t3x-iconpack for header icons in tabs, accordions and section menus
 
 ## Sources
 - [GitHub](https://github.com/t3brightside/containeritems)

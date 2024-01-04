@@ -1,8 +1,8 @@
 {
 	"name": "t3brightside/containeritems",
-	"description": "TYPO3 CMS ext:container layouts for columns, accordions, sections, carousels and boxes",
+	"description": "TYPO3 CMS ext:container layouts for columns, accordions, tabs, sections, carousels and boxes",
 	"type": "typo3-cms-extension",
-	"keywords": ["TYPO3", "template", "grids", "columns", "structure", "carousel"],
+	"keywords": ["TYPO3", "template", "grids", "columns", "accordion", "tabs", "structure", "carousel"],
 	"homepage": "https://microtemplate.t3brightside.com/",
 	"license": "GPL-2.0-or-later",
 	"authors": [{
@@ -11,8 +11,8 @@
 		"homepage": "https://t3brightside.com"
 	}],
 	"require": {
-		"typo3/cms-core": "^11.5 || ^12.0",
-		"typo3/cms-fluid-styled-content": "^11.5 || ^12.0",
+		"typo3/cms-core": "^11.5 || ^12.4",
+		"typo3/cms-fluid-styled-content": "^11.5 || ^12.4",
 		"b13/container": "^2.3",
 		"t3brightside/embedassets": "^1.2"
 	},

@@ -70,3 +70,6 @@
     - [TASK] Add TYPO3 icons
 4.3.1
     - [BUGFIX] Add missing tabs icon
+4.4.0
+    - [FEATURE] ext:t3x-iconpack support
+    - [TASK] Remove TYPO3 v10 support
