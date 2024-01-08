@@ -3,7 +3,11 @@
 
 <ea:asset.css embed="{settings.cssEmbed}" priority="{settings.tabsCssPriority}" identifier="tabsCss" href="{settings.tabsCssFile}" />
 
-<div id="c{data.uid}" class="frame frame-default frame-container-tabs c-tabs frame-space-before-{data.space_before_class} frame-space-after-{data.space_after_class}">
+<div id="c{data.uid}" class="
+    frame
+    frame-default
+    frame-container-tabs
+    c-tabs{f:if(condition: '{data.space_before_class}', then: ' frame-space-before-{data.space_before_class}')}{f:if(condition: '{data.space_after_class}', then: ' frame-space-after-{data.space_after_class}')}{f:if(condition: '{data.tx_containeritems_classes}', then: ' {data.tx_containeritems_classes}')}">
     <div class="c-tabs-header">
         <f:for each="{children_101}" as="element" iteration="iterator">
             <button class="c-tabs-title{f:if(condition: '!{element.header}', then: ' no-text')}">
@@ -21,4 +25,3 @@
     </div>
 </div>
 <ea:asset.script embed="1" identifier="containerTabs" src="EXT:containeritems/Resources/Public/JavaScript/container-tabs.js" />
-</html>
