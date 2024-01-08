@@ -3,16 +3,20 @@
 
 <ea:asset.css embed="{settings.cssEmbed}" priority="{settings.accordionCssPriority}" identifier="accordionCss" href="{settings.accordionCssFile}" />
 
-<div id="c{data.uid}" class="frame frame-default frame-container-accordion c-accordion frame-space-before-{data.space_before_class} frame-space-after-{data.space_after_class}">
+<div id="c{data.uid}" class="
+    frame
+    frame-default
+    frame-container-accordion
+    c-accordion{f:if(condition: '{data.space_before_class}', then: ' frame-space-before-{data.space_before_class}')}{f:if(condition: '{data.space_after_class}', then: ' frame-space-after-{data.space_after_class}')}{f:if(condition: '{data.tx_containeritems_a_stayopen}', then: ' stayopen')}{f:if(condition: '{data.tx_containeritems_classes}', then: ' {data.tx_containeritems_classes}')}">
     <f:for each="{children_101}" as="element" iteration="iterator">
-        <div class="c-accordion-item stayopen-{data.tx_containeritems_a_stayopen} {f:if(condition: '{data.tx_containeritems_a_firstopen} && {iterator.isFirst}', then: 'act')}">
-            <span class="c-accordion-title{f:if(condition: '!{element.header}', then: ' no-text')}">
+        <div class="c-accordion-item  {f:if(condition: '{data.tx_containeritems_a_firstopen} && {iterator.isFirst}', then: 'act')}">
+            <button class="c-accordion-title{f:if(condition: '!{element.header}', then: ' no-text')}" aria-expanded="{f:if(condition: '{data.tx_containeritems_a_firstopen} && {iterator.isFirst}', then: 'true', else: 'false')}">
                 <f:if condition="{element.header_icon}"><i:icon iconfig="{element.header_icon}" preferredRenderTypes="svgInline,webfont" /></f:if>{element.header}
-            </span>
-            <div class="c-accordion-content">
+            </button>
+            <section class="c-accordion-content">
 			      {element.renderedContent -> f:format.raw()}
                   <div class="clear"></div>
-            </div>
+            </section>
         </div>
 	</f:for>
 </div>

@@ -8,8 +8,10 @@
 }
 
 .c-accordion-title {
+    text-align: left;
     display: block;
     position: relative;
+    width: 100%;
     box-sizing: border-box;
     padding: .72em 3em .72em 0;
     font-size: 1.26em;
