@@ -7,20 +7,16 @@ document.addEventListener('DOMContentLoaded', function () {
       const tabTitles = tabsContainer.querySelectorAll('.c-tabs-title');
       const tabContents = tabsContainer.querySelectorAll('.c-tabs-content');
 
-      // Add "active" class to the first tab and its content
-      tabTitles[0].classList.add('active');
-      tabContents[0].classList.add('active');
-
       // Add click event listener to each tab within the current tabs container
       tabTitles.forEach((tab, index) => {
           tab.addEventListener('click', function () {
               // Remove active class from all tabs and contents within the current tabs container
-              tabTitles.forEach(title => title.classList.remove('active'));
-              tabContents.forEach(content => content.classList.remove('active'));
+              tabTitles.forEach(title => title.classList.remove('act'));
+              tabContents.forEach(content => content.classList.remove('act'));
 
               // Add active class to the clicked tab and corresponding content within the current tabs container
-              this.classList.add('active');
-              tabContents[index].classList.add('active');
+              this.classList.add('act');
+              tabContents[index].classList.add('act');
           });
       });
   });

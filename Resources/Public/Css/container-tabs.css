@@ -28,15 +28,15 @@
     margin-right: 0;
 }
 
-.c-tabs-title.active {
-    border-bottom: 4px solid black;
+.c-tabs-title.act {
+    border-bottom: 2px solid black;
 }
 
 .c-tabs-content {
     display: none;
 }
 
-.c-tabs-content.active {
+.c-tabs-content.act {
     display: block;
 }
 
