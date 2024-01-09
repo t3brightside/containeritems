@@ -61,7 +61,7 @@
 .c-accordion-content {
     transition: all .3s ease;
     overflow: hidden;
-    max-height: 0
+    max-height: 0;
 }
 
 .c-accordion-item.act .c-accordion-content {
