@@ -1,5 +1,5 @@
 CREATE TABLE tt_content (
-	tx_containeritems_a_stayopen int(1) DEFAULT NULL,
+	tx_containeritems_a_autocollapse int(1) DEFAULT NULL,
 	tx_containeritems_a_firstopen int(1) DEFAULT NULL,
 	tx_containeritems_classes varchar(25),
 	tx_containeritems_customid varchar(25),
