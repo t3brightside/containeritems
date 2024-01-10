@@ -1,14 +1,3 @@
-const popupOpeners = document.querySelectorAll('.c-popup-opener');
-
-popupOpeners.forEach(button => {
-  button.addEventListener('mouseup', () => {
-    const openButtonName = event.target.name;
-    document.getElementById(openButtonName).classList.add('open');
-    document.body.style.overflow = 'hidden';
-  });
-});
-
-
 const allanchors = document.getElementsByTagName('a');
 for (let i = 0; i < allanchors.length; i++) {
   const href = allanchors[i].getAttribute('href');
@@ -74,8 +63,11 @@ window.addEventListener('popstate', function(event) {
 window.addEventListener('load', function(event) {
   const targetId = window.location.hash.substring(1);
   const target = document.getElementById(targetId);
+  const bodyContent = document.body;
   if (target && target.classList.contains('c-popup')) {
     document.body.style.overflow = 'hidden';
+    setTabIndex(bodyContent, '-1');
+    setTabIndex(target,'0');
     target.classList.add('open');
   }
 });
