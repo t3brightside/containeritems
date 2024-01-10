@@ -11,6 +11,7 @@
     transition: top .4s ease-in-out;
     color: #000;
     padding: 5rem 6rem;
+    left: 0;
 }
 .c-popup-content {
     max-width: 75.778rem;
