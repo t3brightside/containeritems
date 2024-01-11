@@ -14,8 +14,10 @@
 		"typo3/cms-core": "^11.5 || ^12.4",
 		"typo3/cms-fluid-styled-content": "^11.5 || ^12.4",
 		"b13/container": "^2.3",
-		"t3brightside/embedassets": "^1.2",
-		"quellenform/t3x-iconpack": "^1.1"
+		"t3brightside/embedassets": "^1.2"
+	},
+	"suggest": {
+		"quellenform/t3x-iconpack": "Tab and accordion icons"
 	},
 	"autoload": {
 		"psr-4": {

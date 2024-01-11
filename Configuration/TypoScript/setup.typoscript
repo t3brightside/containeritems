@@ -35,21 +35,22 @@ lib.containerItems {
 
 # Accordion
 tt_content.containerAccordion < lib.containerItems
-tt_content.containerAccordion {
-  templateName = ContainerAccordion
-}
+tt_content.containerAccordion.templateName = ContainerAccordion
+["{$containerItems.enableIconpack}" == "1"]
+  tt_content.containerAccordion.templateName = ContainerAccordionIcon
+[end]
 
 # Tabs
 tt_content.containerTabs < lib.containerItems
-tt_content.containerTabs {
-  templateName = ContainerTabs
-}
+tt_content.containerTabs.templateName = ContainerTabs
+["{$containerItems.enableIconpack}" == "1"]
+  tt_content.containerTabs.templateName = ContainerTabsIcon
+[end]
 
 # Box
 tt_content.containerBox < lib.containerItems
-tt_content.containerBox {
-  templateName = ContainerBox
-}
+tt_content.containerBox.templateName = ContainerBox
+
 # Columns
 lib.containerColumnsDefault < lib.containerItems
 lib.containerColumnsDefault {
@@ -73,9 +74,8 @@ tt_content.containerGather.templateName = ContainerGather
 
 # Box
 tt_content.containerPopup < lib.containerItems
-tt_content.containerPopup {
-  templateName = ContainerPopup
-}
+tt_content.containerPopup.templateName = ContainerPopup
+
 
 # Sections
 tt_content.containerSection < lib.containerItems
@@ -107,6 +107,5 @@ tt_content.containerSection {
 
 # Siema
 tt_content.containerSiema < lib.containerItems
-tt_content.containerSiema {
-  templateName = ContainerSiema
-}
+tt_content.containerSiema.templateName = ContainerSiema
+

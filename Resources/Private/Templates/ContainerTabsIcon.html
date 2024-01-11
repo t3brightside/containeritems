@@ -1,4 +1,5 @@
 {namespace ea=Brightside\Embedassets\ViewHelpers}
+{namespace i=Quellenform\Iconpack\ViewHelpers}
 
 <ea:asset.css embed="{settings.cssEmbed}" priority="{settings.tabsCssPriority}" identifier="tabsCss" href="{settings.tabsCssFile}" />
 
@@ -10,7 +11,7 @@
     <div class="c-tabs-header" role="tablist">
         <f:for each="{children_101}" as="element" iteration="iterator">
             <button id="tab-{element.uid}" aria-controls="panel-{element.uid}" aria-selected="{f:if(condition: '{iterator.isFirst}', then: 'true', else: 'false')}" aria-expanded="{f:if(condition: '{iterator.isFirst}', then: 'true', else: 'false')}" role="tab" class="c-tabs-title{f:if(condition: '!{element.header}', then: ' no-text')}{f:if(condition: '{iterator.isFirst}', then: ' act')}">
-                {element.header}
+                <f:if condition="{element.header_icon}"><i:icon iconfig="{element.header_icon}" preferredRenderTypes="svgInline,webfont" /></f:if>{element.header}
             </button>
 	    </f:for>
     </div>

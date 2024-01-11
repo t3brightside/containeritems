@@ -1,4 +1,5 @@
 {namespace ea=Brightside\Embedassets\ViewHelpers}
+{namespace i=Quellenform\Iconpack\ViewHelpers}
 
 <ea:asset.css embed="{settings.cssEmbed}" priority="{settings.accordionCssPriority}" identifier="accordionCss" href="{settings.accordionCssFile}" />
 
@@ -10,6 +11,7 @@
     <f:for each="{children_101}" as="element" iteration="iterator">
         <div class="c-accordion-item  {f:if(condition: '{data.tx_containeritems_a_firstopen} && {iterator.isFirst}', then: 'act')}">
             <button id="header-{element.uid}" aria-controls="section-{element.uid}" class="c-accordion-title{f:if(condition: '!{element.header}', then: ' no-text')}" aria-expanded="{f:if(condition: '{data.tx_containeritems_a_firstopen} && {iterator.isFirst}', then: 'true', else: 'false')}">
+                <f:if condition="{element.header_icon}"><i:icon iconfig="{element.header_icon}" preferredRenderTypes="svgInline,webfont" /></f:if>
                 <f:if condition="{element.header}"><span class="c-accordion-title-text">{element.header}</span></f:if>
             </button>
             <div id="section-{element.uid}" aria-labelledby="header-{element.uid}" role="region" class="c-accordion-content">
