@@ -44,7 +44,7 @@ It's the backbone for the Microtemplate extension. See the **[demo site](https:/
 ## Install
 - `composer req t3brightside/containeritems` or from TYPO3 extension repository **[containeritems](https://extensions.typo3.org/extension/containeritems/)**
 - Include desired static templates
-- install t3x-iconpack for header icons in tabs, accordions and section menus
+- install t3x-iconpack for header icons in tabs and accordions, set enableIconpack constant
 
 ## Sources
 - [GitHub](https://github.com/t3brightside/containeritems)
