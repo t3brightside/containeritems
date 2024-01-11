@@ -6,14 +6,7 @@
 <div id="c{data.uid}" class="
         frame
         frame-type-container
-        c-siema
-        {data.tx_containeritems_classes}
-        {f:if(condition: '{data.tx_containeritems_siema_style}', then: '{data.tx_containeritems_siema_style}')}
-        {f:if(condition: '{data.tx_containeritems_siema_nav}', then: 'has-nav')}
-        {f:if(condition: '{data.tx_containeritems_siema_pagination}', then: 'has-pagination')}
-        {f:if(condition: '{data.space_before_class}', then: 'frame-space-before-{data.space_before_class}')}
-        {f:if(condition: '{data.space_after_class}', then: 'frame-space-after-{data.space_after_class}')}
-    ">
+        c-siema{f:if(condition: '{data.tx_containeritems_classes}', then: ' {data.tx_containeritems_classes}')}{f:if(condition: '{data.tx_containeritems_siema_style}', then: ' {data.tx_containeritems_siema_style}')}{f:if(condition: '{data.tx_containeritems_siema_nav}', then: ' has-nav')}{f:if(condition: '{data.tx_containeritems_siema_pagination}', then: ' has-pagination')}{f:if(condition: '{data.space_before_class}', then: ' frame-space-before-{data.space_before_class}')}{f:if(condition: '{data.space_after_class}', then: ' frame-space-after-{data.space_after_class}')}">
     <div id="siema-{data.uid}">
         <f:for each="{children_101}" as="element">
             {element.renderedContent -> f:format.raw()}

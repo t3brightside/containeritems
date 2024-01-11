@@ -4,11 +4,6 @@
 <div id="c{data.uid}" class="
     frame
     frame-type-container
-    c-columns
-    c-{data.CType}
-    {data.tx_containeritems_classes}
-    {f:if(condition: '{data.space_before_class}', then: 'frame-space-before-{data.space_before_class}')}
-    {f:if(condition: '{data.space_after_class}', then: 'frame-space-after-{data.space_after_class}')}
-">
+    c-columns{f:if(condition: '{data.tx_containeritems_classes}', then: ' {data.tx_containeritems_classes}')}{f:if(condition: '{data.space_before_class}', then: ' frame-space-before-{data.space_before_class}')}{f:if(condition: '{data.space_after_class}', then: ' frame-space-after-{data.space_after_class}')}">
     <f:render partial="{data.CType}" arguments="{_all}" />
 </div>
