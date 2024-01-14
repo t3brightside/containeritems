@@ -47,4 +47,4 @@
 # cat=Containeritems/containeritems; type=boolean; label= Css minified and embed into HTML
   containerItems.cssEmbed = 1
 # cat=Containeritems/containeritems; type=boolean; label= Enable Iconpack for accordions and tabs
-  containerItems.enableIconpack = 1
+  containerItems.enableIconpack = 0
