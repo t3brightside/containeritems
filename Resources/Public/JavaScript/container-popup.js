@@ -45,7 +45,7 @@ function closeTopMost() {
 
 const popupCloses = document.querySelectorAll('.c-popup-close');
 popupCloses.forEach(button => {
-  button.addEventListener('mouseup', () => {
+  button.addEventListener('click', () => {
     closeTopMost();
   });
 });
