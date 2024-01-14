@@ -10,13 +10,14 @@
 
 .c-tabs-title {
     cursor: pointer;
-    padding: .5rem 1.5rem;
+    padding: .5rem 1.2rem;
     border: none;
     text-align: center;
-    text-decoration: none;
     display: inline-block;
     background: none;
     font-weight: bold;
+    transition: all .3s ease-in-out;
+    border-bottom: 2px solid transparent;
 }
 
 .c-tabs-title .iconpack {
