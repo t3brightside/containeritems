@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
   // Get all tabs containers
-  const tabsContainers = document.querySelectorAll('.frame-container-tabs');
+  const tabsContainers = document.querySelectorAll('.c-tabs');
 
   tabsContainers.forEach(tabsContainer => {
     // Get tab items and content within each tabs container
