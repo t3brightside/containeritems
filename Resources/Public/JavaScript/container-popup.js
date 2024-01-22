@@ -83,6 +83,7 @@ function cPopupCloseTopmost() {
       history.back();
     } else {
       cPopupClose(topMostPopup);
+      cPopupResumeDocumentBody();
     }
   }
 
@@ -103,6 +104,8 @@ function cPopupUpdateHistory(popupId) {
 }
 
 function cPopupResumeDocumentBody() {
+  const subpageUrl = window.location.pathname;
+  history.replaceState(subpageUrl, '', subpageUrl);
   documentBody.style.overflow = '';
   cPopupSetTabIndex(documentBody, '0');
 }
