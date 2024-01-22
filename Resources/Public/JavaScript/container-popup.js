@@ -79,10 +79,8 @@ function cPopupCloseTopmost() {
     // Check if the popup was opened from a link
     const openedFromLink = history.state && history.state.endsWith(`#${popupId}`);
     if (openedFromLink) {
-      // If opened from a link, go back in history
       history.back();
     } else {
-      cPopupClose(topMostPopup);
       cPopupResumeDocumentBody();
     }
   }
@@ -104,8 +102,6 @@ function cPopupUpdateHistory(popupId) {
 }
 
 function cPopupResumeDocumentBody() {
-  const subpageUrl = window.location.pathname;
-  history.replaceState(subpageUrl, '', subpageUrl);
   documentBody.style.overflow = '';
   cPopupSetTabIndex(documentBody, '0');
 }
