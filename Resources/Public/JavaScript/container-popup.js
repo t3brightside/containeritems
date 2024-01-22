@@ -81,6 +81,9 @@ function cPopupCloseTopmost() {
     if (openedFromLink) {
       history.back();
     } else {
+      cPopupClose(topMostPopup);
+      const subpageUrl = window.location.pathname + window.location.search;
+      history.replaceState(subpageUrl, '', subpageUrl);
       cPopupResumeDocumentBody();
     }
   }
