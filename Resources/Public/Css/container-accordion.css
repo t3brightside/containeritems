@@ -62,11 +62,13 @@
     transition: all .3s ease;
     overflow: hidden;
     max-height: 0;
+    visibility: hidden;
 }
 
 .c-accordion-item.act .c-accordion-content {
     max-height: var(--max-height);
-    margin-bottom: 1em
+    margin-bottom: 1em;
+    visibility: visible;
 }
 
 .c-accordion-content div:first-child header {

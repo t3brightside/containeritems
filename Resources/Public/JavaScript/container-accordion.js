@@ -9,17 +9,14 @@ function initAccordion(accordion) {
       if (item.classList.contains('act')) {
           content.style.maxHeight = content.scrollHeight + 'px';
           content.setAttribute('aria-hidden', 'false');
-          setTabIndex(content, '0');
       } else {
           content.setAttribute('aria-hidden', 'true');
-          setTabIndex(content, '-1');
       }
 
       titleButton.addEventListener('click', () => {
           if (item.classList.contains('act')) {
               content.style.maxHeight = '0';
               content.setAttribute('aria-hidden', 'true');
-              setTabIndex(content, '-1');
               item.classList.remove('act');
               titleButton.setAttribute('aria-expanded', 'false');
           } else {
@@ -28,7 +25,6 @@ function initAccordion(accordion) {
                       if (otherItem !== item) {
                           otherItem.querySelector('.c-accordion-content').style.maxHeight = '0';
                           otherItem.querySelector('.c-accordion-content').setAttribute('aria-hidden', 'true');
-                          setTabIndex(otherItem.querySelector('.c-accordion-content'), '-1');
                           otherItem.classList.remove('act');
                           otherItem.querySelector('.c-accordion-title').setAttribute('aria-expanded', 'false');
                       }
@@ -36,7 +32,6 @@ function initAccordion(accordion) {
               }
               content.style.maxHeight = content.scrollHeight + 'px';
               content.setAttribute('aria-hidden', 'false');
-              setTabIndex(content, '0');
               item.classList.add('act');
               titleButton.setAttribute('aria-expanded', 'true');
           }
