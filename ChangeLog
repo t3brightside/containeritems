@@ -73,3 +73,24 @@
 4.4.0
     - [FEATURE] ext:t3x-iconpack support
     - [TASK] Remove TYPO3 v10 support
+4.5.0
+    - [TASK] Improve accessibility for popups and accordions
+    - [TASK] Add arrow navigation to tabs
+    - [TASK] Change tabs container class for query
+    - [TASK] Add aria-selected and aria-expanded functions to tabs
+    - [TASK] Set iconpack constant to 0 by default
+    - [TASK] improve pop-up close button accessibility
+    - [TASK] Improve header layout
+    - [TASK] Improve iconpack install instructions
+    - [TASK] Optional iconpack support with TS constant
+    - [TASK] Code clean up
+    - [BUGIX] add custom classes to front end
+    - [TASK] Require t3x-iconpack
+    - [TASK] Removie manual popupOpeners
+    - [BUGFIX] Correct placement for certain cases
+    - [TASK] Improve accordion scripts and accessibility
+    - [BREAKING] change tx_containeritems_a_stayopen to tx_containeritems_a_autocollapse
+    - [TASK] Improve accordions accessibility
+    - [TASK] accessibility improvements and code cleanup
+    - [BUGFIX] add custom classes to FE
+    - [TASK] add custom classes and improve accessibility
