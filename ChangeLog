@@ -96,3 +96,5 @@
     - [TASK] add custom classes and improve accessibility
 4.5.2
     - [BUGFIX] Anchor links and popup closing
+4.5.3
+    - [TASK] change popup visibility hidden by default
