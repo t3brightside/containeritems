@@ -1,7 +1,7 @@
 {namespace ea=Brightside\Embedassets\ViewHelpers}
 <ea:asset.css embed="{settings.cssEmbed}" priority="{settings.popupCssPriority}" identifier="popupCss" href="{settings.popupCssFile}" />
 
-<div id="{f:if(condition: '{data.tx_containeritems_customid}', then: '{data.tx_containeritems_customid}', else: 'c{data.uid}')}" role="dialog" class="
+<div style="visibility: hidden;" id="{f:if(condition: '{data.tx_containeritems_customid}', then: '{data.tx_containeritems_customid}', else: 'c{data.uid}')}" role="dialog" class="
     frame
     frame-default
     frame-container-popup

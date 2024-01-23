@@ -27,6 +27,7 @@ function cPopupFindTopmost(elements) {
 
 function cPopupOpen(popup) {
   documentBody.style.overflow = 'hidden';
+  popup.style.visibility = 'visible';
   cPopupSetTabIndex(documentBody, '-1');
   popup.classList.add('open');
   cPopupCurrentZIndex += 1;
@@ -37,6 +38,9 @@ function cPopupOpen(popup) {
 function cPopupClose(popup) {
   cPopupSetTabIndex(popup, '-1');
   popup.classList.remove('open');
+  setTimeout(function() {
+    popup.style.visibility = 'hidden';
+  }, 400);
 }
 
 for (const popupLink of cPopupAllAnchorLinks) {
