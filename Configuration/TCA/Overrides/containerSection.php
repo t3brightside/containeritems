@@ -487,13 +487,18 @@ $GLOBALS['TCA']['tt_content']['palettes']['sectionBgOverlay']['showitem'] = '
 
 
 $GLOBALS['TCA']['tt_content']['types']['containerSection']['columnsOverrides'] = array(
-    'image' => [
-        'label' => 'Image File',
-        'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
-            'image',
-            [
+    'images' => [
+            'exclude' => 1,
+            'label' => 'Image',
+            'config' => [
+                'type' => 'file',
+                'maxitems' => 100,
+                'allowed' => $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext'],
                 'behaviour' => [
                     'allowLanguageSynchronization' => true,
+                ],
+                'appearance' => [
+                    'createNewRelationLinkTitle' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference'
                 ],
                 'overrideChildTca' => [
                     'types' => [
@@ -504,26 +509,23 @@ $GLOBALS['TCA']['tt_content']['types']['containerSection']['columnsOverrides'] =
                         ],
                         \TYPO3\CMS\Core\Resource\File::FILETYPE_IMAGE => [
                             'showitem' => '
-                            crop,
+                            --palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
                             --palette--;;filePalette'
                         ],
                     ],
                 ],
             ],
-            'svg,jpeg,jpg,png,gif'
-        ),
-    ],
+        ],
     'assets' => [
         'label' => 'Video File',
         'description' => 'Add multiple for different web formats',
-        'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
-            'assets',
-            [
-                'behaviour' => [
-                    'allowLanguageSynchronization' => true,
-                ],
+        'config' => [
+            'type' => 'file',
+            'maxitems' => 100,
+            'allowed' => 'mp4,ogg,webm',
+            'behaviour' => [
+                'allowLanguageSynchronization' => true,
             ],
-            'mp4,ogg,webm'
-        ),
+        ],
     ],
 );
