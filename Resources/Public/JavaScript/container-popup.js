@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const cPopupAllPopups = document.querySelectorAll('.c-popup');
 
   let cPopupCurrentZIndex = 99999;
-  let openPopups = JSON.parse(sessionStorage.getItem('openPopups')) || []; // Track open popups in session storage
+  let openPopups = JSON.parse(sessionStorage.getItem('openPopups')) || [];
 
   function cPopupSetZIndex(popup, zIndex) {
     popup.style.zIndex = zIndex;
@@ -27,8 +27,9 @@ document.addEventListener('DOMContentLoaded', function() {
     cPopupSetZIndex(popup, cPopupCurrentZIndex);
     cPopupSetTabIndex(popup, '0');
 
-    // Push to session storage
     const popupId = popup.id;
+
+    // Add popup to session storage only if it's not already there
     if (!openPopups.includes(popupId)) {
       openPopups.push(popupId);
       sessionStorage.setItem('openPopups', JSON.stringify(openPopups));
@@ -54,7 +55,6 @@ document.addEventListener('DOMContentLoaded', function() {
     openPopups = openPopups.filter(id => id !== popupId);
     sessionStorage.setItem('openPopups', JSON.stringify(openPopups));
 
-    // If no popups are left, restore document body
     if (openPopups.length === 0) {
       cPopupResumeDocumentBody();
     }
@@ -81,7 +81,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-  // Close the topmost popup and update the session storage
   function cPopupCloseTopmost() {
     const allOpenPopups = document.querySelectorAll('.c-popup.open');
     const topMostPopup = cPopupFindTopmost(allOpenPopups);
@@ -110,7 +109,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }, null);
   }
 
-  // Handle close button click events
   cPopupCloseButtons.forEach(button => {
     button.addEventListener('click', () => {
       cPopupCloseTopmost();
@@ -118,29 +116,31 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // Handle back button (popstate) event to close topmost popup
-  window.addEventListener('popstate', function (event) {
+  window.addEventListener('popstate', function(event) {
     if (openPopups.length > 0) {
-      // Close the topmost popup
       cPopupCloseTopmost();
     }
   });
 
-  // Load popup from anchor on page load
+  // Escape key functionality to close the topmost popup
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape' && openPopups.length > 0) {
+      cPopupCloseTopmost();
+    }
+  });
+
+  // Only open the popup from the URL's hash
   if (window.location.hash) {
     const cPopupTargetId = window.location.hash.substring(1);
     const cPopupTarget = document.getElementById(cPopupTargetId);
-    if (cPopupTarget && cPopupTarget.classList.contains('c-popup')) {
-      cPopupOpen(cPopupTarget, false); // Don't push history for initial load
-    }
-  }
 
-  // Reopen all popups saved in sessionStorage on page load (except the last one already opened by URL)
-  openPopups.forEach(popupId => {
-    if (popupId !== window.location.hash.substring(1)) {
-      const popup = document.getElementById(popupId);
-      if (popup && popup.classList.contains('c-popup')) {
-        cPopupOpen(popup, false); // Don't push to history when restoring
-      }
+    if (cPopupTarget && cPopupTarget.classList.contains('c-popup')) {
+      // Clear session storage popups when a hash-based popup is opened
+      openPopups = [cPopupTargetId]; // Only store the opened popup
+      sessionStorage.setItem('openPopups', JSON.stringify(openPopups));
+      cPopupOpen(cPopupTarget, false); // Open only the popup from the hash
     }
-  });
+  } else {
+    // Do NOT restore any previously open popups if there is no hash
+  }
 });
