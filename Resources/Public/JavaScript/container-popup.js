@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const cPopupAllPopups = document.querySelectorAll('.c-popup');
 
   let cPopupCurrentZIndex = 99999;
-  let openPopups = JSON.parse(sessionStorage.getItem('openPopups')) || [];
+  let openPopups = []; // Use a JavaScript variable to track open popups
 
   function cPopupSetZIndex(popup, zIndex) {
     popup.style.zIndex = zIndex;
@@ -29,10 +29,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const popupId = popup.id;
 
-    // Add popup to session storage only if it's not already there
+    // Add popup to the openPopups array only if it's not already there
     if (!openPopups.includes(popupId)) {
       openPopups.push(popupId);
-      sessionStorage.setItem('openPopups', JSON.stringify(openPopups));
     }
 
     // Update URL if required
@@ -50,10 +49,9 @@ document.addEventListener('DOMContentLoaded', function() {
       popup.style.visibility = 'hidden';
     }, 400);
 
-    // Remove from session storage
+    // Remove from openPopups array
     const popupId = popup.id;
     openPopups = openPopups.filter(id => id !== popupId);
-    sessionStorage.setItem('openPopups', JSON.stringify(openPopups));
 
     if (openPopups.length === 0) {
       cPopupResumeDocumentBody();
@@ -135,9 +133,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const cPopupTarget = document.getElementById(cPopupTargetId);
 
     if (cPopupTarget && cPopupTarget.classList.contains('c-popup')) {
-      // Clear session storage popups when a hash-based popup is opened
+      // Clear any previously opened popups in the array
       openPopups = [cPopupTargetId]; // Only store the opened popup
-      sessionStorage.setItem('openPopups', JSON.stringify(openPopups));
       cPopupOpen(cPopupTarget, false); // Open only the popup from the hash
     }
   } else {
