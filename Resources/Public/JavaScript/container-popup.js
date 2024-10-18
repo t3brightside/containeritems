@@ -1,11 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
   const documentBody = document.body;
+
+  // Select all anchor links with an href containing "#"
   const cPopupAllAnchorLinks = document.querySelectorAll('a[href*="#"]');
   const cPopupCloseButtons = document.querySelectorAll('.c-popup-close');
   const cPopupAllPopups = document.querySelectorAll('.c-popup');
 
   let cPopupCurrentZIndex = 99999;
-  let openPopups = []; // Use a JavaScript variable to track open popups
+  let openPopups = [];
 
   function cPopupSetZIndex(popup, zIndex) {
     popup.style.zIndex = zIndex;
@@ -29,12 +31,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const popupId = popup.id;
 
-    // Add popup to the openPopups array only if it's not already there
     if (!openPopups.includes(popupId)) {
       openPopups.push(popupId);
     }
 
-    // Update URL if required
     if (addToHistory) {
       const subpageUrl = window.location.pathname + window.location.search;
       const popupUrl = `${subpageUrl}#${popupId}`;
@@ -49,7 +49,6 @@ document.addEventListener('DOMContentLoaded', function() {
       popup.style.visibility = 'hidden';
     }, 400);
 
-    // Remove from openPopups array
     const popupId = popup.id;
     openPopups = openPopups.filter(id => id !== popupId);
 
@@ -63,19 +62,19 @@ document.addEventListener('DOMContentLoaded', function() {
     cPopupSetTabIndex(documentBody, '0');
   }
 
-  // Open popup when link is clicked
+  // Open popup when link is clicked, but only if the target matches a popup ID
   for (const popupLink of cPopupAllAnchorLinks) {
     const href = popupLink.getAttribute('href');
     if (href && href.indexOf('#') !== -1) {
-      popupLink.addEventListener('click', function (event) {
-        const targetId = href.substring(href.indexOf('#') + 1);
-        const target = Array.from(cPopupAllPopups).find(popup => popup.id === targetId);
-        if (target) {
+      const targetId = href.substring(href.indexOf('#') + 1);
+      const target = Array.from(cPopupAllPopups).find(popup => popup.id === targetId);
+      if (target) {
+        popupLink.addEventListener('click', function (event) {
           event.preventDefault();
           popupLink.id = 'trigger-link-' + targetId;
           cPopupOpen(target);
-        }
-      });
+        });
+      }
     }
   }
 
@@ -93,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
         history.replaceState({ popupId: newTopMostPopup.id }, '', popupUrl);
       } else {
         const currentUrlWithoutHash = window.location.pathname + window.location.search;
-        history.replaceState(null, '', currentUrlWithoutHash); // Clear hash when no more popups
+        history.replaceState(null, '', currentUrlWithoutHash);
       }
     }
   }
@@ -113,31 +112,25 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Handle back button (popstate) event to close topmost popup
   window.addEventListener('popstate', function(event) {
     if (openPopups.length > 0) {
       cPopupCloseTopmost();
     }
   });
 
-  // Escape key functionality to close the topmost popup
   document.addEventListener('keydown', function (event) {
     if (event.key === 'Escape' && openPopups.length > 0) {
       cPopupCloseTopmost();
     }
   });
 
-  // Only open the popup from the URL's hash
   if (window.location.hash) {
     const cPopupTargetId = window.location.hash.substring(1);
     const cPopupTarget = document.getElementById(cPopupTargetId);
 
     if (cPopupTarget && cPopupTarget.classList.contains('c-popup')) {
-      // Clear any previously opened popups in the array
-      openPopups = [cPopupTargetId]; // Only store the opened popup
-      cPopupOpen(cPopupTarget, false); // Open only the popup from the hash
+      openPopups = [cPopupTargetId];
+      cPopupOpen(cPopupTarget, false);
     }
-  } else {
-    // Do NOT restore any previously open popups if there is no hash
   }
 });
