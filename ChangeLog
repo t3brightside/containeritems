@@ -98,3 +98,10 @@
     - [BUGFIX] Anchor links and popup closing
 4.5.3
     - [TASK] change popup visibility hidden by default
+5.0.0
+    - [TASK] v13 compatibility
+    - [TASK] further improvement of popup opening and closing
+    - [TASK] change using local storage to simple variable
+    - [BUGFIX] no need opening popups if no hash
+    - TASK] add TYPO3 13 supprot, experimental
+    - [TASK] improve popup closing using 'back' and fix for Firefox
