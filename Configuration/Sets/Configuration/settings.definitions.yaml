@@ -1,0 +1,187 @@
+categories:
+  Containeritems:
+    label: 'Container Items'
+
+  Containeritems.templates:
+    label: 'Templates'
+    parent: Containeritems
+
+  Containeritems.accordion:
+    label: 'Accordion'
+    parent: Containeritems
+
+  Containeritems.tabs:
+    label: 'Tabs'
+    parent: Containeritems
+
+  Containeritems.columns:
+    label: 'Columns'
+    parent: Containeritems
+
+  Containeritems.section:
+    label: 'Sections'
+    parent: Containeritems
+
+  Containeritems.other:
+    label: 'Other Components (Box/Popup/Siema)'
+    parent: Containeritems
+
+settings:
+  # --- Templates & Global ---
+  containerItems.templateRootPaths:
+    label: 'Template Root Paths'
+    category: Containeritems.templates
+    type: string
+    default: 'EXT:containeritems/Resources/Private/Templates/'
+
+  containerItems.partialRootPaths:
+    label: 'Partial Root Paths'
+    category: Containeritems.templates
+    type: string
+    default: 'EXT:containeritems/Resources/Private/Partials/'
+
+  containerItems.cssEmbed:
+    label: 'Embed CSS'
+    category: Containeritems.templates
+    description: 'Minify and embed CSS into HTML'
+    type: bool
+    default: 1
+
+  containerItems.enableIconpack:
+    label: 'Enable Iconpack'
+    category: Containeritems.templates
+    description: 'Enable for accordions and tabs'
+    type: bool
+    default: 0
+
+  # --- Accordion ---
+  containerItems.accordionCssFile:
+    label: 'Accordion CSS'
+    category: Containeritems.accordion
+    type: string
+    default: 'EXT:containeritems/Resources/Public/Css/container-accordion.css'
+
+  containerItems.accordionCssPriority:
+    label: 'Accordion CSS Priority'
+    category: Containeritems.accordion
+    type: bool
+    default: 1
+
+  # --- Tabs ---
+  containerItems.tabsCssFile:
+    label: 'Tabs CSS'
+    category: Containeritems.tabs
+    type: string
+    default: 'EXT:containeritems/Resources/Public/Css/container-tabs.css'
+
+  containerItems.tabsCssPriority:
+    label: 'Tabs CSS Priority'
+    category: Containeritems.tabs
+    type: bool
+    default: 1
+
+  # --- Columns ---
+  containerItems.columnsCssFile:
+    label: 'Columns CSS'
+    category: Containeritems.columns
+    type: string
+    default: 'EXT:containeritems/Resources/Public/Css/container-columns.css'
+
+  containerItems.columnsCssPriority:
+    label: 'Columns CSS Priority'
+    category: Containeritems.columns
+    type: bool
+    default: 1
+
+  containerItems.columnsSpaceWidth:
+    label: 'Column Gutter (%)'
+    category: Containeritems.columns
+    type: string
+    default: '5'
+
+  containerItems.columnsWidthOfWider:
+    label: 'Wide Column Width (%)'
+    category: Containeritems.columns
+    description: 'Width of the wider column in a two-column layout'
+    type: string
+    default: '60'
+
+  # --- Sections ---
+  containerItems.sectionCssFile:
+    label: 'Section CSS'
+    category: Containeritems.section
+    type: string
+    default: 'EXT:containeritems/Resources/Public/Css/container-section.css'
+
+  containerItems.sectionCssPriority:
+    label: 'Section CSS Priority'
+    category: Containeritems.section
+    type: bool
+    default: 1
+
+  containerItems.sectionDefaultAlignment:
+    label: 'Default Alignment'
+    category: Containeritems.section
+    type: string
+    default: 'left'
+
+  containerItems.sectionBgImageWidth:
+    label: 'BG Image Width (px)'
+    category: Containeritems.section
+    type: int
+    default: 1400
+
+  containerItems.sectionScrollInEffect:
+    label: 'Scroll-in Effect'
+    category: Containeritems.section
+    type: string
+    default: ''
+
+  containerItems.sectionScrollInEffectCssFile:
+    label: 'Scroll-in Effect CSS'
+    category: Containeritems.section
+    type: string
+    default: 'EXT:containeritems/Resources/Public/Css/container-section-scroll-in-effects.css'
+
+  containerItems.sectionScrollInEffectCssPriority:
+    label: 'Scroll-in Priority'
+    category: Containeritems.section
+    type: bool
+    default: 1
+
+  # --- Other (Box, Popup, Siema) ---
+  containerItems.boxCssFile:
+    label: 'Box CSS'
+    category: Containeritems.other
+    type: string
+    default: 'EXT:containeritems/Resources/Public/Css/container-box.css'
+
+  containerItems.boxCssPriority:
+    label: 'Box CSS Priority'
+    category: Containeritems.other
+    type: bool
+    default: 1
+
+  containerItems.popupCssFile:
+    label: 'Popup CSS'
+    category: Containeritems.other
+    type: string
+    default: 'EXT:containeritems/Resources/Public/Css/container-popup.css'
+
+  containerItems.popupCssPriority:
+    label: 'Popup CSS Priority'
+    category: Containeritems.other
+    type: bool
+    default: 0
+
+  containerItems.siemaCssFile:
+    label: 'Siema CSS'
+    category: Containeritems.other
+    type: string
+    default: 'EXT:containeritems/Resources/Public/Css/container-siema.css'
+
+  containerItems.siemaCssPriority:
+    label: 'Siema CSS Priority'
+    category: Containeritems.other
+    type: bool
+    default: 1
