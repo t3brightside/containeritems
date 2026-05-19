@@ -105,3 +105,5 @@
     - [BUGFIX] no need opening popups if no hash
     - TASK] add TYPO3 13 supprot, experimental
     - [TASK] improve popup closing using 'back' and fix for Firefox
+5.0.1
+    - [TASK] basic v14 compatibility

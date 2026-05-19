@@ -12,9 +12,9 @@
     'constraints' => [
       'depends' => [
         'typo3' => '11.5.0-13.99.99',
-        'fluid_styled_content' => '11.5.0-13.99.99',
+        'fluid_styled_content' => '11.5.0-14.99.99',
         'container' => '2.3.0-3.99.99',
-        'embedassets' => '1.2.0-1.99.99',
+        'embedassets' => '1.2.0-1.5.99',
       ],
     ],
   ];
