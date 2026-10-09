@@ -3,7 +3,7 @@
     'title' => 'Containeritems',
     'description' => 'EXT:container layouts for columns, accordions, carousels, content sections and boxes. Demo at: https://microtemplate.t3brightside.com',
     'category' => 'fe',
-    'version' => '6.0.0',
+    'version' => '6.0.1',
     'state' => 'stable',
     'clearCacheOnLoad' => 1,
     'author' => 'Tanel Põld',
@@ -12,7 +12,7 @@
     'constraints' => [
       'depends' => [
         'typo3' => '13.4.0-14.99.99',
-        'container' => '3.0.0-3.99.99',
+        'container' => '3.0.0-4.99.99',
         'embedassets' => '1.4.0-1.99.99',
       ],
     ],

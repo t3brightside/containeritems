@@ -107,3 +107,5 @@
     - [TASK] improve popup closing using 'back' and fix for Firefox
 5.0.1
     - [TASK] basic v14 compatibility
+6.0.1
+    - [TASK] update ext:container compatibility to 4.1
